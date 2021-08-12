@@ -23,7 +23,6 @@ class App extends Component {
       cryptoBoysContract: null,
       cryptoBoysMarketContract: null,
       cryptoBoysCount: 0,
-      punksRemainingToAssign: 0,
       cryptoBoys: [],
       loading: true,
       metamaskConnected: false,
@@ -117,15 +116,6 @@ class App extends Component {
           this.setState({ cryptoBoysContract });
           this.setState({ cryptoBoysMarketContract });
   	      this.setState({ contractDetected: true });
-          const cryptoBoysCount = await cryptoBoysContract.methods
-            .totalSupply()
-            .call();
-          this.setState({ cryptoBoysCount });
-
-          const punksRemainingToAssign = await cryptoBoysContract.methods
-            .punksRemainingToAssign()
-            .call();
-          this.setState({ punksRemainingToAssign})
   	this.setState({ loading: false });
         } else {
           this.setState({ contractDetected: false });
@@ -223,7 +213,6 @@ buyPunk = async (punkIndex, punkPrice) => {
                     colorIsUsed={this.state.colorIsUsed}
                     colorsUsed={this.state.colorsUsed}
                     setMintBtnTimer={this.setMintBtnTimer}
-                    punksRemainingToAssign={this.punksRemainingToAssign}
                   />
                 )}
               />
