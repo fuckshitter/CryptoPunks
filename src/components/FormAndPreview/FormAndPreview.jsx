@@ -5,9 +5,20 @@ class FormAndPreview extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      cryptoPunkIndex: "",
+      cryptoBunkImageURL: "images/punks/punk-0001x8.png",
       cryptoBoyPrice: "",
     };
   }
+
+  Load_New_Image=()=>{
+
+      this.setState({
+
+        imageURL : 'images/punks/punk-0087x8.png'
+
+      })
+    }
 
   componentDidMount = async () => {
     await this.props.setMintBtnTimer();
@@ -42,7 +53,10 @@ class FormAndPreview extends Component {
           </div>
         </div>
 
-        <img src="images/punks/punk-{this.state.punkid}x8.png" alt="" />
+        <img
+            source = {{ uri: this.state.cryptoBunkImageURL }}
+            />
+        <Button title="Load Punk" onPress={this.Load_New_Image} />
         <form onSubmit={this.callClaimPunkFromApp} className="pt-4 mt-1">
           <div className="row">
             <div className="col-md-9">
