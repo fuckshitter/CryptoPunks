@@ -52,7 +52,7 @@ class FormAndPreview extends Component {
       <div>
         <div className="card mt-1">
           <div className="card-body align-items-center d-flex justify-content-center">
-            <h5>Askweedman Crypto Punks</h5>
+            <h5>Baked Punks</h5>
           </div>
         </div>
 
