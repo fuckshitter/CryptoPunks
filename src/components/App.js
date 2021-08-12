@@ -149,8 +149,9 @@ mintMyNFT = async (punkIndex, punkPrice) => {
 };
 offerPunkForSale = async (punkIndex, punkPrice) => {
   this.setState({ loading: true });
+  const price = window.web3.utils.toWei(punkPrice.toString(), "Ether");
     this.state.cryptoBoysMarketContract.methods
-      .offerPunkForSale(punkIndex, punkPrice)
+      .offerPunkForSale(punkIndex, price)
       .send({ from: this.state.accountAddress })
       .on("confirmation", () => {
         localStorage.setItem(this.state.accountAddress, new Date().getTime());
@@ -171,9 +172,10 @@ claimPunk = async (punkIndex) => {
 };
 buyPunk = async (punkIndex, punkPrice) => {
   this.setState({ loading: true });
+  const price = window.web3.utils.toWei(punkPrice.toString(), "Ether");
     this.state.cryptoBoysMarketContract.methods
       .buyPunk(punkIndex)
-      .send({ from: this.state.accountAddress, value: punkPrice })
+      .send({ from: this.state.accountAddress, value: price })
       .on("confirmation", () => {
         localStorage.setItem(this.state.accountAddress, new Date().getTime());
         this.setState({ loading: false });
