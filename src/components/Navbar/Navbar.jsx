@@ -8,7 +8,7 @@ const Navbar = () => {
       <div className="container">
         <img src={icon} alt="" />
         <Link to="/" className="navbar-brand ml-2">
-          AskWeedman Binance Punks
+          Baked Punks
         </Link>
         <button
           className="navbar-toggler"
@@ -22,11 +22,6 @@ const Navbar = () => {
             style={{ fontSize: "0.8rem", letterSpacing: "0.2rem" }}
             className="navbar-nav ml-auto"
           >
-            <li className="nav-item">
-              <Link to="/" className="nav-link">
-                Home
-              </Link>
-            </li>
             <li className="nav-item">
               <Link to="/mint" className="nav-link">
                 Punks

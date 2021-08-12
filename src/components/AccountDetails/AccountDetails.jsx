@@ -4,10 +4,10 @@ const AccountDetails = ({ accountAddress, accountBalance }) => {
   return (
     <div>
       <div className="jumbotron">
-        <h1 className="display-5">Askweedman Punks NFT Marketplace</h1>
+        <h1 className="display-5">Baked Punks NFT Marketplace</h1>
         <p className="lead">
-          This is an NFT marketplace where you can get Askweedman Punks implemented{" "}
-          <i>Askweedman Punks NFTs</i> and manage them.
+          This is an NFT marketplace where you can get Baked Punks{" "}
+          <i>Baked Punks NFTs</i> and manage them.
         </p>
         <hr className="my-4" />
         <p className="lead">Account address :</p>

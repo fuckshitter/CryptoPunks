@@ -5,11 +5,11 @@ const ConnectToMetamask = ({ connectToMetamask }) => {
   return (
     <div className="jumbotron">
       <h1 className="display-5">
-        Askweedman Crypto Punks NFT Marketplace
+        Baked Punks NFT Marketplace
       </h1>
       <p className="lead">
-        This is an NFT marketplace where you can mint your Askweedman Crypto Punks implemented{" "}
-        <i>Askweedman Crypto Punks NFTs</i> and manage them.
+        This is an NFT marketplace where you can claim your Baked Punks{" "}
+        <i>Baked Punks NFTs</i> and manage them.
       </p>
       <hr className="my-4" />
       <button
