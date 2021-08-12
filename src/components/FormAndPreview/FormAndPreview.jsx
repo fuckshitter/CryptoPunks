@@ -10,7 +10,7 @@ class FormAndPreview extends Component {
       cryptoBoyPrice: "",
     };
   }
-  Load_New_Image=()=>{
+  Load_New_Image=(e)=>{
 
       var s = this.state.punkid+"";
       while (s.length < 4) s = "0" + s;
@@ -87,7 +87,7 @@ class FormAndPreview extends Component {
                   className="form-control"
                   placeholder="Enter Punk Id"
                   onChange={(e) =>
-                    this.setState({ punkid: e.target.value })
+                    this.Load_New_Image(e)
                   }
                 />
               </div>
