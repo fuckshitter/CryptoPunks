@@ -11,7 +11,7 @@ class FormAndPreview extends Component {
     };
   }
   Load_New_Image=(e)=>{
-
+      this.state.punkid =e.target.value;
       var s = this.state.punkid+"";
       while (s.length < 4) s = "0" + s;
 
