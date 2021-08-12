@@ -41,6 +41,8 @@ class FormAndPreview extends Component {
             <h5>Color Your Crypto Boy As You Want It To be!</h5>
           </div>
         </div>
+
+        <img src="images/punks/punk-0087x4.png" alt="" />
         <form onSubmit={this.callClaimPunkFromApp} className="pt-4 mt-1">
           <div className="row">
             <div className="col-md-9">
@@ -71,7 +73,7 @@ class FormAndPreview extends Component {
               </div>
             </div>
           </div>
-        </form>	    
+        </form>
         <form onSubmit={this.callMintMyNFTFromApp} className="pt-4 mt-1">
           <div className="row">
             <div className="col-md-9">
@@ -163,7 +165,7 @@ class FormAndPreview extends Component {
               </div>
             </div>
           </div>
-        </form>	    
+        </form>
       </div>
     );
   }
