@@ -87,7 +87,7 @@ class FormAndPreview extends Component {
                   className="form-control"
                   placeholder="Enter Punk Id"
                   onChange={(e) =>
-                    {this.setState({ punkid: e.target.value ; this.Load_New_Image})}
+                    this.setState({ punkid: e.target.value })
                   }
                 />
               </div>
