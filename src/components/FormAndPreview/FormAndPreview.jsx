@@ -42,7 +42,7 @@ class FormAndPreview extends Component {
           </div>
         </div>
 
-        <img src="images/punks/punk-0087x4.png" alt="" />
+        <img src="images/punks/punk-{this.state.punkid}x8.png" alt="" />
         <form onSubmit={this.callClaimPunkFromApp} className="pt-4 mt-1">
           <div className="row">
             <div className="col-md-9">
