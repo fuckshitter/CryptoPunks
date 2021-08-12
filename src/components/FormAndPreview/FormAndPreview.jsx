@@ -6,7 +6,7 @@ class FormAndPreview extends Component {
     super(props);
     this.state = {
       cryptoPunkIndex: "",
-      cryptoBunkImageURL: "images/punks/punk-0001x8.png",
+      cryptoBunkImageURL: "/images/punks/punk-0001x8.png",
       cryptoBoyPrice: "",
     };
   }
@@ -15,7 +15,7 @@ class FormAndPreview extends Component {
 
       this.setState({
 
-        cryptoBunkImageURL : 'images/punks/punk-0087x8.png'
+        cryptoBunkImageURL : '/images/punks/punk-0087x8.png'
 
       })
     }
@@ -54,7 +54,7 @@ class FormAndPreview extends Component {
         </div>
 
         <img
-            source = {{ uri: this.state.cryptoBunkImageURL }}
+            source={this.state.cryptoBunkImageURL}
             />
        <form onSubmit={this.Load_New_Image} className="pt-4 mt-1">
         <button
