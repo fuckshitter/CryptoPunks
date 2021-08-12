@@ -109,15 +109,15 @@ class FormAndPreview extends Component {
                 />
               </div>
 	      <div>
-                <label htmlFor="punkid">Price</label>
+                <label htmlFor="price">Price</label>
                 <input
                   required
                   type="number"
-                  name="punkid"
-                  id="punkid"
+                  name="price"
+                  id="cryptoBoyPrice"
                   value={this.state.cryptoBoyPrice}
                   className="form-control"
-                  placeholder="Enter Punk ID"
+                  placeholder="Enter Price In BNB"
                   onChange={(e) =>
                     this.setState({ cryptoBoyPrice: e.target.value })
                   }
@@ -163,7 +163,7 @@ class FormAndPreview extends Component {
                   id="cryptoBoyPrice"
                   value={this.state.cryptoBoyPrice}
                   className="form-control"
-                  placeholder="Enter Price In Ξ"
+                  placeholder="Enter Price In BNB"
                   onChange={(e) =>
                     this.setState({ cryptoBoyPrice: e.target.value })
                   }
