@@ -57,7 +57,7 @@ class FormAndPreview extends Component {
             source = {{ uri: this.state.cryptoBunkImageURL }}
             />
         <button
-          onPress={this.Load_New_Image}
+          onClick={this.Load_New_Image}
           id="mintBtn22"
           style={{ fontSize: "0.9rem", letterSpacing: "0.14rem" }}
           type="submit"
