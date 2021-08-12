@@ -223,7 +223,7 @@ buyPunk = async (punkIndex, punkPrice) => {
                     colorIsUsed={this.state.colorIsUsed}
                     colorsUsed={this.state.colorsUsed}
                     setMintBtnTimer={this.setMintBtnTimer}
-                    punksRemainingToAssign=={this.punksRemainingToAssign}
+                    punksRemainingToAssign={this.punksRemainingToAssign}
                   />
                 )}
               />
