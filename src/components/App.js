@@ -218,11 +218,12 @@ buyPunk = async (punkIndex, punkPrice) => {
                     mintMyNFT={this.mintMyNFT}
                     buyPunk={this.buyPunk}
                     offerPunkForSale={this.offerPunkForSale}
-		    claimPunk={this.claimPunk}
-		    nameIsUsed={this.state.nameIsUsed}
+            		    claimPunk={this.claimPunk}
+            		    nameIsUsed={this.state.nameIsUsed}
                     colorIsUsed={this.state.colorIsUsed}
                     colorsUsed={this.state.colorsUsed}
                     setMintBtnTimer={this.setMintBtnTimer}
+                    punksRemainingToAssign=={this.punksRemainingToAssign}
                   />
                 )}
               />
