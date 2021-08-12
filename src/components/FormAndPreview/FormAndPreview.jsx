@@ -52,7 +52,7 @@ class FormAndPreview extends Component {
       <div>
         <div className="card mt-1">
           <div className="card-body align-items-center d-flex justify-content-center">
-            <h5>Color Your Crypto Boy As You Want It To be!</h5>
+            <h5>Askweedman Crypto Punks</h5>
           </div>
         </div>
 
@@ -60,14 +60,18 @@ class FormAndPreview extends Component {
             src={this.state.cryptoBunkImageURL}
             />
        <form onSubmit={this.Load_New_Image} className="pt-4 mt-1">
+       <div className="row">
+         <div className="col-md-9">
         <button
           id="mintBtn22"
           style={{ fontSize: "0.9rem", letterSpacing: "0.14rem" }}
           type="submit"
-          className="btn mt-4 btn-block btn-outline-primary"
+          className="form-control"
         >
-        Load Punk
+        View Punk
         </button>
+          </div>
+        </div>
       </form>
         <form onSubmit={this.callClaimPunkFromApp} className="pt-4 mt-1">
           <div className="row">
@@ -186,7 +190,7 @@ class FormAndPreview extends Component {
                 type="submit"
                 className="btn mt-4 btn-block btn-outline-primary"
               >
-                Buy Crypto Punk
+                Buy Punk
               </button>
               </div>
             </div>
