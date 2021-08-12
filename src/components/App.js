@@ -125,7 +125,7 @@ class App extends Component {
           const punksRemainingToAssign = await cryptoBoysContract.methods
             .punksRemainingToAssign()
             .call();
-          this.setState({ punksRemainingToAssign });
+          this.setState({ punksRemainingToAssign: punksRemainingToAssign})
   	this.setState({ loading: false });
         } else {
           this.setState({ contractDetected: false });
