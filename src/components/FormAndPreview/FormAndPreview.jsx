@@ -10,7 +10,7 @@ class FormAndPreview extends Component {
       cryptoBoyPrice: "",
     };
   }
-  function padZ(num, size) {
+  padZ = (num, size)  =>{
       var s = num+"";
       while (s.length < size) s = "0" + s;
       return s;
