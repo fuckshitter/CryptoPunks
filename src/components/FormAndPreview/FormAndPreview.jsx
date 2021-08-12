@@ -10,13 +10,17 @@ class FormAndPreview extends Component {
       cryptoBoyPrice: "",
     };
   }
-
+  function padZ(num, size) {
+      var s = num+"";
+      while (s.length < size) s = "0" + s;
+      return s;
+  }
   Load_New_Image=()=>{
 
       window.alert(
-        "Changing Image"
+        "Changing Image" + padZ(3,this.state.punkid)
       );
-      var newImageUrl = '/images/punks/punk-000' + this.state.punkid + 'x8.png';
+      var newImageUrl = '/images/punks/punk-' + padZ(3,this.state.punkid) + 'x8.png';
       this.setState({
         cryptoBunkImageURL : newImageUrl
 
