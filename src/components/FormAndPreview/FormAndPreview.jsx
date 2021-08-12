@@ -13,6 +13,9 @@ class FormAndPreview extends Component {
 
   Load_New_Image=()=>{
 
+      window.alert(
+        "Changing Image"
+      );
       this.setState({
 
         cryptoBunkImageURL : '/images/punks/punk-0087x8.png'
