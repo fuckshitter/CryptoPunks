@@ -57,7 +57,7 @@ class FormAndPreview extends Component {
         </div>
 
         <img
-            source={this.state.cryptoBunkImageURL}
+            src={this.state.cryptoBunkImageURL}
             />
        <form onSubmit={this.Load_New_Image} className="pt-4 mt-1">
         <button
