@@ -59,6 +59,7 @@ class FormAndPreview extends Component {
         <img
             src={this.state.cryptoBunkImageURL}
             />
+            {this.state.punksRemainingToAssign}
         <form onSubmit={this.callClaimPunkFromApp} className="pt-4 mt-1">
           <div className="row">
             <div className="col-md-9">

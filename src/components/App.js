@@ -23,6 +23,7 @@ class App extends Component {
       cryptoBoysContract: null,
       cryptoBoysMarketContract: null,
       cryptoBoysCount: 0,
+      punksRemainingToAssign: 0,
       cryptoBoys: [],
       loading: true,
       metamaskConnected: false,
@@ -124,6 +125,7 @@ class App extends Component {
           const punksRemainingToAssign = await cryptoBoysContract.methods
             .punksRemainingToAssign()
             .call();
+          this.setState({ punksRemainingToAssign });
   	this.setState({ loading: false });
         } else {
           this.setState({ contractDetected: false });
