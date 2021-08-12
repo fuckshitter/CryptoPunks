@@ -15,9 +15,7 @@ class FormAndPreview extends Component {
       var s = this.state.punkid+"";
       while (s.length < 4) s = "0" + s;
 
-      window.alert(
-        "Changing Image" + s
-      );
+
       var newImageUrl = '/images/punks/punk-' + s + 'x8.png';
       this.setState({
         cryptoBunkImageURL : newImageUrl
