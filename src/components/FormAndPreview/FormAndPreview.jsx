@@ -12,8 +12,8 @@ class FormAndPreview extends Component {
   }
   Load_New_Image=()=>{
 
-      var s = 4+"";
-      while (s.length < this.state.punkid) s = "0" + s;
+      var s = this.state.punkid+"";
+      while (s.length < 4) s = "0" + s;
 
       window.alert(
         "Changing Image" + s
