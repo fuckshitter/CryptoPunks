@@ -6,14 +6,13 @@ const AccountDetails = ({ accountAddress, accountBalance }) => {
       <div className="jumbotron">
         <h1 className="display-5">Baked Punks NFT Marketplace</h1>
         <p className="lead">
-          This is an NFT marketplace where you can get Baked Punks{" "}
-          <i>Baked Punks NFTs</i> and manage them.
+          This is an NFT marketplace where you can get Baked Punks.
         </p>
         <hr className="my-4" />
         <p className="lead">Account address :</p>
         <h4>{accountAddress}</h4>
         <p className="lead">Account balance :</p>
-        <h4>{accountBalance} Ξ</h4>
+        <h4>{accountBalance} BNB</h4>
       </div>
     </div>
   );
