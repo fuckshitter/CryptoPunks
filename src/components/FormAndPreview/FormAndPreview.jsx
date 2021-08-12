@@ -56,13 +56,14 @@ class FormAndPreview extends Component {
         <img
             source = {{ uri: this.state.cryptoBunkImageURL }}
             />
+       <form onSubmit={this.Load_New_Image} className="pt-4 mt-1">
         <button
-          onClick={this.Load_New_Image}
           id="mintBtn22"
           style={{ fontSize: "0.9rem", letterSpacing: "0.14rem" }}
           type="submit"
           className="btn mt-4 btn-block btn-outline-primary"
         >
+      </form>
         Load Punk
         </button>
         <form onSubmit={this.callClaimPunkFromApp} className="pt-4 mt-1">
