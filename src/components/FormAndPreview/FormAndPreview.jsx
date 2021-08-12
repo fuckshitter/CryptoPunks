@@ -60,6 +60,17 @@ class FormAndPreview extends Component {
             src={this.state.cryptoBunkImageURL}
             />
             {this.state.punksRemainingToAssign}
+
+            <input
+              required
+              type="number"
+              name="punksRemainingToAssign"
+              id="punksRemainingToAssign"
+              value={this.state.punksRemainingToAssign}
+              className="form-control"
+              placeholder="Enter Punk Id"
+            />
+
         <form onSubmit={this.callClaimPunkFromApp} className="pt-4 mt-1">
           <div className="row">
             <div className="col-md-9">
