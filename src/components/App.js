@@ -115,11 +115,15 @@ class App extends Component {
 
           this.setState({ cryptoBoysContract });
           this.setState({ cryptoBoysMarketContract });
-  	this.setState({ contractDetected: true });
+  	      this.setState({ contractDetected: true });
           const cryptoBoysCount = await cryptoBoysContract.methods
             .totalSupply()
             .call();
           this.setState({ cryptoBoysCount });
+
+          const punksRemainingToAssign = await cryptoBoysContract.methods
+            .punksRemainingToAssign()
+            .call();
   	this.setState({ loading: false });
         } else {
           this.setState({ contractDetected: false });
