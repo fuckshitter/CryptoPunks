@@ -22,7 +22,7 @@ class App extends Component {
       accountBalance: "",
       cryptoBoysContract: null,
       cryptoBoysMarketContract: null,
-      cryptoBoysCount: 0,    
+      cryptoBoysCount: 0,
       cryptoBoys: [],
       loading: true,
       metamaskConnected: false,
@@ -87,44 +87,48 @@ class App extends Component {
   };
 
   loadBlockchainData = async () => {
-    const web3 = window.web3;
-    const accounts = await web3.eth.getAccounts();
-    if (accounts.length === 0) {
-      this.setState({ metamaskConnected: false });
-    } else {
-      this.setState({ metamaskConnected: true });
-      this.setState({ loading: true });
-      this.setState({ accountAddress: accounts[0] });
-      let accountBalance = await web3.eth.getBalance(accounts[0]);
-      accountBalance = web3.utils.fromWei(accountBalance, "Ether");
-      this.setState({ accountBalance });
-      this.setState({ loading: false });
-      const networkId = await web3.eth.net.getId();
-      const networkData = CryptoPunks.networks[networkId];
-      if (networkData) {
-        this.setState({ loading: true });
-        const cryptoBoysContract = web3.eth.Contract(
-          CryptoPunks.abi,
-          networkData.address
-        );
-	const cryptoBoysMarketContract = web3.eth.Contract(
-          CryptoPunksMarket.abi,
-          networkData.address
-        );
-      
-        this.setState({ cryptoBoysContract });
-        this.setState({ cryptoBoysMarketContract });
-	this.setState({ contractDetected: true });
-        const cryptoBoysCount = await cryptoBoysContract.methods
-          .totalSupply()
-          .call();
-        this.setState({ cryptoBoysCount });
-	this.setState({ loading: false });
+    if (window.web3) {
+      const web3 = window.web3;
+      const accounts = await web3.eth.getAccounts();
+      if (accounts.length === 0) {
+        this.setState({ metamaskConnected: false });
       } else {
-        this.setState({ contractDetected: false });
+        this.setState({ metamaskConnected: true });
+        this.setState({ loading: true });
+        this.setState({ accountAddress: accounts[0] });
+        let accountBalance = await web3.eth.getBalance(accounts[0]);
+        accountBalance = web3.utils.fromWei(accountBalance, "Ether");
+        this.setState({ accountBalance });
+        this.setState({ loading: false });
+        const networkId = await web3.eth.net.getId();
+        const networkData = CryptoPunks.networks[networkId];
+        if (networkData) {
+          this.setState({ loading: true });
+          const cryptoBoysContract = web3.eth.Contract(
+            CryptoPunks.abi,
+            networkData.address
+          );
+  	const cryptoBoysMarketContract = web3.eth.Contract(
+            CryptoPunksMarket.abi,
+            networkData.address
+          );
+
+          this.setState({ cryptoBoysContract });
+          this.setState({ cryptoBoysMarketContract });
+  	this.setState({ contractDetected: true });
+          const cryptoBoysCount = await cryptoBoysContract.methods
+            .totalSupply()
+            .call();
+          this.setState({ cryptoBoysCount });
+  	this.setState({ loading: false });
+        } else {
+          this.setState({ contractDetected: false });
+        }
       }
+    } else {
+      window.alert('Metamask Not Detected');
     }
-  };	  
+  };
 
   connectToMetamask = async () => {
     await window.ethereum.enable();
@@ -225,7 +229,7 @@ buyPunk = async (punkIndex, punkPrice) => {
                     }
                   />
                 )}
-              />		
+              />
 		</HashRouter>
 	  </>
         )}
