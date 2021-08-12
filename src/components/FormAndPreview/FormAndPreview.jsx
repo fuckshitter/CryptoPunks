@@ -59,20 +59,6 @@ class FormAndPreview extends Component {
         <img
             src={this.state.cryptoBunkImageURL}
             />
-       <form onSubmit={this.Load_New_Image} className="pt-4 mt-1">
-       <div className="row">
-         <div className="col-md-9">
-        <button
-          id="mintBtn22"
-          style={{ fontSize: "0.9rem", letterSpacing: "0.14rem" }}
-          type="submit"
-          className="form-control"
-        >
-        View Punk
-        </button>
-          </div>
-        </div>
-      </form>
         <form onSubmit={this.callClaimPunkFromApp} className="pt-4 mt-1">
           <div className="row">
             <div className="col-md-9">
@@ -118,7 +104,7 @@ class FormAndPreview extends Component {
                   className="form-control"
                   placeholder="Enter Punk Id"
                   onChange={(e) =>
-                    this.setState({ punkid: e.target.value })
+                      this.Load_New_Image(e)
                   }
                 />
               </div>
@@ -164,7 +150,7 @@ class FormAndPreview extends Component {
                   className="form-control"
                   placeholder="Enter Punk Id"
                   onChange={(e) =>
-                    this.setState({ punkid: e.target.value })
+                    this.Load_New_Image(e)
                   }
                 />
               </div>
