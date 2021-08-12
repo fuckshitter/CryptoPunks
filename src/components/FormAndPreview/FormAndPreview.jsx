@@ -63,9 +63,9 @@ class FormAndPreview extends Component {
           type="submit"
           className="btn mt-4 btn-block btn-outline-primary"
         >
-      </form>
         Load Punk
         </button>
+      </form>
         <form onSubmit={this.callClaimPunkFromApp} className="pt-4 mt-1">
           <div className="row">
             <div className="col-md-9">
