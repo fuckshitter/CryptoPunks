@@ -15,7 +15,7 @@ class FormAndPreview extends Component {
 
       this.setState({
 
-        imageURL : 'images/punks/punk-0087x8.png'
+        cryptoBunkImageURL : 'images/punks/punk-0087x8.png'
 
       })
     }
