@@ -16,9 +16,9 @@ class FormAndPreview extends Component {
       window.alert(
         "Changing Image"
       );
+      var newImageUrl = '/images/punks/punk-000' + cryptoPunkIndex 'x8.png';
       this.setState({
-
-        cryptoBunkImageURL : '/images/punks/punk-0087x8.png'
+        cryptoBunkImageURL : newImageUrl
 
       })
     }
