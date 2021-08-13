@@ -223,6 +223,7 @@ class FormAndPreview extends Component {
           </div>
         </form>
 
+        <hr className="my-4" />
         Askweedman.io
       </div>
     );
