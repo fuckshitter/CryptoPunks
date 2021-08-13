@@ -13,7 +13,7 @@ const MyCryptoBoys = ({
 }) => {
   const [loading, setLoading] = useState(false);
   const [myCryptoBoys, setMyCryptoBoys] = useState([]);
-  const [items, setItems] = useState([]);
+  //const [items, setItems] = useState([]);
 
   function onPressCard() {
     //Alert.alert('You selected the card!');
@@ -34,8 +34,9 @@ const MyCryptoBoys = ({
     setMyCryptoBoys(my_crypto_boys);
   }, [cryptoBoys]);
 
-  const elements = cryptoBoys;
+  const elements = this.props.cryptoBoys;
 
+  const items = []
 //  const items = []
 
   for (const [index, value] of elements.entries()) {
