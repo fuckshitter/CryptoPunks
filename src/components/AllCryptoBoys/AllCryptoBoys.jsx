@@ -26,11 +26,15 @@ class AllCryptoBoys extends Component {
     const items = []
 
     for (const [index, value] of elements.entries()) {
-      items.push(<li key={index}>{value}</li>)
+
+      var s = index+"";
+      while (s.length < 4) s = "0" + s;
+      var newImageUrl = '/images/punks/punk-' + s + 'x8.png';
+      items.push(<li key={index}><img src={newImageUrl} /> {value}</li>)
     }
     return (
       <div>
-      <hr className="my-4" />   
+      <hr className="my-4" />
       <p className="lead">
         This is an NFT marketplace where you can get Baked Punks.
       </p>
