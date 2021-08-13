@@ -120,8 +120,8 @@ class App extends Component {
           const totalTokensOwnedByAccount2 = await cryptoBoysContract.methods
             .punksRemainingToAssign()
             .call();
-          this.totalTokensOwnedByAccount  = 10;
-          this.setState(this.totalTokensOwnedByAccount);
+          this.state.totalTokensOwnedByAccount  = 10;
+          this.setState(this.state.totalTokensOwnedByAccount);
 
   	       this.setState({ loading: false });
         } else {
