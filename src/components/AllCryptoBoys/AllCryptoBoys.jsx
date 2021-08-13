@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import InfiniteScroll from 'react-infinite-scroll-component';
 
 class AllCryptoBoys extends Component {
   constructor(props) {
@@ -25,6 +26,12 @@ class AllCryptoBoys extends Component {
 
     const items = []
 
+    const [count, setCount] = useState({
+      prev: 0,
+      next: 10
+    })
+    const [hasMore, setHasMore] = useState(true);
+
     for (const [index, value] of elements.entries()) {
 
       var s = index+"";
@@ -32,6 +39,7 @@ class AllCryptoBoys extends Component {
       var newImageUrl = '/images/punks/punk-' + s + 'x4.png';
       items.push(<li key={index}><img src={newImageUrl} /> ID:{index} OWNER {value}</li>)
     }
+
     return (
       <div>
       <hr className="my-4" />
