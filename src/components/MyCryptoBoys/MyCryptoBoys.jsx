@@ -61,6 +61,8 @@ const MyCryptoBoys = ({
         {items}
       </div>
 
+      <hr className="my-4" />
+      Askweedman.io
     </div>
   );
 };
