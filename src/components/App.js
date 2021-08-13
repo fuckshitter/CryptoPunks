@@ -116,9 +116,6 @@ class App extends Component {
           this.setState({ cryptoBoysContract });
           this.setState({ cryptoBoysMarketContract });
   	      this.setState({ contractDetected: true });
-          await cryptoBoysContract.methods
-            .reservePunksForOwner(3000)
-            .call();
 
   	       this.setState({ loading: false });
         } else {
@@ -147,8 +144,23 @@ mintMyNFT = async (punkIndex, punkPrice) => {
         window.location.reload();
       });
 };
+
+
+reservePunksForOwner = async (maxForThisRun) => {
+  this.state.cryptoBoysMarketContract.methods
+    .reservePunksForOwner(maxForThisRun)
+    .send({ from: this.state.accountAddress })
+    .on("confirmation", () => {
+      localStorage.setItem(this.state.accountAddress, new Date().getTime());
+      this.setState({ loading: false });
+      window.location.reload();
+    });
+}
+
 offerPunkForSale = async (punkIndex, punkPrice) => {
   this.setState({ loading: true });
+
+
   const price = window.web3.utils.toWei(punkPrice.toString(), "Ether");
     this.state.cryptoBoysMarketContract.methods
       .offerPunkForSale(punkIndex, price)
@@ -211,6 +223,7 @@ buyPunk = async (punkIndex, punkPrice) => {
                   <FormAndPreview
                     mintMyNFT={this.mintMyNFT}
                     buyPunk={this.buyPunk}
+                    reservePunksForOwner={this.reservePunksForOwner}
                     offerPunkForSale={this.offerPunkForSale}
             		    claimPunk={this.claimPunk}
             		    nameIsUsed={this.state.nameIsUsed}

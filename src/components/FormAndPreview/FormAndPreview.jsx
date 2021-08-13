@@ -8,6 +8,7 @@ class FormAndPreview extends Component {
       cryptoPunkIndex: "",
       cryptoBunkImageURL: "/images/punks/punk-0001x8.png",
       cryptoBoyPrice: "",
+      maxForThisRun: 0,
     };
   }
   Load_New_Image=(e)=>{
@@ -47,6 +48,12 @@ class FormAndPreview extends Component {
       this.state.cryptoBoyPrice
     );
   };
+  callreservePunksForOwnerFromApp = (e) => {
+    e.preventDefault();
+    this.props.reservePunksForOwner(
+      this.state.maxForThisRun
+    );
+  };
   render() {
     return (
       <div>
@@ -59,6 +66,37 @@ class FormAndPreview extends Component {
         <img
             src={this.state.cryptoBunkImageURL}
             />
+            <form onSubmit={this.callreservePunksForOwnerFromApp} className="pt-4 mt-1">
+              <div className="row">
+                <div className="col-md-9">
+                  <div>
+                    <label htmlFor="punkId">Run Amount</label>
+                    <input
+                      required
+                      type="number"
+                      name="maxForThisRun"
+                      id="maxForThisRun"
+                      value={this.state.maxForThisRun}
+                      className="form-control"
+                      placeholder="Enter Max for This Run"
+                      onChange={(e) =>
+                        this.setState({ maxForThisRun: e.target.value })
+                      }
+                    />
+                  </div>
+                  <div>
+                  <button
+                    id="mintBtn22"
+                    style={{ fontSize: "0.9rem", letterSpacing: "0.14rem" }}
+                    type="submit"
+                    className="btn mt-4 btn-block btn-outline-primary"
+                  >
+                    Reserve For Owner
+                  </button>
+                  </div>
+                </div>
+              </div>
+            </form>
 
         <form onSubmit={this.callClaimPunkFromApp} className="pt-4 mt-1">
           <div className="row">
