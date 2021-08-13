@@ -44,7 +44,7 @@ const MyCryptoBoys = ({
       <p className="lead">
           You Own {balanceOf}
       </p>
-      <form onSubmit= className="pt-4 mt-1">
+      <form onSubmit="#" className="pt-4 mt-1">
         <div className="row">
           <div className="col-md-9">
             <div>
