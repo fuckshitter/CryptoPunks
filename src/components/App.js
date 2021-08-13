@@ -125,7 +125,14 @@ class App extends Component {
           const balanceOf = await cryptoBoysContract.methods
             .balanceOf(this.state.accountAddress)
             .call();
-          
+
+          const punkOwners = []
+          for (let i = 0; i < 3; i++) {
+            const punkOwner = await cryptoBoysContract.methods
+              .punkIndexToAddress(i)
+              .call();
+            items.push(punkOwner);  
+          }
           this.state.balanceOf  = balanceOf + "";
           this.state.totalTokensOwnedByAccount  = totalTokensOwnedByAccount2 + "";
           this.setState({totalTokensOwnedByAccount:this.state.totalTokensOwnedByAccount});
