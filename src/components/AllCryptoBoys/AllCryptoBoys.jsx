@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { Component } from "react";
 import InfiniteScroll from 'react-infinite-scroll-component';
 
 class AllCryptoBoys extends Component {
@@ -26,11 +26,6 @@ class AllCryptoBoys extends Component {
 
     const items = []
 
-    const [count, setCount] = useState({
-      prev: 0,
-      next: 10
-    })
-    const [hasMore, setHasMore] = useState(true);
 
     for (const [index, value] of elements.entries()) {
 
