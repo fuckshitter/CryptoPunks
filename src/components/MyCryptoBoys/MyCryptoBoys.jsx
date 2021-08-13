@@ -28,9 +28,9 @@ const MyCryptoBoys = ({
     setMyCryptoBoys(my_crypto_boys);
   }, [cryptoBoys]);
 
-  callLoadMyPunks(() => {
+  callLoadMyPunks = (e) => {
 
-  });
+  };
   return (
     <div>
       <div className="card mt-1">
@@ -44,7 +44,7 @@ const MyCryptoBoys = ({
       <p className="lead">
           You Own {balanceOf}
       </p>
-      <form onSubmit={this.callLoadMyPunks()} className="pt-4 mt-1">
+      <form onSubmit={this.callLoadMyPunks} className="pt-4 mt-1">
         <div className="row">
           <div className="col-md-9">
             <div>
