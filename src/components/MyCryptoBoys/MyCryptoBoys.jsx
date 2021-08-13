@@ -28,8 +28,8 @@ const MyCryptoBoys = ({
     setMyCryptoBoys(my_crypto_boys);
   }, [cryptoBoys]);
 
-  callLoadMyPunks = (e) => {
-
+  callLoadMyPunks = () => {
+    //this.props.changeTokenPrice(tokenId, newPrice);
   };
   return (
     <div>
@@ -44,7 +44,7 @@ const MyCryptoBoys = ({
       <p className="lead">
           You Own {balanceOf}
       </p>
-      <form onSubmit={this.callLoadMyPunks} className="pt-4 mt-1">
+      <form onSubmit={this.callLoadMyPunks()} className="pt-4 mt-1">
         <div className="row">
           <div className="col-md-9">
             <div>
