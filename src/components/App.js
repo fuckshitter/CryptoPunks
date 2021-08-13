@@ -270,6 +270,7 @@ loadMorePunks = async () => {
                     changeTokenPrice={this.changeTokenPrice}
                     toggleForSale={this.toggleForSale}
                     buyCryptoBoy={this.buyCryptoBoy}
+                    loadMorePunks={this.loadMorePunks}                    
                   />
                 )}
               />
