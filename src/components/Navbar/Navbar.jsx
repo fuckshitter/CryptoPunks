@@ -28,6 +28,11 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="nav-item">
+              <Link to="/marketplace" className="nav-link">
+                All Punks
+              </Link>
+            </li>
+            <li className="nav-item">
               <Link to="/my-tokens" className="nav-link">
                 My Punks
               </Link>

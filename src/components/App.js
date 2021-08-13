@@ -260,6 +260,19 @@ loadMorePunks = async () => {
                 )}
               />
               <Route
+                path="/marketplace"
+                render={() => (
+                  <AllCryptoBoys
+                    accountAddress={this.state.accountAddress}
+                    cryptoBoys={this.state.cryptoBoys}
+                    totalTokensMinted={this.state.totalTokensMinted}
+                    changeTokenPrice={this.changeTokenPrice}
+                    toggleForSale={this.toggleForSale}
+                    buyCryptoBoy={this.buyCryptoBoy}
+                  />
+                )}
+              />              
+              <Route
                 path="/my-tokens"
                 render={() => (
                   <MyCryptoBoys
