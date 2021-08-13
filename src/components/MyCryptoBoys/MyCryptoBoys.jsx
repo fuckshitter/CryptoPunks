@@ -3,46 +3,37 @@ import CryptoBoyNFTImage from "../CryptoBoyNFTImage/CryptoBoyNFTImage";
 import MyCryptoBoyNFTDetails from "../MyCryptoBoyNFTDetails/MyCryptoBoyNFTDetails";
 import Loading from "../Loading/Loading";
 
-const MyCryptoBoys = ({
-  accountAddress,
-  cryptoBoys,
-  balanceOf,
-  totalTokensOwnedByAccount,
-}) => {
+class MyCryptoBoys extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      accountAddress: "",
+      cryptoBoys: "/images/punks/punk-0001x8.png",
+      balanceOf: "",
+      totalTokensOwnedByAccount: 0,
+    };
+  }
+
+
   const [loading, setLoading] = useState(false);
   const [myCryptoBoys, setMyCryptoBoys] = useState([]);
 
 
 
-  useEffect(() => {
-    if (cryptoBoys.length !== 0) {
-      if (cryptoBoys[0].metaData !== undefined) {
-        setLoading(loading);
-      } else {
-        setLoading(false);
-      }
-    }
-    const my_crypto_boys = cryptoBoys.filter(
-      (cryptoboy) => cryptoboy.currentOwner === accountAddress
-    );
-    setMyCryptoBoys(my_crypto_boys);
-  }, [cryptoBoys]);
-
-  callLoadMyPunks = () => {
-    //this.props.changeTokenPrice(tokenId, newPrice);
-  };
+  
+render() {
   return (
     <div>
       <div className="card mt-1">
         <div className="card-body align-items-center d-flex justify-content-center">
           <h5>
-            Total No. of Baked Punks remaining {totalTokensOwnedByAccount} / 10000
+            Total No. of Baked Punks remaining {this.state.totalTokensOwnedByAccount} / 10000
           </h5>
         </div>
       </div>
       <hr className="my-4" />
       <p className="lead">
-          You Own {balanceOf}
+          You Own {this.state.balanceOf}
       </p>
       <form onSubmit="#" className="pt-4 mt-1">
         <div className="row">
@@ -61,7 +52,8 @@ const MyCryptoBoys = ({
         </div>
       </form>
     </div>
-  );
-};
+    );
+  }
+}
 
 export default MyCryptoBoys;
