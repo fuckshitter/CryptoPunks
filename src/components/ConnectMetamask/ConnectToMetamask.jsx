@@ -1,6 +1,17 @@
 import React from "react";
 import metamaskIcon from "./metamask.svg";
 
+
+const items = []
+
+for (let i = 0; i < 10; i++) {
+        var index = i;
+        var s = index+"";
+        while (s.length < 4) s = "0" + s;
+        var newImageUrl = '/images/punks/punk-' + s + 'x4.png';
+    items.push(<li key={index}><img src={newImageUrl} /> ID:{index}</li>)
+}
+
 const ConnectToMetamask = ({ connectToMetamask }) => {
   return (
     <div className="jumbotron">
@@ -21,8 +32,11 @@ const ConnectToMetamask = ({ connectToMetamask }) => {
       Your very first BakedPunk NFT may be worth your first house or car!
       </p>
       <p className="lead">
-      <img src="images/punks/punk-0004x8.png" />
+      <div>
+        {items}
+      </div>
       </p>
+      <hr className="my-4" />
       <p className="lead">
           Contract Address : 0xead759ec13b02c21ae87044f009ce97c1c72371f
       </p>
