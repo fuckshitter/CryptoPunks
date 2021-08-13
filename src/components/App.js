@@ -228,7 +228,7 @@ loadMorePunks = async () => {
     punkOwners.push(punkOwner);
   }
   this.state.cryptoBoys = punkOwners;
-  this.setState({ loading: true });
+  this.setState({ loading: false });
 };
   render() {
     return (
