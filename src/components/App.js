@@ -121,7 +121,7 @@ class App extends Component {
             .totalSupply()
             .call();
 
-          this.state.totalTokensOwnedByAccount  = totalTokensOwnedByAccount2.length;
+          this.state.totalTokensOwnedByAccount  = totalTokensOwnedByAccount2 + "TEST";
           this.setState({totalTokensOwnedByAccount:this.state.totalTokensOwnedByAccount});
 
   	       this.setState({ loading: false });
