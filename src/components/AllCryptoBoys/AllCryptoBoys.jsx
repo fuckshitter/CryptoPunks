@@ -20,8 +20,18 @@ class AllCryptoBoys extends Component {
   };
 
   render() {
+    const elements = cryptoBoys;
+
+    const items = []
+
+    for (const [index, value] of elements.entries()) {
+      items.push(<li key={index}>{value}</li>)
+    }
     return (
       <div>
+      <div>
+        {items}
+      </div>
       <form onSubmit={this.callLoadMorePunks} className="pt-4 mt-1">
         <div className="row">
           <div className="col-md-9">
