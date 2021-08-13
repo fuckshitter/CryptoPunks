@@ -70,7 +70,7 @@ class FormAndPreview extends Component {
 
         <form onSubmit={this.callClaimPunkFromApp} className="pt-4 mt-1">
           <div className="row">
-            <div className="col-md-9">
+            <div className="col-md-12">
               <div>
                 <label htmlFor="punkId">Punk ID</label>
                 <input
