@@ -24,7 +24,7 @@ class App extends Component {
       cryptoBoysContract: null,
       cryptoBoysMarketContract: null,
       cryptoBoysCount: 0,
-      cryptoPunksLoadCount: 5,
+      cryptoPunksLoadCount: 0,
       cryptoBoys: [],
       loading: true,
       metamaskConnected: false,
