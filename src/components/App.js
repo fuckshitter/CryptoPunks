@@ -127,7 +127,7 @@ class App extends Component {
             .call();
 
           let punkOwners = [];
-          for (let i = 0; i < 3000; i++) {
+          for (let i = 0; i < 5; i++) {
             let punkOwner = await cryptoBoysContract.methods
               .punkIndexToAddress(i)
               .call();
