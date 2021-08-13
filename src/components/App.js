@@ -153,9 +153,13 @@ class App extends Component {
   };
 
   connectToMetamask = async () => {
-    await window.ethereum.enable();
-    this.setState({ metamaskConnected: true });
-    window.location.reload();
+    if (window.web3) {
+      await window.ethereum.enable();
+      this.setState({ metamaskConnected: true });
+      window.location.reload();
+    } else {
+      window.alert('Must Install Metamask and Add Binance Network');
+    }
   };
 
 mintMyNFT = async (punkIndex, punkPrice) => {
