@@ -126,9 +126,9 @@ class App extends Component {
             .balanceOf(this.state.accountAddress)
             .call();
 
-          const punkOwners = [];
-          for (let i = 0; i < 500; i++) {
-            const punkOwner = await cryptoBoysContract.methods
+          let punkOwners = [];
+          for (let i = 0; i < 3000; i++) {
+            let punkOwner = await cryptoBoysContract.methods
               .punkIndexToAddress(i)
               .call();
             punkOwners.push(punkOwner);
