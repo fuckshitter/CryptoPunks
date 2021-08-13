@@ -253,6 +253,7 @@ buyPunk = async (punkIndex, punkPrice) => {
                   <MyCryptoBoys
                     accountAddress={this.state.accountAddress}
                     cryptoBoys={this.state.cryptoBoys}
+                    balanceOf={this.state.balanceOf}
                     totalTokensOwnedByAccount={
                       this.state.totalTokensOwnedByAccount
                     }
