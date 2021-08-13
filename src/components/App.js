@@ -28,7 +28,7 @@ class App extends Component {
       metamaskConnected: false,
       contractDetected: false,
       totalTokensMinted: 0,
-      totalTokensOwnedByAccount: null,
+      totalTokensOwnedByAccount: 0,
       nameIsUsed: false,
       colorIsUsed: false,
       colorsUsed: [],
