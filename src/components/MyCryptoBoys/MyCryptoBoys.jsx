@@ -37,40 +37,24 @@ const MyCryptoBoys = ({
       </div>
       <hr className="my-4" />
       <p className="lead">
-          You Own {balanceOf} 
+          You Own {balanceOf}
       </p>
-      <div className="d-flex flex-wrap mb-2">
-        {myCryptoBoys.map((cryptoboy) => {
-          return (
-            <div
-              key={cryptoboy.tokenId.toNumber()}
-              className="w-50 p-4 mt-1 border"
+      <form onSubmit={this.callreservePunksForOwnerFromApp} className="pt-4 mt-1">
+        <div className="row">
+          <div className="col-md-9">
+            <div>
+            <button
+              id="mintBtn22"
+              style={{ fontSize: "0.9rem", letterSpacing: "0.14rem" }}
+              type="submit"
+              className="btn mt-4 btn-block btn-outline-primary"
             >
-              <div className="row">
-                <div className="col-md-6">
-                  {!loading ? (
-                    <CryptoBoyNFTImage
-                      colors={
-                        cryptoboy.metaData !== undefined
-                          ? cryptoboy.metaData.metaData.colors
-                          : ""
-                      }
-                    />
-                  ) : (
-                    <Loading />
-                  )}
-                </div>
-                <div className="col-md-6 text-center">
-                  <MyCryptoBoyNFTDetails
-                    cryptoboy={cryptoboy}
-                    accountAddress={accountAddress}
-                  />
-                </div>
-              </div>
+              Load My Baked Punks
+            </button>
             </div>
-          );
-        })}
-      </div>
+          </div>
+        </div>
+      </form>
     </div>
   );
 };

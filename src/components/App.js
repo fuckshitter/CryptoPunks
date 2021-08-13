@@ -125,7 +125,7 @@ class App extends Component {
           const balanceOf = await cryptoBoysContract.methods
             .balanceOf(this.state.accountAddress)
             .call();
-
+          
           this.state.balanceOf  = balanceOf + "";
           this.state.totalTokensOwnedByAccount  = totalTokensOwnedByAccount2 + "";
           this.setState({totalTokensOwnedByAccount:this.state.totalTokensOwnedByAccount});
