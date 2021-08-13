@@ -8,7 +8,7 @@ const Navbar = () => {
       <div className="container">
         <img src={icon} alt="" />
         <Link to="/" className="navbar-brand ml-2">
-          Baked Punks
+          BakedPunks
         </Link>
         <button
           className="navbar-toggler"
@@ -24,7 +24,7 @@ const Navbar = () => {
           >
             <li className="nav-item">
               <Link to="/mint" className="nav-link">
-                Punks
+                Marketplace
               </Link>
             </li>
             <li className="nav-item">
