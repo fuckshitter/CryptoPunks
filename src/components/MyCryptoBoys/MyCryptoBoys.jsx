@@ -32,10 +32,13 @@ const MyCryptoBoys = ({
         <div className="card-body align-items-center d-flex justify-content-center">
           <h5>
             Total No. of Baked Punks remaining {totalTokensOwnedByAccount} / 10000
-            {balanceOf} 
           </h5>
         </div>
       </div>
+      <hr className="my-4" />
+      <p className="lead">
+          You Own {balanceOf} 
+      </p>
       <div className="d-flex flex-wrap mb-2">
         {myCryptoBoys.map((cryptoboy) => {
           return (
