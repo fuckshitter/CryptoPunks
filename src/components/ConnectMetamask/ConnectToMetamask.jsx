@@ -5,7 +5,7 @@ import metamaskIcon from "./metamask.svg";
 const items = []
 
 for (let i = 0; i < 10; i++) {
-        const rand = 0 + Math.random() * (9999 - 0);
+        const rand = 1 + Math.random() * (9999 - 1);
         var index = rand;
         var s = index+"";
         while (s.length < 4) s = "0" + s;
