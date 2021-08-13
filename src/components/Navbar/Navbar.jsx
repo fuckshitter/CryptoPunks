@@ -29,7 +29,7 @@ const Navbar = () => {
             </li>
             <li className="nav-item">
               <Link to="/my-tokens" className="nav-link">
-                My Tokens
+                My Punks
               </Link>
             </li>
           </ul>

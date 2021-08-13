@@ -42,24 +42,9 @@ const MyCryptoBoys = ({
       </div>
       <hr className="my-4" />
       <p className="lead">
-          You Own {balanceOf}
+          You Own {balanceOf} Punks
       </p>
-      <form onSubmit="onPressCard()"  className="pt-4 mt-1">
-        <div className="row">
-          <div className="col-md-9">
-            <div>
-            <button
-              id="mintBtn22"
-              style={{ fontSize: "0.9rem", letterSpacing: "0.14rem" }}
-              type="submit"
-              className="btn mt-4 btn-block btn-outline-primary"
-            >
-              Load My Punks
-            </button>
-            </div>
-          </div>
-        </div>
-      </form>
+      
     </div>
   );
 };
