@@ -8,8 +8,9 @@ const MyCryptoBoys = ({
   cryptoBoys,
   balanceOf,
   totalTokensOwnedByAccount,
+  loadMorePunks,
 }) => {
-  const [loading, setLoading, loadMorePunks] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [myCryptoBoys, setMyCryptoBoys] = useState([]);
 
   function onPressCard() {
