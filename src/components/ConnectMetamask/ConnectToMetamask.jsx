@@ -5,10 +5,10 @@ const ConnectToMetamask = ({ connectToMetamask }) => {
   return (
     <div className="jumbotron">
       <h1 className="display-5">
-        Baked Punks NFT Marketplace
+        BakedPunks NFT Marketplace
       </h1>
       <p className="lead">
-        This is an NFT marketplace where you can claim your Baked Punks.
+        This is an NFT marketplace where you can claim your BakedPunks.
       </p>
       <hr className="my-4" />
       <p className="lead">
@@ -17,8 +17,11 @@ const ConnectToMetamask = ({ connectToMetamask }) => {
       By minting a BakedPunk, you become the proud owner of the very first punk NFT on the Binance network.
       What’s more is, there can only ever be 10,000 punks.
       When you decide to mint one, you will receive a unique-one-of-a-kind
-      BakedPunk with proof of ownership stored on the polygon network. Who knows? 
+      BakedPunk with proof of ownership stored on the polygon network. Who knows?
       Your very first BakedPunk NFT may be worth your first house or car!
+      </p>
+      <p className="lead">
+      <img src="images/punks/punk-0004x8.png" />
       </p>
       <p className="lead">
           Contract Address : 0xead759ec13b02c21ae87044f009ce97c1c72371f
