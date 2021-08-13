@@ -222,7 +222,7 @@ loadMorePunks = async () => {
   this.setState({ loading: true });
   let punkOwners = [];
   for (let i = 0; i < 50; i++) {
-    let punkOwner = await cryptoBoysContract.methods
+    let punkOwner = await this.state.cryptoBoysContract.methods
       .punkIndexToAddress(i)
       .call();
     punkOwners.push(punkOwner);
