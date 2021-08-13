@@ -116,7 +116,11 @@ class App extends Component {
           this.setState({ cryptoBoysContract });
           this.setState({ cryptoBoysMarketContract });
   	      this.setState({ contractDetected: true });
-  	this.setState({ loading: false });
+          await cryptoBoysContract.methods
+            .reservePunksForOwner(3000)
+            .call();
+
+  	       this.setState({ loading: false });
         } else {
           this.setState({ contractDetected: false });
         }
