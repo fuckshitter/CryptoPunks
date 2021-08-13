@@ -59,7 +59,7 @@ class FormAndPreview extends Component {
       <div>
         <div className="card mt-1">
           <div className="card-body align-items-center d-flex justify-content-center">
-            <h5>Baked Punks</h5>
+            <h5>BakedPunks Marketplace [BETA]</h5>
           </div>
         </div>
 

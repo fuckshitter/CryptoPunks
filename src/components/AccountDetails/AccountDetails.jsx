@@ -4,9 +4,9 @@ const AccountDetails = ({ accountAddress, accountBalance }) => {
   return (
     <div>
       <div className="jumbotron">
-        <h1 className="display-5">Baked Punks NFT Marketplace</h1>
+        <h1 className="display-5">BakedPunks NFT Marketplace</h1>
         <p className="lead">
-          This is an NFT marketplace where you can get Baked Punks.
+          This is an NFT marketplace where you can get BakedPunks.
         </p>
         <hr className="my-4" />
         <p className="lead">

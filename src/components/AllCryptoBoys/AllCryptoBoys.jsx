@@ -36,7 +36,7 @@ class AllCryptoBoys extends Component {
       <div>
       <hr className="my-4" />
       <p className="lead">
-        This is an NFT marketplace where you can get Baked Punks.
+        View All 10,000 BakedPunks.
       </p>
       <hr className="my-4" />
       <p className="lead">
