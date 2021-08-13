@@ -39,7 +39,7 @@ const ConnectToMetamask = ({ connectToMetamask }) => {
       </p>
       <hr className="my-4" />
       <p className="lead">
-          Contract Address : 0xead759ec13b02c21ae87044f009ce97c1c72371f
+          Contract Address : <a href="https://bscscan.com/address/0xead759ec13b02c21ae87044f009ce97c1c72371f" >0xea...371f</a>
       </p>
 
       <hr className="my-4" />
