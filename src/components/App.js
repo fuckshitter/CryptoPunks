@@ -232,6 +232,7 @@ loadMorePunks = async () => {
   }
   this.state.cryptoPunksLoadCount += incAmt;
   //this.setState({ loading: false });
+  window.location.reload(false);
 };
   render() {
     return (
