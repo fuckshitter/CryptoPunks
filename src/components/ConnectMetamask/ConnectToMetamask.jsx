@@ -20,7 +20,7 @@ const ConnectToMetamask = ({ connectToMetamask }) => {
         BakedPunks NFT Marketplace
       </h1>
       <p className="lead">
-        This is an NFT marketplace where you can claim your BakedPunks.
+        This is an NFT marketplace where you can claim, buy and sell your BakedPunks.
       </p>
       <hr className="my-4" />
       <p className="lead">

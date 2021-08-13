@@ -222,7 +222,7 @@ buyPunk = async (punkIndex, punkPrice) => {
       });
 };
 loadMorePunks = async () => {
-  this.setState({ loading: true });
+  //this.setState({ loading: true });
   let incAmt = 20;
   for (let i = this.state.cryptoPunksLoadCount; i < this.state.cryptoPunksLoadCount + incAmt; i++) {
     let punkOwner = await this.state.cryptoBoysContract.methods
@@ -231,7 +231,7 @@ loadMorePunks = async () => {
     this.state.cryptoBoys.push(punkOwner);
   }
   this.state.cryptoPunksLoadCount += incAmt;
-  this.setState({ loading: false });
+  //this.setState({ loading: false });
 };
   render() {
     return (
