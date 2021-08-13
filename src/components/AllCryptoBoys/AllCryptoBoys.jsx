@@ -1,4 +1,4 @@
-import React, { Component }, { useState } from "react";
+import React, { Component, useState } from "react";
 import InfiniteScroll from 'react-infinite-scroll-component';
 
 class AllCryptoBoys extends Component {
