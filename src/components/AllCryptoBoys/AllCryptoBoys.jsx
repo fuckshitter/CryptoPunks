@@ -8,6 +8,7 @@ class AllCryptoBoys extends Component {
       cryptoBunkImageURL: "/images/punks/punk-0001x8.png",
       cryptoBoyPrice: "",
       maxForThisRun: 0,
+      cryptoBoys: null,
     };
   }
 
@@ -20,7 +21,7 @@ class AllCryptoBoys extends Component {
   };
 
   render() {
-    const elements = cryptoBoys;
+    const elements = this.props.cryptoBoys;
 
     const items = []
 
