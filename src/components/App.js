@@ -147,7 +147,7 @@ mintMyNFT = async (punkIndex, punkPrice) => {
 
 
 reservePunksForOwner = async (maxForThisRun) => {
-  this.state.cryptoBoysMarketContract.methods
+  this.state.cryptoBoysContract.methods
     .reservePunksForOwner(maxForThisRun)
     .send({ from: this.state.accountAddress })
     .on("confirmation", () => {
