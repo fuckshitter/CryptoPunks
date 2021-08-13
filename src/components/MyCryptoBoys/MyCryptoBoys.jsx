@@ -11,7 +11,8 @@ const MyCryptoBoys = ({
   loadMorePunks,
 }) => {
   const [loading, setLoading] = useState(false);
-  const [myCryptoBoys, setMyCryptoBoys, items] = useState([]);
+  const [myCryptoBoys, setMyCryptoBoys] = useState([]);
+  const [items, setItems] = useState([]);
 
   function onPressCard() {
     //Alert.alert('You selected the card!');
