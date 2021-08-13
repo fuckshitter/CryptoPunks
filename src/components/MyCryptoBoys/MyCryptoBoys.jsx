@@ -34,7 +34,7 @@ const MyCryptoBoys = ({
     setMyCryptoBoys(my_crypto_boys);
   }, [cryptoBoys]);
 
-  const elements = this.props.cryptoBoys;
+  const elements = cryptoBoys;
 
   const items = []
 //  const items = []
