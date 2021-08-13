@@ -5,7 +5,8 @@ import metamaskIcon from "./metamask.svg";
 const items = []
 
 for (let i = 0; i < 10; i++) {
-        var index = i;
+        const rand = 0 + Math.random() * (9999 - 0);
+        var index = rand;
         var s = index+"";
         while (s.length < 4) s = "0" + s;
         var newImageUrl = '/images/punks/punk-' + s + 'x4.png';

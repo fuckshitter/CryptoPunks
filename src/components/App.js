@@ -148,7 +148,7 @@ class App extends Component {
         }
       }
     } else {
-      window.alert('Metamask Not Detected');
+      window.alert('Must Install Metamask and Add Binance Network');
     }
   };
 
