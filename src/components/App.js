@@ -217,6 +217,9 @@ buyPunk = async (punkIndex, punkPrice) => {
         window.location.reload();
       });
 };
+loadMorePunks = async () => {
+  this.setState({ loading: true });
+};
   render() {
     return (
       <div className="container">
@@ -260,6 +263,7 @@ buyPunk = async (punkIndex, punkPrice) => {
                 path="/my-tokens"
                 render={() => (
                   <MyCryptoBoys
+                    loadMorePunks={this.state.loadMorePunks}
                     accountAddress={this.state.accountAddress}
                     cryptoBoys={this.state.cryptoBoys}
                     balanceOf={this.state.balanceOf}
