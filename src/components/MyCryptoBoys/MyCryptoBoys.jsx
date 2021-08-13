@@ -16,7 +16,7 @@ const MyCryptoBoys = ({
   function onPressCard() {
     //Alert.alert('You selected the card!');
       window.alert('Loading Punks');
-      loadMorePunks();
+      props.loadMorePunks();
   }
 
   useEffect(() => {
