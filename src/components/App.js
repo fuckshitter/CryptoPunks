@@ -28,6 +28,7 @@ class App extends Component {
       metamaskConnected: false,
       contractDetected: false,
       totalTokensMinted: 0,
+      balanceOf: 0,
       totalTokensOwnedByAccount: 0,
       nameIsUsed: false,
       colorIsUsed: false,
@@ -125,9 +126,10 @@ class App extends Component {
             .balanceOf(this.state.accountAddress)
             .call();
 
-
+          this.state.balanceOf  = balanceOf + "";
           this.state.totalTokensOwnedByAccount  = totalTokensOwnedByAccount2 + "";
           this.setState({totalTokensOwnedByAccount:this.state.totalTokensOwnedByAccount});
+          this.setState({balanceOf:this.state.balanceOf});
 
   	       this.setState({ loading: false });
         } else {
