@@ -11,7 +11,7 @@ const MyCryptoBoys = ({
   loadMorePunks,
 }) => {
   const [loading, setLoading] = useState(false);
-  const [myCryptoBoys, setMyCryptoBoys] = useState([]);
+  const [myCryptoBoys, setMyCryptoBoys, items] = useState([]);
 
   function onPressCard() {
     //Alert.alert('You selected the card!');
@@ -34,7 +34,7 @@ const MyCryptoBoys = ({
 
   const elements = cryptoBoys;
 
-  const items = []
+//  const items = []
 
   for (const [index, value] of elements.entries()) {
     if(accountAddress == value){
