@@ -9,7 +9,7 @@ for (let i = 0; i < 10; i++) {
         var s = index+"";
         while (s.length < 4) s = "0" + s;
         var newImageUrl = '/images/punks/punk-' + s + 'x4.png';
-    items.push(<img src={newImageUrl} /> ID:{index})
+    items.push(<img src={newImageUrl} />)
 }
 
 const ConnectToMetamask = ({ connectToMetamask }) => {
