@@ -13,9 +13,9 @@ const MyCryptoBoys = ({
   const [myCryptoBoys, setMyCryptoBoys] = useState([]);
 
   function onPressCard() {
-    Alert.alert('You selected the card!');
+    //Alert.alert('You selected the card!');
   }
-  
+
   useEffect(() => {
     if (cryptoBoys.length !== 0) {
       if (cryptoBoys[0].metaData !== undefined) {
