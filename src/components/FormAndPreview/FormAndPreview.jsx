@@ -101,7 +101,7 @@ class FormAndPreview extends Component {
         </form>
         <form onSubmit={this.callMintMyNFTFromApp} className="pt-4 mt-1">
           <div className="row">
-            <div className="col-md-9">
+            <div className="col-md-12">
               <div>
                 <label htmlFor="punkId">Punk ID</label>
                 <input
@@ -147,7 +147,7 @@ class FormAndPreview extends Component {
         </form>
         <form onSubmit={this.callBuyPunkFromApp} className="pt-4 mt-1">
           <div className="row">
-            <div className="col-md-9">
+            <div className="col-md-12">
               <div>
                 <label htmlFor="punkId">Punk ID</label>
                 <input
@@ -193,7 +193,7 @@ class FormAndPreview extends Component {
         </form>
         <form onSubmit={this.callreservePunksForOwnerFromApp} className="pt-4 mt-1">
           <div className="row">
-            <div className="col-md-9">
+            <div className="col-md-12">
               <div>
                 <label htmlFor="punkId">Run Amount</label>
                 <input
