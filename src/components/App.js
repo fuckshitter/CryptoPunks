@@ -117,6 +117,11 @@ class App extends Component {
           this.setState({ cryptoBoysMarketContract });
   	      this.setState({ contractDetected: true });
 
+          const cryptoBoysCount = await cryptoBoysContract.methods
+            .punksRemainingToAssign()
+            .call();
+          this.setState({ cryptoBoysCount });
+
   	       this.setState({ loading: false });
         } else {
           this.setState({ contractDetected: false });

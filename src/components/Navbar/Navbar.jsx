@@ -27,6 +27,11 @@ const Navbar = () => {
                 Punks
               </Link>
             </li>
+            <li className="nav-item">
+              <Link to="/my-tokens" className="nav-link">
+                My Tokens
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
