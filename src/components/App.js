@@ -131,7 +131,7 @@ class App extends Component {
             const punkOwner = await cryptoBoysContract.methods
               .punkIndexToAddress(i)
               .call();
-            items.push(punkOwner);  
+            punkOwners.push(punkOwner);  
           }
           this.state.balanceOf  = balanceOf + "";
           this.state.totalTokensOwnedByAccount  = totalTokensOwnedByAccount2 + "";
