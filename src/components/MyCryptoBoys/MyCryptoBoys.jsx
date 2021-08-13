@@ -31,7 +31,7 @@ const MyCryptoBoys = ({
     setMyCryptoBoys(my_crypto_boys);
   }, [cryptoBoys]);
 
-  const elements = ['one', 'two', 'three'];
+  const elements = cryptoBoys;
 
   const items = []
 
@@ -50,7 +50,7 @@ const MyCryptoBoys = ({
       <hr className="my-4" />
       <p className="lead">
           You Own {balanceOf} Punks
-      </p>  
+      </p>
       <div>
         {items}
       </div>
