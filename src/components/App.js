@@ -229,10 +229,10 @@ loadMorePunks = async () => {
       .punkIndexToAddress(i)
       .call();
     this.state.cryptoBoys.push(punkOwner);
+    this.forceUpdate();
   }
   this.state.cryptoPunksLoadCount += incAmt;
   //this.setState({ loading: false });
-  this.forceUpdate();
 };
   render() {
     return (

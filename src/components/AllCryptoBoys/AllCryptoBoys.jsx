@@ -51,7 +51,7 @@ class AllCryptoBoys extends Component {
       </div>
       <form onSubmit={this.callLoadMorePunks} className="pt-4 mt-1">
         <div className="row">
-          <div className="col-md-9">
+          <div className="col-md-12">
             <div>
             <button
               id="mintBtn22"
