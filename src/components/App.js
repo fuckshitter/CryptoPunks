@@ -117,9 +117,10 @@ class App extends Component {
           this.setState({ cryptoBoysMarketContract });
   	      this.setState({ contractDetected: true });
 
+          const totalTokensOwnedByAccount2 = await cryptoBoysContract.methods
+            .getTotalSupply()
+            .call();
 
-
-          const totalTokensOwnedByAccount2 = cryptoBoysContract.totalSupply;
           this.state.totalTokensOwnedByAccount  = totalTokensOwnedByAccount2;
           this.setState({totalTokensOwnedByAccount:this.state.totalTokensOwnedByAccount});
 
