@@ -12,6 +12,10 @@ const MyCryptoBoys = ({
   const [loading, setLoading] = useState(false);
   const [myCryptoBoys, setMyCryptoBoys] = useState([]);
 
+  callLoadMyPunks = () => {
+
+  };
+
   useEffect(() => {
     if (cryptoBoys.length !== 0) {
       if (cryptoBoys[0].metaData !== undefined) {
@@ -39,7 +43,7 @@ const MyCryptoBoys = ({
       <p className="lead">
           You Own {balanceOf}
       </p>
-      <form onSubmit={this.callreservePunksForOwnerFromApp} className="pt-4 mt-1">
+      <form onSubmit={this.callLoadMyPunks} className="pt-4 mt-1">
         <div className="row">
           <div className="col-md-9">
             <div>
