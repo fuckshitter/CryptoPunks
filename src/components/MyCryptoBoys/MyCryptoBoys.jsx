@@ -31,6 +31,13 @@ const MyCryptoBoys = ({
     setMyCryptoBoys(my_crypto_boys);
   }, [cryptoBoys]);
 
+  const elements = ['one', 'two', 'three'];
+
+  const items = []
+
+  for (const [index, value] of elements.entries()) {
+    items.push(<li key={index}>{value}</li>)
+  }
   return (
     <div>
       <div className="card mt-1">
@@ -43,8 +50,10 @@ const MyCryptoBoys = ({
       <hr className="my-4" />
       <p className="lead">
           You Own {balanceOf} Punks
-      </p>
-      
+      </p>  
+      <div>
+        {items}
+      </div>
     </div>
   );
 };
