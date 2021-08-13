@@ -220,6 +220,15 @@ buyPunk = async (punkIndex, punkPrice) => {
 };
 loadMorePunks = async () => {
   this.setState({ loading: true });
+  let punkOwners = [];
+  for (let i = 0; i < 50; i++) {
+    let punkOwner = await cryptoBoysContract.methods
+      .punkIndexToAddress(i)
+      .call();
+    punkOwners.push(punkOwner);
+  }
+  this.state.cryptoBoys = punkOwners;
+  this.setState({ loading: true });
 };
   render() {
     return (
