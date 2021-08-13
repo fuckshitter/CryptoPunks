@@ -121,7 +121,7 @@ class App extends Component {
             .punksRemainingToAssign()
             .call();
 
-          this.state.totalTokensOwnedByAccount  = totalTokensOwnedByAccount2 + "TEST";
+          this.state.totalTokensOwnedByAccount  = totalTokensOwnedByAccount2 + "";
           this.setState({totalTokensOwnedByAccount:this.state.totalTokensOwnedByAccount});
 
   	       this.setState({ loading: false });
