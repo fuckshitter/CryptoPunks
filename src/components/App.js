@@ -24,6 +24,7 @@ class App extends Component {
       cryptoBoysContract: null,
       cryptoBoysMarketContract: null,
       cryptoBoysCount: 0,
+      cryptoPunksLoadCount: 5,
       cryptoBoys: [],
       loading: true,
       metamaskConnected: false,
@@ -128,7 +129,7 @@ class App extends Component {
             .call();
 
           let punkOwners = [];
-          for (let i = 0; i < 5; i++) {
+          for (let i = 0; i < this.state.cryptoPunksLoadCount; i++) {
             let punkOwner = await cryptoBoysContract.methods
               .punkIndexToAddress(i)
               .call();
@@ -220,14 +221,13 @@ buyPunk = async (punkIndex, punkPrice) => {
 };
 loadMorePunks = async () => {
   this.setState({ loading: true });
-  let punkOwners = [];
-  for (let i = 0; i < 50; i++) {
+  for (let i = this.state.cryptoPunksLoadCount; i < 50; i++) {
     let punkOwner = await this.state.cryptoBoysContract.methods
       .punkIndexToAddress(i)
       .call();
-    punkOwners.push(punkOwner);
+    this.state.cryptoBoys.push(punkOwner);
   }
-  this.state.cryptoBoys = punkOwners;
+  this.state.cryptoPunksLoadCount += 50;
   this.setState({ loading: false });
 };
   render() {

@@ -56,15 +56,6 @@ const MyCryptoBoys = ({
         {items}
       </div>
 
-      <button
-        id="mintBtn22"
-        style={{ fontSize: "0.9rem", letterSpacing: "0.14rem" }}
-        type="submit"
-        className="btn mt-4 btn-block btn-outline-primary"
-        onClick={onPressCard}
-      >
-        Load More
-      </button>
     </div>
   );
 };
