@@ -15,12 +15,10 @@ class MyCryptoBoys extends Component {
   }
 
 
-  const [loading, setLoading] = useState(false);
-  const [myCryptoBoys, setMyCryptoBoys] = useState([]);
 
 
 
-  
+
 render() {
   return (
     <div>
