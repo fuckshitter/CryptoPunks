@@ -6,6 +6,7 @@ import Web3 from "web3";
 import CryptoPunks from "../abis/CryptoPunks.json";
 import CryptoPunksMarket from "../abis/CryptoPunksMarket.json";
 
+import AllCryptoBoys from "./AllCryptoBoys/AllCryptoBoys";
 import FormAndPreview from "../components/FormAndPreview/FormAndPreview";
 import AccountDetails from "./AccountDetails/AccountDetails";
 import ContractNotDeployed from "./ContractNotDeployed/ContractNotDeployed";
@@ -271,7 +272,7 @@ loadMorePunks = async () => {
                     buyCryptoBoy={this.buyCryptoBoy}
                   />
                 )}
-              />              
+              />
               <Route
                 path="/my-tokens"
                 render={() => (
