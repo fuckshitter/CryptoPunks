@@ -12,9 +12,7 @@ const MyCryptoBoys = ({
   const [loading, setLoading] = useState(false);
   const [myCryptoBoys, setMyCryptoBoys] = useState([]);
 
-  callLoadMyPunks = () => {
 
-  };
 
   useEffect(() => {
     if (cryptoBoys.length !== 0) {
@@ -30,6 +28,9 @@ const MyCryptoBoys = ({
     setMyCryptoBoys(my_crypto_boys);
   }, [cryptoBoys]);
 
+  callLoadMyPunks(() => {
+
+  });
   return (
     <div>
       <div className="card mt-1">
