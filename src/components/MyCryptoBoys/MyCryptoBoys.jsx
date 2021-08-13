@@ -37,7 +37,9 @@ const MyCryptoBoys = ({
   const items = []
 
   for (const [index, value] of elements.entries()) {
-    items.push(<li key={index}>{value}</li>)
+    if(accountAddress == value){
+      items.push(<li key={index}>{value}</li>)
+    }
   }
   return (
     <div>
