@@ -20,9 +20,10 @@ class FormAndPreview extends Component {
   handleQueryString = () => {
      // Parsing the query string
      // Using parse method
-     let queries = queryString.parse(this.props.location.search)
-     console.log(queries)
-     this.setState(queries)
+     const search = useLocation();
+     let queries = queryString.parse(search);
+     console.log(queries);
+     this.setState(queries);
   }
 
   Load_New_Image=(e)=>{
