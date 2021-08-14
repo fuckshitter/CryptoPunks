@@ -86,7 +86,7 @@ const MyCryptoBoys = ({
           </li>
         </ul>
 
-        <Child name={query.get("punkid")} />
+        <Child punkid={query.get("punkid")} />
       </div>
       <div className="row">
         {items}
