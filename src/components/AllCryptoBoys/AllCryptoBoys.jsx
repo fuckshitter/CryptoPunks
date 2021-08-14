@@ -46,7 +46,7 @@ class AllCryptoBoys extends Component {
           Contract Address : 0xead759ec13b02c21ae87044f009ce97c1c72371f
       </p>
       <hr className="my-4" />
-      <div>
+      <div className="col-md-12">
         {items}
       </div>
       <form onSubmit={this.callLoadMorePunks} className="pt-4 mt-1">
