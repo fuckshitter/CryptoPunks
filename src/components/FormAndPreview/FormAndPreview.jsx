@@ -13,6 +13,10 @@ class FormAndPreview extends Component {
       addressTo: "",
     };
   }
+
+  const search = this.props.location.search;
+  const name = new URLSearchParams(search).get('punkid');
+
   Load_New_Image=(e)=>{
       this.state.punkid =e.target.value;
       var s = this.state.punkid+"";
@@ -66,8 +70,6 @@ class FormAndPreview extends Component {
 
   render() {
 
-  const search = this.props.location.search;
-  const name = new URLSearchParams(search).get('punkid');
 
     return (
       <div>
