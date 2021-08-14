@@ -25,7 +25,7 @@ class AllCryptoBoys extends Component {
   callGoToPunk = (e) => {
     e.preventDefault();
     window.alert("Non-Ethereum browser detected. You should consider trying MetaMask! " + e.target.value);
-    window.open("/mint");
+    window.open("#/mint");
     //this.props.loadMorePunks();
   };
 
