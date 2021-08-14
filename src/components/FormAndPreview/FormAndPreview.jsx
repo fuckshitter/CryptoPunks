@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import CryptoBoyNFTImage from "../CryptoBoyNFTImage/CryptoBoyNFTImage";
 import {useLocation} from "react-router-dom";
 import queryString from 'query-string'
+import { HashRouter } from 'react-router-dom'
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 class FormAndPreview extends Component {
   constructor(props) {
