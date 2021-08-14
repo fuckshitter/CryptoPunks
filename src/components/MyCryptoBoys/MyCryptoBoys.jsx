@@ -66,7 +66,6 @@ const MyCryptoBoys = ({
           </h5>
         </div>
       </div>
-        <Child name={query.get("punkid")} />
       <hr className="my-4" />
       <p className="lead">
           You Own {balanceOf} Punks
@@ -82,24 +81,6 @@ const MyCryptoBoys = ({
       Askweedman.io
     </div>
   );
-  function Child({ punkid }) {
-    if(punkid){
-        selectedpunkid = punkid;
-        //state.punkid  = selectedpunkid;
-    }
-    return (
-      <div>
-        {punkid ? (
-          <h3>
-            The <code>name</code> in the query string is &quot;{punkid} Logic :{selectedpunkid}
-            &quot;
-          </h3>
-        ) : (
-          <h3>There is no punkid in the query string </h3>
-        )}
-      </div>
-    );
-  }
 };
 
 
