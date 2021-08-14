@@ -35,7 +35,7 @@ class FormAndPreview extends Component {
 
   componentDidMount = async () => {
 
-    this.state.punkid = new URLSearchParams(this.props.location.search).get("punkid")
+    this.state.punkid = new URLSearchParams(useLocation().search).get("punkid")
     await this.props.setMintBtnTimer();
   };
 
