@@ -289,6 +289,8 @@ loadMorePunks = async () => {
                     colorIsUsed={this.state.colorIsUsed}
                     colorsUsed={this.state.colorsUsed}
                     setMintBtnTimer={this.setMintBtnTimer}
+                    />
+                  )}
               />  
               <Route
                 path="/marketplace"
