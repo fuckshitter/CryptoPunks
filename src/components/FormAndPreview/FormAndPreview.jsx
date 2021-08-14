@@ -76,6 +76,7 @@ class FormAndPreview extends Component {
     function handleQueryString (){
        // Parsing the query string
        // Using parse method
+       window.alert("reached function");
        const search = useLocation();
        let queries = queryString.parse(search);
        console.log(queries);
