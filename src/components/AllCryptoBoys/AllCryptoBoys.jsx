@@ -32,7 +32,7 @@ class AllCryptoBoys extends Component {
       var s = index+"";
       while (s.length < 4) s = "0" + s;
       var newImageUrl = '/images/punks/punk-' + s + 'x4.png';
-      items.push(<div class="card" ><p id={index}><img src={newImageUrl} /> PUNK NO {index} PUNK OWNER {value}</p></div>)
+      items.push(<div class="card" ><img src={newImageUrl} /><div class="card-body"> <h5 class="card-title">PUNK NO {index}</h5><p class="card-text"> PUNK OWNER {value}</p></div></div>)
     }
 
     return (
