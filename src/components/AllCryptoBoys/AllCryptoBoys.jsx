@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import InfiniteScroll from 'react-infinite-scroll-component';
 import { Link } from "react-router-dom";
+import { withRouter } from 'react-router-dom'
 
 class AllCryptoBoys extends Component {
   constructor(props) {
