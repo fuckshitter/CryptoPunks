@@ -3,6 +3,11 @@ import CryptoBoyNFTImage from "../CryptoBoyNFTImage/CryptoBoyNFTImage";
 import MyCryptoBoyNFTDetails from "../MyCryptoBoyNFTDetails/MyCryptoBoyNFTDetails";
 import Loading from "../Loading/Loading";
 import ReactPaginate from 'react-paginate';
+import {
+  BrowserRouter as Router,
+  Link,
+  useLocation
+} from "react-router-dom";
 
 const MyCryptoBoys = ({
   accountAddress,
