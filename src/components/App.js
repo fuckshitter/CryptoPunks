@@ -276,21 +276,20 @@ loadMorePunks = async () => {
               />
               <Route
                 path="/mint"
-                render={() => (
+                render={(props) => (
                   <FormAndPreview
+                    {...props}
                     mintMyNFT={this.mintMyNFT}
                     buyPunk={this.buyPunk}
                     reservePunksForOwner={this.reservePunksForOwner}
                     offerPunkForSale={this.offerPunkForSale}
-            		    claimPunk={this.claimPunk}
-            		    transferPunk={this.transferPunk}
-            		    nameIsUsed={this.state.nameIsUsed}
+                    claimPunk={this.claimPunk}
+                    transferPunk={this.transferPunk}
+                    nameIsUsed={this.state.nameIsUsed}
                     colorIsUsed={this.state.colorIsUsed}
                     colorsUsed={this.state.colorsUsed}
                     setMintBtnTimer={this.setMintBtnTimer}
-                  />
-                )}
-              />
+              />  
               <Route
                 path="/marketplace"
                 render={() => (
