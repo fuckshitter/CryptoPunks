@@ -223,7 +223,7 @@ buyPunk = async (punkIndex, punkPrice) => {
 };
 transferPunk = async (addressTo, punkIndex) => {
   this.setState({ loading: true });
-    this.state.cryptoBoysMarketContract.methods
+    this.state.cryptoBoysContract.methods
       .transferPunk(addressTo, punkIndex)
       .send({ from: this.state.accountAddress})
       .on("confirmation", () => {
