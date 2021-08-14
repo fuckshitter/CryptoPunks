@@ -76,6 +76,8 @@ class FormAndPreview extends Component {
     return new URLSearchParams(useLocation().search);
   }
 
+  let query = useQuery();
+  
   render() {
 
 
