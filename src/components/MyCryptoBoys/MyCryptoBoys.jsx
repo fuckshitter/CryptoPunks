@@ -52,7 +52,7 @@ const MyCryptoBoys = ({
       <div className="card mt-1">
         <div className="card-body align-items-center d-flex justify-content-center">
           <h5>
-            Total No. of Baked Punks remaining {totalTokensOwnedByAccount} / 10000
+            Total No. of BakedPunks remaining {totalTokensOwnedByAccount} / 10000
           </h5>
         </div>
       </div>

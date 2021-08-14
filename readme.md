@@ -34,6 +34,10 @@ Once you are watching the contract you can execute the following functions to tr
 
 This is the official and genuine image of all of the CryptoPunks that have been created. To allow verification that the punks being managed by the CryptoPunks Ethereum contract are the same as what you see in the image, we have embedded a SHA256 hash of the image file into the contract. You can generate this hash for the punks image file via a command line similar to ```openssl sha -sha256 punks.png``` and compare that to the embedded hash in the contract ```ac39af4793119ee46bbff351d8cb6b5f23da60222126add4268e261199a2921b```.
 
+exec ssh-agent bash
+
+ssh-add cryptopunksssh
+
 npm i react-paginate
 
 npm i react-infinite-scroll-component

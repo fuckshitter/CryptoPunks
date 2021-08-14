@@ -221,6 +221,17 @@ buyPunk = async (punkIndex, punkPrice) => {
         window.location.reload();
       });
 };
+transferPunk = async (addressTo, punkIndex) => {
+  this.setState({ loading: true });
+    this.state.cryptoBoysMarketContract.methods
+      .transferPunk(addressTo, punkIndex)
+      .send({ from: this.state.accountAddress})
+      .on("confirmation", () => {
+        localStorage.setItem(this.state.accountAddress, new Date().getTime());
+        this.setState({ loading: false });
+        window.location.reload();
+      });
+};
 loadMorePunks = async () => {
   //this.setState({ loading: true });
   let incAmt = 1000;
@@ -266,6 +277,7 @@ loadMorePunks = async () => {
                     reservePunksForOwner={this.reservePunksForOwner}
                     offerPunkForSale={this.offerPunkForSale}
             		    claimPunk={this.claimPunk}
+            		    transferPunk={this.transferPunk}
             		    nameIsUsed={this.state.nameIsUsed}
                     colorIsUsed={this.state.colorIsUsed}
                     colorsUsed={this.state.colorsUsed}
