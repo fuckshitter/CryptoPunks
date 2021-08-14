@@ -41,3 +41,5 @@ ssh-add cryptopunksssh
 npm i react-paginate
 
 npm i react-infinite-scroll-component
+
+npm install query-string 

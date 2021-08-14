@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import CryptoBoyNFTImage from "../CryptoBoyNFTImage/CryptoBoyNFTImage";
 import {useLocation} from "react-router-dom";
+import queryString from 'query-string'
 
 class FormAndPreview extends Component {
   constructor(props) {
@@ -14,8 +15,13 @@ class FormAndPreview extends Component {
     };
   }
 
-  const search = this.props.location.search;
-  const name = new URLSearchParams(search).get('punkid');
+  handleQueryString = () => {
+     // Parsing the query string
+     // Using parse method
+     let queries = queryString.parse(this.props.location.search)
+     console.log(queries)
+     this.setState(queries)
+  }
 
   Load_New_Image=(e)=>{
       this.state.punkid =e.target.value;
@@ -69,6 +75,7 @@ class FormAndPreview extends Component {
   };
 
   render() {
+
 
 
     return (
