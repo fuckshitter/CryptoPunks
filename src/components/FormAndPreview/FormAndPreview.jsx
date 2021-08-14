@@ -66,7 +66,7 @@ class FormAndPreview extends Component {
 
   render() {
 
-  const search = props.location.search;
+  const search = this.props.location.search;
   const name = new URLSearchParams(search).get('punkid');
 
     return (
