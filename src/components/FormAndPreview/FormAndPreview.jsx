@@ -4,6 +4,7 @@ import {useLocation} from "react-router-dom";
 import queryString from 'query-string'
 import { HashRouter } from 'react-router-dom'
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { useLocation } from "react-router-dom";
 
 
 class FormAndPreview extends Component {
@@ -71,6 +72,10 @@ class FormAndPreview extends Component {
     );
   };
 
+
+  function useQuery() {
+    return new URLSearchParams(useLocation().search);
+  }
 
   render() {
 
