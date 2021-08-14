@@ -19,7 +19,9 @@ const MyCryptoBoys = ({
     //Alert.alert('You selected the card!');
       window.alert('Loading Punks');
   }
-
+  function useQuery() {
+    return new URLSearchParams(useLocation().search);
+  }
   useEffect(() => {
     if (cryptoBoys.length !== 0) {
       if (cryptoBoys[0].metaData !== undefined) {
@@ -56,6 +58,7 @@ const MyCryptoBoys = ({
           </h5>
         </div>
       </div>
+        <Child name={query.get("name")} />
       <hr className="my-4" />
       <p className="lead">
           You Own {balanceOf} Punks
@@ -68,6 +71,21 @@ const MyCryptoBoys = ({
       Askweedman.io
     </div>
   );
+  function Child({ name }) {
+    return (
+      <div>
+        {name ? (
+          <h3>
+            The <code>name</code> in the query string is &quot;{name}
+            &quot;
+          </h3>
+        ) : (
+          <h3>There is no name in the query string</h3>
+        )}
+      </div>
+    );
+  }
 };
+
 
 export default MyCryptoBoys;
