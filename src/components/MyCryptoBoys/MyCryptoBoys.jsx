@@ -54,6 +54,7 @@ const MyCryptoBoys = ({
       items.push(<div class="card col-md-3" ><img src={newImageUrl} /><div class="card-body"> <h5 class="card-title">PUNK NO {index}</h5><p class="card-text"> PUNK OWNER {value}</p></div></div>)
     }
   }
+  let query = useQuery();
   return (
     <div>
       <div className="card mt-1">
