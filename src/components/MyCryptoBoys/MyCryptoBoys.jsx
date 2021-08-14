@@ -13,6 +13,7 @@ const MyCryptoBoys = ({
   accountAddress,
   cryptoBoys,
   balanceOf,
+  selectedpunkid,
   totalTokensOwnedByAccount,
   loadMorePunks,
 }) => {
@@ -81,6 +82,9 @@ const MyCryptoBoys = ({
     </div>
   );
   function Child({ punkid }) {
+    if(punkid){
+        selectedpunkid = punkid;
+    }
     return (
       <div>
         {punkid ? (
