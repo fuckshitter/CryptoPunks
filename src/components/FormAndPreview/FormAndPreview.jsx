@@ -5,6 +5,16 @@ import queryString from 'query-string'
 import { HashRouter } from 'react-router-dom'
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
+function handleQueryString(){
+   // Parsing the query string
+   // Using parse method
+   window.alert("reached function");
+   const search = useLocation();
+   let queries = queryString.parse(search);
+   console.log(queries);
+   this.setState(queries);
+}
+
 class FormAndPreview extends Component {
   constructor(props) {
     super(props);
@@ -70,15 +80,7 @@ class FormAndPreview extends Component {
     );
   };
 
-  handleQueryString = (e) => {
-     // Parsing the query string
-     // Using parse method
-     window.alert("reached function");
-     const search = useLocation();
-     let queries = queryString.parse(search);
-     console.log(queries);
-     this.setState(queries);
-  }
+
   render() {
 
 
