@@ -5,15 +5,6 @@ import queryString from 'query-string'
 import { HashRouter } from 'react-router-dom'
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-function handleQueryString(){
-   // Parsing the query string
-   // Using parse method
-   window.alert("reached function");
-   const search = useLocation();
-   let queries = queryString.parse(search);
-   console.log(queries);
-   this.setState(queries);
-}
 
 class FormAndPreview extends Component {
   constructor(props) {
@@ -96,12 +87,6 @@ class FormAndPreview extends Component {
         <img
             src={this.state.cryptoBunkImageURL}
             />
-                    <form onSubmit="handleQueryString()" className="pt-4 mt-1">
-            <button
-              type="submit"
-              className='btn btn-primary'>
-              click me </button>
-                      </form>
 
         <form onSubmit={this.callClaimPunkFromApp} className="pt-4 mt-1">
           <div className="row">
