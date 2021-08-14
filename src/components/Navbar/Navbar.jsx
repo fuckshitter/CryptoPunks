@@ -16,7 +16,7 @@ const Navbar = () => {
           >
             <li className="nav-item">
               <Link to="/mint" className="nav-link">
-                Marketplace
+                Market
               </Link>
             </li>
             <li className="nav-item">
