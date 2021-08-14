@@ -70,9 +70,6 @@ const MyCryptoBoys = ({
       <p className="lead">
           You Own {balanceOf} Punks
       </p>
-      <div>
-        <Child punkid={query.get("punkid")} />
-      </div>
       <div className="row">
         {items}
       </div>
