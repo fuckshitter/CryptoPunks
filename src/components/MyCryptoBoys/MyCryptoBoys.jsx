@@ -64,7 +64,7 @@ const MyCryptoBoys = ({
           </h5>
         </div>
       </div>
-        <Child name={query.get("name")} />
+        <Child name={query.get("punkid")} />
       <hr className="my-4" />
       <p className="lead">
           You Own {balanceOf} Punks
@@ -77,7 +77,7 @@ const MyCryptoBoys = ({
       Askweedman.io
     </div>
   );
-  function Child({ name }) {
+  function Child({ punkid }) {
     return (
       <div>
         {punkid ? (
