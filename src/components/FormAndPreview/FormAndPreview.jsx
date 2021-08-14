@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import CryptoBoyNFTImage from "../CryptoBoyNFTImage/CryptoBoyNFTImage";
+import {useLocation} from "react-router-dom";
 
 class FormAndPreview extends Component {
   constructor(props) {
@@ -64,6 +65,10 @@ class FormAndPreview extends Component {
   };
 
   render() {
+
+  const search = props.location.search;
+  const name = new URLSearchParams(search).get('punkid');
+
     return (
       <div>
         <div className="card mt-1">
