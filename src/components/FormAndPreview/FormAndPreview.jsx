@@ -72,7 +72,7 @@ class FormAndPreview extends Component {
   };
 
 
-  function useQuery() {
+  useQuery() {
     return new URLSearchParams(useLocation().search);
   }
 
