@@ -85,7 +85,7 @@ const MyCryptoBoys = ({
   function Child({ punkid }) {
     if(punkid){
         selectedpunkid = punkid;
-        state.punkid  = selectedpunkid;
+        //state.punkid  = selectedpunkid;
     }
     return (
       <div>
