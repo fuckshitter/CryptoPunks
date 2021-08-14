@@ -70,18 +70,19 @@ class FormAndPreview extends Component {
     );
   };
 
+  handleQueryString = (e) => {
+     // Parsing the query string
+     // Using parse method
+     window.alert("reached function");
+     const search = useLocation();
+     let queries = queryString.parse(search);
+     console.log(queries);
+     this.setState(queries);
+  }
   render() {
 
 
-    function handleQueryString (){
-       // Parsing the query string
-       // Using parse method
-       window.alert("reached function");
-       const search = useLocation();
-       let queries = queryString.parse(search);
-       console.log(queries);
-       this.setState(queries);
-    }
+
     return (
       <div>
         <div className="card mt-1">
@@ -95,7 +96,6 @@ class FormAndPreview extends Component {
             />
                     <form onSubmit={this.handleQueryString} className="pt-4 mt-1">
             <button
-              onClick={this.handleQueryString}
               type="submit"
               className='btn btn-primary'>
               click me </button>
