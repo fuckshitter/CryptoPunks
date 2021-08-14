@@ -34,6 +34,7 @@ class FormAndPreview extends Component {
     }
 
   componentDidMount = async () => {
+    let query = useQuery();
     await this.props.setMintBtnTimer();
   };
 
@@ -80,7 +81,6 @@ class FormAndPreview extends Component {
   render() {
 
 
-    let query = useQuery();
 
     return (
       <div>
