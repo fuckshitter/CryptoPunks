@@ -69,6 +69,25 @@ const MyCryptoBoys = ({
       <p className="lead">
           You Own {balanceOf} Punks
       </p>
+      <div>
+        <h2>Accounts</h2>
+        <ul>
+          <li>
+            <Link to="/my-tokens?name=netflix">Netflix</Link>
+          </li>
+          <li>
+            <Link to="/my-tokens?name=zillow-group">Zillow Group</Link>
+          </li>
+          <li>
+            <Link to="/my-tokens?name=yahoo">Yahoo</Link>
+          </li>
+          <li>
+            <Link to="/my-tokens?name=modus-create">Modus Create</Link>
+          </li>
+        </ul>
+
+        <Child name={query.get("name")} />
+      </div>
       <div className="row">
         {items}
       </div>
