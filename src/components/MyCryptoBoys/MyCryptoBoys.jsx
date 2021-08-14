@@ -44,7 +44,7 @@ const MyCryptoBoys = ({
           var s = index+"";
           while (s.length < 4) s = "0" + s;
           var newImageUrl = '/images/punks/punk-' + s + 'x4.png';
-      items.push(<li key={index}><img src={newImageUrl} /> ID:{index}</li>)
+      items.push(<div class="card col-md-3" ><img src={newImageUrl} /><div class="card-body"> <h5 class="card-title">PUNK NO {index}</h5><p class="card-text"> PUNK OWNER {value}</p></div></div>)
     }
   }
   return (
@@ -60,7 +60,7 @@ const MyCryptoBoys = ({
       <p className="lead">
           You Own {balanceOf} Punks
       </p>
-      <div>
+      <div className="row">
         {items}
       </div>
 
