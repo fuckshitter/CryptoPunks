@@ -12,8 +12,8 @@ const Navbar = () => {
         </Link>
         <button
           type="button"
-          class="navbar-toggler collapsed"
-          className="navbar-toggler collapsed"
+          class="navbar-toggl collapsed"
+          className="navbar-toggl collapsed"
           data-toggle="collapse"
           data-target="#navbar"
           aria-expanded="false"
