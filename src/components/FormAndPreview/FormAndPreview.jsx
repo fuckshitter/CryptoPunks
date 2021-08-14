@@ -73,7 +73,7 @@ class FormAndPreview extends Component {
   render() {
 
 
-    function handleQueryString = () => {
+    function handleQueryString (){
        // Parsing the query string
        // Using parse method
        const search = useLocation();
