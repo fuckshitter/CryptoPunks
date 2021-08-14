@@ -12,8 +12,8 @@ const Navbar = () => {
         </Link>
         <button
           type="button"
-          class="navbar-toggl collapsed"
-          className="navbar-toggl collapsed"
+          class="navbar-toggler collapsed"
+          className="navbar-toggler collapsed"
           data-toggle="collapse"
           data-target="#navbar"
           aria-expanded="false"
@@ -21,7 +21,7 @@ const Navbar = () => {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div id="navbar" className="collapse navbar-collapse">
+        <div id="navbar" className="navbar">
           <ul
             style={{ fontSize: "0.8rem", letterSpacing: "0.2rem" }}
             className="navbar-nav ml-auto"
