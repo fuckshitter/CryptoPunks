@@ -34,7 +34,7 @@ class FormAndPreview extends Component {
     }
 
   componentDidMount = async () => {
-    let query = useQuery();
+    let query = URLSearchParams(useLocation().search);
     await this.props.setMintBtnTimer();
   };
 
@@ -73,9 +73,6 @@ class FormAndPreview extends Component {
   };
 
 
-  useQuery() {
-    return new URLSearchParams(useLocation().search);
-  }
 
 
   render() {
