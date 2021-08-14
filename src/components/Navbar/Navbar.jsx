@@ -10,17 +10,6 @@ const Navbar = () => {
         <Link to="/" className="navbar-brand ml-2">
           BakedPunks
         </Link>
-        <button
-          type="button"
-          class="navbar-toggler collapsed"
-          className="navbar-toggler collapsed"
-          data-toggle="collapse"
-          data-target="#navbar"
-          aria-expanded="false"
-          aria-controls="navbar"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
         <div id="navbar" className="navbar">
           <ul
             style={{ fontSize: "0.8rem", letterSpacing: "0.2rem" }}
