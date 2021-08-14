@@ -17,14 +17,7 @@ class FormAndPreview extends Component {
     };
   }
 
-  handleQueryString = () => {
-     // Parsing the query string
-     // Using parse method
-     const search = useLocation();
-     let queries = queryString.parse(search);
-     console.log(queries);
-     this.setState(queries);
-  }
+
 
   Load_New_Image=(e)=>{
       this.state.punkid =e.target.value;
@@ -80,7 +73,14 @@ class FormAndPreview extends Component {
   render() {
 
 
-
+    function handleQueryString = () => {
+       // Parsing the query string
+       // Using parse method
+       const search = useLocation();
+       let queries = queryString.parse(search);
+       console.log(queries);
+       this.setState(queries);
+    }
     return (
       <div>
         <div className="card mt-1">
