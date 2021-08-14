@@ -73,16 +73,16 @@ const MyCryptoBoys = ({
         <h2>Accounts</h2>
         <ul>
           <li>
-            <Link to="/my-tokens?name=netflix">Netflix</Link>
+            <Link to="/my-tokens?punkid=netflix">Netflix</Link>
           </li>
           <li>
-            <Link to="/my-tokens?name=zillow-group">Zillow Group</Link>
+            <Link to="/my-tokens?punkid=zillow-group">Zillow Group</Link>
           </li>
           <li>
-            <Link to="/my-tokens?name=yahoo">Yahoo</Link>
+            <Link to="/my-tokens?punkid=yahoo">Yahoo</Link>
           </li>
           <li>
-            <Link to="/my-tokens?name=modus-create">Modus Create</Link>
+            <Link to="/my-tokens?punkid=modus-create">Modus Create</Link>
           </li>
         </ul>
 
