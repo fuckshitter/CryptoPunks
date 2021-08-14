@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import InfiniteScroll from 'react-infinite-scroll-component';
 import { Link } from "react-router-dom";
 import { withRouter } from 'react-router-dom'
+import { useHistory } from "react-router-dom";
 
 class AllCryptoBoys extends Component {
   constructor(props) {
@@ -25,7 +26,10 @@ class AllCryptoBoys extends Component {
   callGoToPunk = (e) => {
     e.preventDefault();
     window.alert("Non-Ethereum browser detected. You should consider trying MetaMask! " + e.target.value);
-    this.props.history.replace("#/mint");
+    let history = useHistory();
+    history.push('/mint')
+//    this.state.cryptoPunkIndex = e.target.value;
+//    this.props.history.push("#/mint");
     //this.props.loadMorePunks();
   };
 

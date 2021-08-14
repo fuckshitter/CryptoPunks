@@ -15,6 +15,8 @@ import Loading from "./Loading/Loading";
 import Navbar from "./Navbar/Navbar";
 import MyCryptoBoys from "./MyCryptoBoys/MyCryptoBoys";
 
+import { useHistory } from "react-router-dom";
+
 class App extends Component {
   constructor(props) {
     super(props);
