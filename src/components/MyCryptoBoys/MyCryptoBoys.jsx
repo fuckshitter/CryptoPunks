@@ -80,13 +80,13 @@ const MyCryptoBoys = ({
   function Child({ name }) {
     return (
       <div>
-        {name ? (
+        {punkid ? (
           <h3>
-            The <code>name</code> in the query string is &quot;{name}
+            The <code>name</code> in the query string is &quot;{punkid}
             &quot;
           </h3>
         ) : (
-          <h3>There is no name in the query string</h3>
+          <h3>There is no punkid in the query string</h3>
         )}
       </div>
     );
