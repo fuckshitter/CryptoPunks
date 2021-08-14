@@ -11,13 +11,16 @@ const Navbar = () => {
           BakedPunks
         </Link>
         <button
-          className="navbar-toggler"
+          type="button" 
+          className="navbar-toggler collapsed"
           data-toggle="collapse"
-          data-target="#navbarNav1"
+          data-target="#navbar"
+          aria-expanded="false"
+          aria-controls="navbar"
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div id="navbarNav1" className="collapse navbar-collapse">
+        <div id="navbar" className="collapse navbar-collapse">
           <ul
             style={{ fontSize: "0.8rem", letterSpacing: "0.2rem" }}
             className="navbar-nav ml-auto"
