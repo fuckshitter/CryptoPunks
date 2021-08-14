@@ -19,6 +19,7 @@ const MyCryptoBoys = ({
 }) => {
   const [loading, setLoading] = useState(false);
   const [myCryptoBoys, setMyCryptoBoys] = useState([]);
+  const [state, setState] = useState(0);
   //const [items, setItems] = useState([]);
 
   function onPressCard() {
