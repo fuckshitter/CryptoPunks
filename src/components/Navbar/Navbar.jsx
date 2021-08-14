@@ -13,11 +13,11 @@ const Navbar = () => {
         <button
           className="navbar-toggler"
           data-toggle="collapse"
-          data-target="#navbarNav"
+          data-target="#navbarNav1"
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div id="navbarNav" className="collapse navbar-collapse">
+        <div id="navbarNav1" className="collapse navbar-collapse">
           <ul
             style={{ fontSize: "0.8rem", letterSpacing: "0.2rem" }}
             className="navbar-nav ml-auto"
