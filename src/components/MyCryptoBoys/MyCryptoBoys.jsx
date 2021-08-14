@@ -93,7 +93,7 @@ const MyCryptoBoys = ({
             &quot;
           </h3>
         ) : (
-          <h3>There is no punkid in the query string</h3>
+          <h3>There is no punkid in the query string {selectedpunkid}</h3>
         )}
       </div>
     );
