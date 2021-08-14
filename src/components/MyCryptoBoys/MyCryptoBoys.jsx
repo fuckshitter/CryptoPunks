@@ -89,11 +89,11 @@ const MyCryptoBoys = ({
       <div>
         {punkid ? (
           <h3>
-            The <code>name</code> in the query string is &quot;{punkid}
+            The <code>name</code> in the query string is &quot;{punkid} Logic :{selectedpunkid}
             &quot;
           </h3>
         ) : (
-          <h3>There is no punkid in the query string {selectedpunkid}</h3>
+          <h3>There is no punkid in the query string </h3>
         )}
       </div>
     );
