@@ -96,7 +96,7 @@ class FormAndPreview extends Component {
         <img
             src={this.state.cryptoBunkImageURL}
             />
-                    <form onSubmit={this.handleQueryString} className="pt-4 mt-1">
+                    <form onSubmit="handleQueryString()" className="pt-4 mt-1">
             <button
               type="submit"
               className='btn btn-primary'>
