@@ -70,22 +70,6 @@ const MyCryptoBoys = ({
           You Own {balanceOf} Punks
       </p>
       <div>
-        <h2>Accounts</h2>
-        <ul>
-          <li>
-            <Link to="/my-tokens?punkid=netflix">Netflix</Link>
-          </li>
-          <li>
-            <Link to="/my-tokens?punkid=zillow-group">Zillow Group</Link>
-          </li>
-          <li>
-            <Link to="/my-tokens?punkid=yahoo">Yahoo</Link>
-          </li>
-          <li>
-            <Link to="/my-tokens?punkid=modus-create">Modus Create</Link>
-          </li>
-        </ul>
-
         <Child punkid={query.get("punkid")} />
       </div>
       <div className="row">
