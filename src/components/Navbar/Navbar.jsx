@@ -6,7 +6,6 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
       <div className="container">
-        <img src={icon} alt="" />
         <Link to="/" className="navbar-brand ml-2">
           BakedPunks
         </Link>
