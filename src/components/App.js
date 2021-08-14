@@ -26,6 +26,7 @@ class App extends Component {
     this.state = {
       accountAddress: "",
       accountBalance: "",
+      selectedpunkid: "",
       cryptoBoysContract: null,
       cryptoBoysMarketContract: null,
       cryptoBoysCount: 0,
@@ -312,6 +313,7 @@ loadMorePunks = async () => {
                     accountAddress={this.state.accountAddress}
                     cryptoBoys={this.state.cryptoBoys}
                     balanceOf={this.state.balanceOf}
+                    selectedpunkid={this.state.selectedpunkid}
                     totalTokensOwnedByAccount={
                       this.state.totalTokensOwnedByAccount
                     }
