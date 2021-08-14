@@ -11,7 +11,8 @@ const Navbar = () => {
           BakedPunks
         </Link>
         <button
-          type="button" 
+          type="button"
+          class="navbar-toggler collapsed"
           className="navbar-toggler collapsed"
           data-toggle="collapse"
           data-target="#navbar"
