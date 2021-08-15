@@ -117,7 +117,7 @@ class FormAndPreview extends Component {
                     <div class="card-body">
                 <img
                     src={this.state.cryptoBunkImageURL}
-                    class="img-thumbnail"
+                    class="img-thumbnail card-img-top"
                     />
     <h5 class="card-title">Punk NO {this.state.punkid}</h5>
     <h6 class="card-subtitle mb-2 text-muted">Price {this.state.cryptoBoyPrice} BNB</h6>
