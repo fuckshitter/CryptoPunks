@@ -37,6 +37,15 @@ class FormAndPreview extends Component {
     console.log(this.props);
     const punkid = new URLSearchParams(this.props.location.search).get( "punkid" );
     this.setState({ punkid });
+    var s = this.state.punkid+"";
+    while (s.length < 4) s = "0" + s;
+
+
+    var newImageUrl = '/images/punks/punk-' + s + 'x8.png';
+    this.setState({
+      cryptoBunkImageURL : newImageUrl
+
+    })
 //    this.state.punkid = new URLSearchParams(useLocation().search).get("punkid")
     await this.props.setMintBtnTimer();
   };
