@@ -38,7 +38,11 @@ const MyCryptoBoys = ({
         setLoading(false);
       }
     }
-  }, [myPunks]);
+    const my_crypto_boys = cryptoBoys.filter(
+      (cryptoboy) => cryptoboy.currentOwner === accountAddress
+    );
+    setMyCryptoBoys(my_crypto_boys);
+  }, [cryptoBoys]);
 
   const elements = cryptoBoys;
 
@@ -57,8 +61,8 @@ const MyCryptoBoys = ({
 
   const items_my = []
   const elements_my = myPunks;
-  for (const [index_my, value_my] of elements_my.entries()) {
-    items_my.push(<div class="card col-md-3" >{value_my}</div>);
+  for (let i = 0; i < elements_my.length; i++) {
+    items_my.push(<div class="card col-md-3" >{elements_my[i]}</div>);
   }
   let query = useQuery();
   return (
