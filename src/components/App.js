@@ -227,7 +227,7 @@ punksOfferedForSale = async (punkIndex) => {
     this.setState({ cryptoBoyPrice: price });
     window.alert('Sale Price  ONE ' + price + " BNB");
     window.alert('Sale Price  TWO ' + this.state.cryptoBoyPrice + " BNB");
-
+    return price;
 };
 
 buyPunk = async (punkIndex, punkPrice) => {

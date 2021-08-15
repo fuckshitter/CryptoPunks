@@ -42,7 +42,10 @@ class FormAndPreview extends Component {
     let punkid = new URLSearchParams(this.props.location.search).get( "punkid" );
     if(punkid === '' || punkid === null || punkid === undefined)punkid = "0";
     this.setState({ punkid });
-    this.props.punksOfferedForSale(punkid);
+    //this.props.punksOfferedForSale(punkid);
+    const price = await this.props.punksOfferedForSale(punkid);
+    this.setState({ cryptoBoyPrice: price });
+
     window.alert('Function ' + this.props.cryptoBoyPrice);
     var s = punkid +"";
     while (s.length < 4) s = "0" + s;
