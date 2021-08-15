@@ -252,7 +252,6 @@ transferPunk = async (addressTo, punkIndex) => {
       });
 };
 loadMorePunks = async () => {
-  //this.setState({ loading: true });
   let incAmt = 10000;
   for (let i = this.state.cryptoPunksLoadCount; i < this.state.cryptoPunksLoadCount + incAmt && i < 10000; i++) {
     let punkOwner = await this.state.cryptoBoysContract.methods
@@ -262,8 +261,15 @@ loadMorePunks = async () => {
     this.forceUpdate();
   }
   this.state.cryptoPunksLoadCount += incAmt;
-  //this.setState({ loading: false });
 };
+
+getPunkOwner = async (punkIndex) => {
+    let punkOwner = await this.state.cryptoBoysContract.methods
+      .punkIndexToAddress(i)
+      .call();
+  return punkOwner;
+};
+
   render() {
     return (
       <div className="container">
@@ -304,6 +310,7 @@ loadMorePunks = async () => {
                     setMintBtnTimer={this.setMintBtnTimer}
                     punksOfferedForSale={this.punksOfferedForSale}
                     cryptoBoyPrice={this.state.cryptoBoyPrice}
+                    getPunkOwner={this.getPunkOwner}
                     />
                   )}
               />
