@@ -240,7 +240,7 @@ transferPunk = async (addressTo, punkIndex) => {
 };
 loadMorePunks = async () => {
   //this.setState({ loading: true });
-  let incAmt = 1000;
+  let incAmt = 10000;
   for (let i = this.state.cryptoPunksLoadCount; i < this.state.cryptoPunksLoadCount + incAmt; i++) {
     let punkOwner = await this.state.cryptoBoysContract.methods
       .punkIndexToAddress(i)
@@ -291,7 +291,7 @@ loadMorePunks = async () => {
                     setMintBtnTimer={this.setMintBtnTimer}
                     />
                   )}
-              />  
+              />
               <Route
                 path="/marketplace"
                 render={() => (

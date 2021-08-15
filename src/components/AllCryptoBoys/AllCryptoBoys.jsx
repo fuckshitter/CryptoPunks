@@ -76,7 +76,7 @@ class AllCryptoBoys extends Component {
               type="submit"
               className="btn mt-4 btn-block btn-outline-primary"
             >
-              Load More Punks
+              Load Punks
             </button>
             </div>
           </div>
