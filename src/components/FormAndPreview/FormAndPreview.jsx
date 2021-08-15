@@ -119,7 +119,8 @@ class FormAndPreview extends Component {
                     src={this.state.cryptoBunkImageURL}
                     class="img-thumbnail"
                     />
-                <p class="card-text">Price {this.state.cryptoBoyPrice} BNB</p>
+    <h5 class="card-title">Punk NO {this.state.punkid}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Price {this.state.cryptoBoyPrice} BNB</h6>
                     </div>
         </div>
         <form onSubmit={this.callClaimPunkFromApp} className="pt-4 mt-1">
