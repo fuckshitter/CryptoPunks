@@ -222,7 +222,7 @@ punksOfferedForSale = async (punkIndex) => {
     .punksOfferedForSale(punkIndex)
     .call();
 
-    const price = window.web3.utils.fromWei(punkOwner.minValue, "Ether");
+    const price = window.web3.utils.fromWei(punkOwner.minValue +'', "Ether");
     this.state.salePrice = punkOwner.minValue;
     window.alert('Must Install Metamask and Add Binance Network ' + price);
 
