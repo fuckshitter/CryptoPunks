@@ -223,9 +223,8 @@ punksOfferedForSale = async (punkIndex) => {
     .call();
 
     const price = window.web3.utils.fromWei(punkOwner.minValue +'', "Ether");
-    this.state.salePrice = price;
-    this.state.cryptoBoyPrice = price;
-    window.alert('Must Install Metamask and Add Binance Network ' + price);
+    this.setState({ cryptoBoyPrice: price });
+    window.alert('Sale Price  ' + price + " BNB");
 
 };
 
