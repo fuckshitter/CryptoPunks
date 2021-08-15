@@ -97,7 +97,6 @@ class FormAndPreview extends Component {
   render() {
 
 
-    const [cryptoBoyPrice, setCryptoBoyPrice] = useState('');
 
     return (
       <div>
