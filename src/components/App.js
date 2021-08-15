@@ -215,6 +215,14 @@ claimPunk = async (punkIndex) => {
         window.location.reload();
       });
 };
+punksOfferedForSale = async (punkIndex) => {
+
+  let punkOwner = await this.state.cryptoBoysContract.methods
+    .punksOfferedForSale(punkIndex)
+    .call();
+
+};
+
 buyPunk = async (punkIndex, punkPrice) => {
   this.setState({ loading: true });
   const price = window.web3.utils.toWei(punkPrice.toString(), "Ether");
@@ -289,6 +297,7 @@ loadMorePunks = async () => {
                     colorIsUsed={this.state.colorIsUsed}
                     colorsUsed={this.state.colorsUsed}
                     setMintBtnTimer={this.setMintBtnTimer}
+                    punksOfferedForSale={this.punksOfferedForSale}
                     />
                   )}
               />

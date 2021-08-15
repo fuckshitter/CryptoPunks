@@ -40,6 +40,7 @@ class FormAndPreview extends Component {
     let punkid = new URLSearchParams(this.props.location.search).get( "punkid" );
     if(punkid === '' || punkid === null || punkid === undefined)punkid = "0";
     this.setState({ punkid });
+    this.props.punksOfferedForSale(punkid);
 
     var s = punkid +"";
     while (s.length < 4) s = "0" + s;
@@ -108,8 +109,6 @@ class FormAndPreview extends Component {
                     src={this.state.cryptoBunkImageURL}
                     class="img-thumbnail"
                     />
-
-                    </div>
         </div>
         <form onSubmit={this.callClaimPunkFromApp} className="pt-4 mt-1">
           <div className="row">
