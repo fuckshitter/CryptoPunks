@@ -165,21 +165,6 @@ class FormAndPreview extends Component {
         <form onSubmit={this.callMintMyNFTFromApp} className="pt-4 mt-1">
           <div className="row">
             <div className="col-md-12">
-              <div>
-                <label htmlFor="punkId">Punk ID</label>
-                <input
-                  required
-                  type="number"
-                  name="punkid"
-                  id="punkid"
-                  value={this.state.punkid}
-                  className="form-control"
-                  placeholder="Enter Punk Id"
-                  onChange={(e) =>
-                      this.Load_New_Image(e)
-                  }
-                />
-              </div>
 	      <div>
                 <label htmlFor="price">Price</label>
                 <input
