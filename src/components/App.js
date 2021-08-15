@@ -146,10 +146,6 @@ class App extends Component {
           let myPunks = await this.state.cryptoBoysContract.methods
             .balanceOf(this.state.accountAddress)
             .call();
-
-          for (let i = 0; i < myPunks.length; i++) {
-            this.state.myPunks.push(myPunks[i]);
-          }
           this.state.myPunks = myPunks;
           this.setState({myPunks:this.state.myPunks});
 
