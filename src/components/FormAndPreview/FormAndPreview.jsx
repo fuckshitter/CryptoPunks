@@ -35,7 +35,7 @@ class FormAndPreview extends Component {
       })
 
 
-      const price = await this.props.punksOfferedForSale(punkid);
+      const price = this.props.punksOfferedForSale(this.state.punkid);
       this.setState({ cryptoBoyPrice: price });
 
     }
