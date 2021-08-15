@@ -300,8 +300,7 @@ loadMorePunks = async () => {
                     colorIsUsed={this.state.colorIsUsed}
                     colorsUsed={this.state.colorsUsed}
                     setMintBtnTimer={this.setMintBtnTimer}
-                    punksOfferedForSale={this.punksOfferedForSale}
-                    salePrice={this.state.salePrice}                    
+                    punksOfferedForSale={this.punksOfferedForSale}    
                     />
                   )}
               />
