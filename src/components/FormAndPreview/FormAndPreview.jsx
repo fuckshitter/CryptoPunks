@@ -33,6 +33,11 @@ class FormAndPreview extends Component {
         cryptoBunkImageURL : newImageUrl
 
       })
+
+
+      const price = await this.props.punksOfferedForSale(punkid);
+      this.setState({ cryptoBoyPrice: price });
+
     }
 
   componentDidMount = async () => {
