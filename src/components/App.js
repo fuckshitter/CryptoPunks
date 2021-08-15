@@ -32,6 +32,7 @@ class App extends Component {
       cryptoBoysCount: 0,
       cryptoPunksLoadCount: 0,
       cryptoBoys: [],
+      myPunks: [],
       loading: true,
       metamaskConnected: false,
       contractDetected: false,
@@ -141,6 +142,14 @@ class App extends Component {
               .call();
             punkOwners.push(punkOwner);
           }
+
+          let myPunks = await this.state.cryptoBoysContract.methods
+            .balanceOf(this.state.accountAddress)
+            .call();
+
+          this.state.myPunks = myPunks;
+          this.setState({myPunks:this.state.myPunks});
+
           this.state.cryptoBoys = punkOwners;
           this.state.balanceOf  = balanceOf + "";
           this.state.totalTokensOwnedByAccount  = totalTokensOwnedByAccount2 + "";
@@ -270,6 +279,13 @@ getPunkOwner = async (punkIndex) => {
   return punkOwner;
 };
 
+getMyPunks = async () => {
+    let myPunks = await this.state.cryptoBoysContract.methods
+      .balanceOf(this.state.accountAddress)
+      .call();
+  return myPunks;
+};
+
   render() {
     return (
       <div className="container">
@@ -311,6 +327,7 @@ getPunkOwner = async (punkIndex) => {
                     punksOfferedForSale={this.punksOfferedForSale}
                     cryptoBoyPrice={this.state.cryptoBoyPrice}
                     getPunkOwner={this.getPunkOwner}
+                    getMyPunks={this.getMyPunks}
                     />
                   )}
               />
@@ -335,6 +352,7 @@ getPunkOwner = async (punkIndex) => {
                     loadMorePunks={this.state.loadMorePunks}
                     accountAddress={this.state.accountAddress}
                     cryptoBoys={this.state.cryptoBoys}
+                    myPunks={this.state.myPunks}
                     balanceOf={this.state.balanceOf}
                     selectedpunkid={this.state.selectedpunkid}
                     totalTokensOwnedByAccount={

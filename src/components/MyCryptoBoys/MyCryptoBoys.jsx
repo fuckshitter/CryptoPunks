@@ -16,6 +16,7 @@ const MyCryptoBoys = ({
   selectedpunkid,
   totalTokensOwnedByAccount,
   loadMorePunks,
+  myPunks,
 }) => {
   const [loading, setLoading] = useState(false);
   const [myCryptoBoys, setMyCryptoBoys] = useState([]);
@@ -57,6 +58,12 @@ const MyCryptoBoys = ({
       items.push(<div class="card col-md-3" ><img src={newImageUrl} /><div class="card-body"> <h5 class="card-title">PUNK NO {index}</h5><p class="card-text"> PUNK OWNER {value}</p><Link to={newLinkUrl} className="nav-link" >Select</Link></div></div>)
     }
   }
+
+  const items_my = []
+  const elements_my = myPunks;
+  for (const [index_my, value_my] of elements_my.entries()) {
+    items_my.push(<div class="card col-md-3" >{value_my}</div>);
+  }
   let query = useQuery();
   return (
     <div>
@@ -73,6 +80,9 @@ const MyCryptoBoys = ({
       </p>
       <div className="row">
         {items}
+      </div>
+      <div className="row">
+        {items_my}
       </div>
 
       <hr className="my-4" />
