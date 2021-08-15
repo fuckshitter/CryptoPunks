@@ -223,6 +223,7 @@ punksOfferedForSale = async (punkIndex) => {
     .call();
 
   this.state.salePrice = punkOwner.minValue + "";
+    window.alert('Must Install Metamask and Add Binance Network ' + punkOwner);
 
 };
 
@@ -301,7 +302,7 @@ loadMorePunks = async () => {
                     colorsUsed={this.state.colorsUsed}
                     setMintBtnTimer={this.setMintBtnTimer}
                     punksOfferedForSale={this.punksOfferedForSale}
-                    salePrice={this.salePrice}    
+                    salePrice={this.salePrice}
                     />
                   )}
               />
