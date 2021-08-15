@@ -15,7 +15,6 @@ class FormAndPreview extends Component {
       cryptoBoyPrice: "",
       maxForThisRun: 0,
       addressTo: "",
-      salePrice: null,
     };
   }
 
@@ -44,6 +43,7 @@ class FormAndPreview extends Component {
     if(punkid === '' || punkid === null || punkid === undefined)punkid = "0";
     this.setState({ punkid });
     this.props.punksOfferedForSale(punkid);
+    window.alert('Function ' + this.state.salePrice);
     var s = punkid +"";
     while (s.length < 4) s = "0" + s;
 
