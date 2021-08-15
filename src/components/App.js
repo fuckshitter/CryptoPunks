@@ -132,8 +132,6 @@ class App extends Component {
             .balanceOf(this.state.accountAddress)
             .call();
 
-          const punkEvents = await cryptoBoysContract.methods.getPastEvents('PunkOffered', { fromBlock: 0, toBlock: 'latest' }).call(); 
-
           let punkOwners = [];
           for (let i = 0; i < this.state.cryptoPunksLoadCount; i++) {
             let punkOwner = await cryptoBoysContract.methods
