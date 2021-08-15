@@ -38,11 +38,7 @@ const MyCryptoBoys = ({
         setLoading(false);
       }
     }
-    const my_crypto_boys = cryptoBoys.filter(
-      (cryptoboy) => cryptoboy.currentOwner === accountAddress
-    );
-    setMyCryptoBoys(my_crypto_boys);
-  }, [cryptoBoys]);
+  }, [myPunks]);
 
   const elements = cryptoBoys;
 
