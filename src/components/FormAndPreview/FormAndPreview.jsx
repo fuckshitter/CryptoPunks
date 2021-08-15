@@ -20,7 +20,7 @@ class FormAndPreview extends Component {
 
 
 
-  Load_New_Image=(e)=>{
+  Load_New_Image= async (e)=>{
       this.state.punkid =e.target.value;
       this.props.punksOfferedForSale(this.state.punkid);
       this.state.cryptoBoyPrice = this.state.salePrice
@@ -35,7 +35,7 @@ class FormAndPreview extends Component {
       })
 
 
-      const price = this.props.punksOfferedForSale(this.state.punkid);
+      const price = await this.props.punksOfferedForSale(this.state.punkid);
       this.setState({ cryptoBoyPrice: price });
 
     }
