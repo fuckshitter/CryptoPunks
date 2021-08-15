@@ -59,11 +59,6 @@ const MyCryptoBoys = ({
     }
   }
 
-  const items_my = []
-  const elements_my = myPunks;
-  for (let i = 0; i < elements_my.length; i++) {
-    items_my.push(<div class="card col-md-3" >{elements_my[i]}</div>);
-  }
   let query = useQuery();
   return (
     <div>
@@ -80,9 +75,6 @@ const MyCryptoBoys = ({
       </p>
       <div className="row">
         {items}
-      </div>
-      <div className="row">
-        {items_my}
       </div>
 
       <hr className="my-4" />
