@@ -37,8 +37,6 @@ class FormAndPreview extends Component {
 
       const price = await this.props.punksOfferedForSale(this.state.punkid);
       this.setState({ cryptoBoyPrice: price });
-
-
       const punkOwner = await this.props.getPunkOwner(this.state.punkid);
       this.setState({ punkOwner: punkOwner });
 
@@ -52,8 +50,11 @@ class FormAndPreview extends Component {
     if(punkid === '' || punkid === null || punkid === undefined)punkid = "0";
     this.setState({ punkid });
     //this.props.punksOfferedForSale(punkid);
+
     const price = await this.props.punksOfferedForSale(punkid);
     this.setState({ cryptoBoyPrice: price });
+    const punkOwner = await this.props.getPunkOwner(this.state.punkid);
+    this.setState({ punkOwner: punkOwner });
 
   //  window.alert('Function ' + this.props.cryptoBoyPrice);
     var s = punkid +"";
@@ -126,7 +127,7 @@ class FormAndPreview extends Component {
                               <hr className="my-4" />
     <h5 class="card-title">Punk NO {this.state.punkid}</h5>
     <h6 class="card-subtitle mb-2 text-muted">Price {this.state.cryptoBoyPrice} BNB</h6>
-    <p>{this.state.punkOwner}</p>
+    <p class="card-text">OWNER : {this.state.punkOwner}</p>
 
                     </div>
         </div>
