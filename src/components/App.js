@@ -43,7 +43,7 @@ class App extends Component {
       colorIsUsed: false,
       colorsUsed: [],
       lastMintTime: null,
-      cryptoBoyPrice: 0;
+      cryptoBoyPrice: 0,
     };
   }
 
