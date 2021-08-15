@@ -37,6 +37,7 @@ class App extends Component {
       contractDetected: false,
       totalTokensMinted: 0,
       balanceOf: 0,
+      salePrice: "0",
       totalTokensOwnedByAccount: 0,
       nameIsUsed: false,
       colorIsUsed: false,
@@ -220,6 +221,8 @@ punksOfferedForSale = async (punkIndex) => {
   let punkOwner = await this.state.cryptoBoysContract.methods
     .punksOfferedForSale(punkIndex)
     .call();
+
+  this.state.salePrice = punkOwner.minValue + "";
 
 };
 
