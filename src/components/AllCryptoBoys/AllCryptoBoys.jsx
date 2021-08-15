@@ -59,10 +59,6 @@ class AllCryptoBoys extends Component {
         View All 10,000 BakedPunks.
       </p>
       <hr className="my-4" />
-      <p className="lead">
-          Contract Address : 0xead759ec13b02c21ae87044f009ce97c1c72371f
-      </p>
-      <hr className="my-4" />
       <div className="row">
         {items}
       </div>

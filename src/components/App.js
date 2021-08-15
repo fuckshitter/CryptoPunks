@@ -132,6 +132,15 @@ class App extends Component {
             .balanceOf(this.state.accountAddress)
             .call();
 
+          const punkEvents = await cryptoBoysContract.getPastEvents('PunkOffered', { fromBlock: 0, toBlock: 'latest' }); 
+
+            export const loadAllOrders = async (exchange, dispatch) => {
+                 const cancelStream = exchange ?
+                    await exchange.getPastEvents('Cancel', { fromBlock: 0, toBlock: 'latest' })
+                    : null // Check if exchange defined then call getPastEvents
+                 console.log(cancelStream)
+            }
+
           let punkOwners = [];
           for (let i = 0; i < this.state.cryptoPunksLoadCount; i++) {
             let punkOwner = await cryptoBoysContract.methods
