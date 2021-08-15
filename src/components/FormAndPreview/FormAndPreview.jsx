@@ -36,7 +36,7 @@ class FormAndPreview extends Component {
   componentDidMount = async () => {
     console.log(this.props);
     const punkid = new URLSearchParams(this.props.location.search).get( "punkid" );
-    if(punkid === '')punkid = "0";     
+    if(punkid === '' || punkid === null || punkid === undefined)punkid = "0";     
     this.setState({ punkid });
 
     var s = punkid +"";
