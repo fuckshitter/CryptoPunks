@@ -265,7 +265,7 @@ loadMorePunks = async () => {
 
 getPunkOwner = async (punkIndex) => {
     let punkOwner = await this.state.cryptoBoysContract.methods
-      .punkIndexToAddress(i)
+      .punkIndexToAddress(punkIndex)
       .call();
   return punkOwner;
 };
