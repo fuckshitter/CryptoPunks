@@ -102,12 +102,14 @@ class FormAndPreview extends Component {
             <h5>BakedPunks Marketplace [BETA]</h5>
           </div>
         </div>
-        <div class="card col-md-6" >
+        <div class="card col-md-6 text-center" >
+                    <div class="card-body">
                 <img
                     src={this.state.cryptoBunkImageURL}
                     />
 
-            </div>
+                    </div>
+        </div>
         <form onSubmit={this.callClaimPunkFromApp} className="pt-4 mt-1">
           <div className="row">
             <div className="col-md-12">
