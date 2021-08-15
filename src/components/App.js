@@ -225,8 +225,6 @@ punksOfferedForSale = async (punkIndex) => {
 
     const price = window.web3.utils.fromWei(punkOwner.minValue +'', "Ether");
     this.setState({ cryptoBoyPrice: price });
-    window.alert('Sale Price  ONE ' + price + " BNB");
-    window.alert('Sale Price  TWO ' + this.state.cryptoBoyPrice + " BNB");
     return price;
 };
 
