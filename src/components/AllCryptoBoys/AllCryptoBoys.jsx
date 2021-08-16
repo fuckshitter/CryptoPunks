@@ -49,7 +49,7 @@ class AllCryptoBoys extends Component {
       while (s.length < 4) s = "0" + s;
       var newImageUrl = '/images/punks/punk-' + s + '.png';
       var newLinkUrl = '/mint?punkid=' + index;
-      items.push(<Link to={newLinkUrl} className="nav-link" ><img src={newImageUrl} alt={index} </Link>)
+      items.push(<Link to={newLinkUrl} className="nav-link" ><img src={newImageUrl} alt={index} /></Link>)
     }
 
     return (
