@@ -135,7 +135,7 @@ class FormAndPreview extends Component {
           <div className="row">
             <div className="col-md-12">
               <div>
-                <label htmlFor="punkId">Punk ID</label>
+                <label htmlFor="punkId">Enter Punk ID</label>
                 <input
                   required
                   type="number"
