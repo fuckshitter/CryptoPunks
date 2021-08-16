@@ -62,7 +62,7 @@ const MyCryptoBoys = ({
   let query = useQuery();
   return (
     <div>
-      <div className="card col-md-12 text-center">
+      <div className="card mt-1">
         <div className="card-body align-items-center d-flex justify-content-center">
           <h5>
             Total No. of BakedPunks remaining {totalTokensOwnedByAccount} / 10000
@@ -70,7 +70,7 @@ const MyCryptoBoys = ({
         </div>
       </div>
       <hr className="my-4" />
-      <div class="card" style="width: 18rem;">
+      <div class="card col-md-12 text-center">
         <div class="card-body">
           <h5 class="card-title">You Own {balanceOf} Punks</h5>
           <p class="card-text">  In order to view your Punk(s) in the “My Punks” page, you must first retrieve all punk ownership data from blockchain. You can do this by clicking on “Load Punks” in the “All Punks” page. There are a total of 10,000 punks, once your punk number is loaded it will show up in the “My Punks” Page.</p>
