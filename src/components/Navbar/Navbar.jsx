@@ -15,6 +15,11 @@ const Navbar = () => {
             className="navbar-nav ml-auto"
           >
             <li className="nav-item">
+              <Link to="/forsale" className="nav-link">
+                For Sale
+              </Link>
+            </li>
+            <li className="nav-item">
               <Link to="/mint" className="nav-link">
                 Marketplace
               </Link>

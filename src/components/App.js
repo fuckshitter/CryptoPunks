@@ -347,6 +347,20 @@ getPunkOwner = async (punkIndex) => {
                   />
                 )}
               />
+              <Route
+                path="/forsale"
+                render={() => (
+                  <PunksForSale
+                    accountAddress={this.state.accountAddress}
+                    cryptoBoys={this.state.cryptoBoys}
+                    totalTokensMinted={this.state.totalTokensMinted}
+                    changeTokenPrice={this.changeTokenPrice}
+                    toggleForSale={this.toggleForSale}
+                    buyCryptoBoy={this.buyCryptoBoy}
+                    loadMorePunks={this.loadMorePunks}
+                  />
+                )}
+              />
 		</HashRouter>
 	  </>
         )}
