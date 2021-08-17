@@ -271,11 +271,11 @@ loadPunksForSale = async () => {
     let punkOwner = await this.state.cryptoBoysContract.methods
       .punksOfferedForSale(i)
       .call();
-    if(punkOwner !== 0){
-    const price = window.web3.utils.fromWei(punkOwner.minValue +'', "Ether");
-      this.setState({ cryptoBoyPrice: price });
-      this.state.cryptoBoysForSale.push(price);
-      this.forceUpdate();
+    if(punkOwner > 0){
+      const price = window.web3.utils.fromWei(punkOwner.minValue +'', "Ether");
+        this.setState({ cryptoBoyPrice: price });
+        this.state.cryptoBoysForSale.push(price);
+        this.forceUpdate();
     }
   }
 };
