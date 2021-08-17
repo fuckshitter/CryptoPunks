@@ -87,4 +87,4 @@ class PunksForSale extends Component {
   }
 }
 
-export default AllCryptoBoys;
+export default PunksForSale;
