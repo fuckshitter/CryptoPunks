@@ -16,7 +16,7 @@ const Navbar = () => {
           >
             <li className="nav-item">
               <Link to="/mint" className="nav-link">
-                Market
+                Punk Detail
               </Link>
             </li>
             <li className="nav-item">
