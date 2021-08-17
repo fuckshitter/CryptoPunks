@@ -276,7 +276,6 @@ loadPunksForSale = async () => {
     this.state.cryptoBoysForSale.push(price);
     this.forceUpdate();
   }
-  this.state.cryptoPunksLoadCount += incAmt;
 };
 
 getPunkOwner = async (punkIndex) => {
