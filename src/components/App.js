@@ -14,6 +14,7 @@ import ConnectToMetamask from "./ConnectMetamask/ConnectToMetamask";
 import Loading from "./Loading/Loading";
 import Navbar from "./Navbar/Navbar";
 import MyCryptoBoys from "./MyCryptoBoys/MyCryptoBoys";
+import PunksForSale from "./PunksForSale/PunksForSale";
 
 import {useLocation} from "react-router-dom";
 
