@@ -268,6 +268,9 @@ loadMorePunks = async () => {
 };
 loadPunksForSale = async () => {
   for (let i = 0; i < 10000 && i < 10000; i++) {
+    let punkOwner = await this.state.cryptoBoysContract.methods
+      .punksOfferedForSale(i)
+      .call();
     const price = window.web3.utils.fromWei(punkOwner.minValue +'', "Ether");
     this.setState({ cryptoBoyPrice: price });
     this.state.cryptoBoysForSale.push(price);
