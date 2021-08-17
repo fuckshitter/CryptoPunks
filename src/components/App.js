@@ -267,7 +267,7 @@ loadMorePunks = async () => {
   this.state.cryptoPunksLoadCount += incAmt;
 };
 loadPunksForSale = async () => {
-  for (let i = 0; i < 10000 && i < 10000; i++) {
+  for (let i = 0; i < 10000; i++) {
     let punkOwner = await this.state.cryptoBoysContract.methods
       .punksOfferedForSale(i)
       .call();
