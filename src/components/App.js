@@ -33,6 +33,7 @@ class App extends Component {
       cryptoBoysCount: 0,
       cryptoPunksLoadCount: 0,
       cryptoBoys: [],
+      cryptoBoysForSale: [],
       loading: true,
       metamaskConnected: false,
       contractDetected: false,
@@ -265,6 +266,15 @@ loadMorePunks = async () => {
   }
   this.state.cryptoPunksLoadCount += incAmt;
 };
+loadPunksForSale = async () => {
+  for (let i = 0; i < 10000 && i < 10000; i++) {
+    const price = window.web3.utils.fromWei(punkOwner.minValue +'', "Ether");
+    this.setState({ cryptoBoyPrice: price });
+    this.state.cryptoBoysForSale.push(price);
+    this.forceUpdate();
+  }
+  this.state.cryptoPunksLoadCount += incAmt;
+};
 
 getPunkOwner = async (punkIndex) => {
     let punkOwner = await this.state.cryptoBoysContract.methods
@@ -354,11 +364,13 @@ getPunkOwner = async (punkIndex) => {
                   <PunksForSale
                     accountAddress={this.state.accountAddress}
                     cryptoBoys={this.state.cryptoBoys}
+                    cryptoBoysForSale={this.state.cryptoBoysForSale}
                     totalTokensMinted={this.state.totalTokensMinted}
                     changeTokenPrice={this.changeTokenPrice}
                     toggleForSale={this.toggleForSale}
                     buyCryptoBoy={this.buyCryptoBoy}
                     loadMorePunks={this.loadMorePunks}
+                    loadPunksForSale={this.loadPunksForSale}
                   />
                 )}
               />
