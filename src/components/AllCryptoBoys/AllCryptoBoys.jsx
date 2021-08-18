@@ -33,7 +33,7 @@ class AllCryptoBoys extends Component {
   };
   loadPage = (e) => {
     e.preventDefault();
-    window.alert('Function ' + e.target);
+    window.alert('Function ' + e.target.id);
 
   }
   callLoadMorePunks = (e) => {
