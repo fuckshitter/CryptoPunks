@@ -49,6 +49,7 @@ class App extends Component {
       colorsUsed: [],
       lastMintTime: null,
       cryptoBoyPrice: 0,
+      currentPage: 0,
     };
   }
 
@@ -158,6 +159,7 @@ class App extends Component {
           this.setState({cryptoBoys:this.state.cryptoBoys});
           this.setState({cryptoBoysForSale:this.state.cryptoBoysForSale});
           this.setState({punksforsalebuttonhtml:this.state.punksforsalebuttonhtml});
+          this.setState({currentPage:this.state.currentPage});
 
   	       this.setState({ loading: false });
         } else {
@@ -355,6 +357,7 @@ getPunkOwner = async (punkIndex) => {
                     toggleForSale={this.toggleForSale}
                     buyCryptoBoy={this.buyCryptoBoy}
                     loadMorePunks={this.loadMorePunks}
+                    currentPage={this.state.currentPage}                    
                   />
                 )}
               />

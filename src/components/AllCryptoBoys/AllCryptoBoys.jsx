@@ -17,6 +17,7 @@ class AllCryptoBoys extends Component {
       cryptoBoyPrice: "",
       maxForThisRun: 0,
       cryptoBoys: null,
+      currentPage: 0,
     };
   }
 
@@ -57,7 +58,7 @@ class AllCryptoBoys extends Component {
       <div>
       <hr className="my-4" />
       <p className="lead">
-        View All 10,000 BakedPunks.
+        View All 10,000 BakedPunks. Current Page {currentPage}
       </p>
       <hr className="my-4" />
       <div className="row">
