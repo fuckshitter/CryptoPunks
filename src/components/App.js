@@ -348,8 +348,9 @@ getPunkOwner = async (punkIndex) => {
               />
               <Route
                 path="/marketplace"
-                render={() => (
+                render={(props) => (
                   <AllCryptoBoys
+                    {...props}
                     accountAddress={this.state.accountAddress}
                     cryptoBoys={this.state.cryptoBoys}
                     totalTokensMinted={this.state.totalTokensMinted}
@@ -357,7 +358,7 @@ getPunkOwner = async (punkIndex) => {
                     toggleForSale={this.toggleForSale}
                     buyCryptoBoy={this.buyCryptoBoy}
                     loadMorePunks={this.loadMorePunks}
-                    currentPage={this.state.currentPage}                    
+                    currentPage={this.state.currentPage}
                   />
                 )}
               />
