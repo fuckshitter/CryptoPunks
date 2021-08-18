@@ -45,7 +45,7 @@ class PunksForSale extends Component {
 
 
     for (const [index, value] of elements.entries()) {
-      if(0 !== value){
+      if(0 != 0x0){
 
       var s = index+"";
       while (s.length < 4) s = "0" + s;
