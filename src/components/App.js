@@ -385,6 +385,7 @@ getPunkOwner = async (punkIndex) => {
                     buyCryptoBoy={this.buyCryptoBoy}
                     loadMorePunks={this.loadMorePunks}
                     loadPunksForSale={this.loadPunksForSale}
+                    punksforsalebuttonhtml={this.state.punksforsalebuttonhtml}
                   />
                 )}
               />
@@ -407,7 +408,6 @@ getPunkOwner = async (punkIndex) => {
                     cryptoBoyPrice={this.state.cryptoBoyPrice}
                     getPunkOwner={this.getPunkOwner}
                     getMyPunks={this.getMyPunks}
-                    punksforsalebuttonhtml={this.state.punksforsalebuttonhtml}
                     />
                   )}
               />
