@@ -148,7 +148,7 @@ class App extends Component {
 
 
           this.state.cryptoBoys = punkOwners;
-          this.state.cryptoBoysForSale = punkOwners;
+          this.state.cryptoBoysForSale = [];
           this.state.balanceOf  = balanceOf + "";
           this.state.totalTokensOwnedByAccount  = totalTokensOwnedByAccount2 + "";
           this.setState({totalTokensOwnedByAccount:this.state.totalTokensOwnedByAccount});
