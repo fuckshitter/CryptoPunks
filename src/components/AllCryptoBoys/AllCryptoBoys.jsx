@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import InfiniteScroll from 'react-infinite-scroll-component';
 import queryString from 'query-string'
 import { HashRouter } from 'react-router-dom'
-import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { useLocation } from "react-router-dom";
 import {
   BrowserRouter as Router,
