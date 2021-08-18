@@ -73,7 +73,7 @@ class PunksForSale extends Component {
           <div className="col-md-12">
             <div>
             <button
-              id="mintBtn22"
+              id="mintBtn25"
               style={{ fontSize: "0.9rem", letterSpacing: "0.14rem" }}
               type="submit"
               className="btn mt-4 btn-block btn-outline-primary"

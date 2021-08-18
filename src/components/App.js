@@ -267,7 +267,9 @@ loadMorePunks = async () => {
   this.state.cryptoPunksLoadCount += incAmt;
 };
 loadPunksForSale = async () => {
+  const mintBtn = document.getElementById("mintBtn25");
   for (let i = 0; i < 10000; i++) {
+    mintBtn.innerHTML = "Loading " + i;
     let punkOwner = await this.state.cryptoBoysContract.methods
       .punksOfferedForSale(i)
       .call();
@@ -277,6 +279,7 @@ loadPunksForSale = async () => {
         this.forceUpdate();
 //      }
   }
+  mintBtn.innerHTML = "Done Loading";
 };
 
 getPunkOwner = async (punkIndex) => {
