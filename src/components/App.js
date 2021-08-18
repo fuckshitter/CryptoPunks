@@ -277,7 +277,7 @@ loadPunksForSale = async () => {
   const mintBtn = document.getElementById("mintBtn25");
   mintBtn.disabled = true;
   for (let i = this.state.cryptoPunksBuyLoadCount; i < 10000; i++) {
-    mintBtn.innerHTML = "Loading " + i + " of 10000";
+    this.state.punksforsalebuttonhtml = "Loading " + i + " of 10000";
     let punkOwner = await this.state.cryptoBoysContract.methods
       .punksOfferedForSale(i)
       .call();

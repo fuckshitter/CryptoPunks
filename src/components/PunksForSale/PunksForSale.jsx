@@ -79,7 +79,7 @@ class PunksForSale extends Component {
               type="submit"
               className="btn mt-4 btn-block btn-outline-primary"
             >
-              {punksforsalebuttonhtml}
+              {this.state.punksforsalebuttonhtml}
             </button>
             </div>
           </div>
