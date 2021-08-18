@@ -31,6 +31,10 @@ class AllCryptoBoys extends Component {
       window.alert('Function ' + pageid);
 
   };
+  loadPage = (e) => {
+    window.alert('Function ' + e.target.value);
+
+  }
   callLoadMorePunks = (e) => {
     e.preventDefault();
     this.props.loadMorePunks();
@@ -64,8 +68,8 @@ class AllCryptoBoys extends Component {
     const pages = []
     const numberofPages = this.props.cryptoBoys.length/500;
         for (let j=0;j<numberofPages;j++) {
-          var newLinkUrl = '/marketplace?pageid=' + j;
-          pages[j] = <li class="page-item"><Link to={newLinkUrl} className="nav-link" >{j}</Link></li>;
+          var newLinkUrl = 'loadPage';
+          pages[j] = <li class="page-item"><Link onclick="loadPage" className="nav-link" value={j} >{j}</Link></li>;
         }
     return (
       <div>
