@@ -1,5 +1,10 @@
 import React, { Component } from "react";
 import InfiniteScroll from 'react-infinite-scroll-component';
+import queryString from 'query-string'
+import { HashRouter } from 'react-router-dom'
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { useLocation } from "react-router-dom";
+
 import { withRouter } from 'react-router-dom'
 import { useHistory } from "react-router-dom";
 import {
@@ -23,6 +28,13 @@ class AllCryptoBoys extends Component {
 
   componentDidMount = async () => {
   //  await this.props.setMintBtnTimer();
+      window.scrollTo(0, 0);
+      console.log(this.props);
+      let pageid = new URLSearchParams(this.props.location.search).get( "pageid" );
+      if(pageid === '' || pageid === null || pageid === undefined)pageid = "0";
+      this.setState({ currentPage: pageid });
+      window.alert('Function ' + pageid);
+
   };
   callLoadMorePunks = (e) => {
     e.preventDefault();
