@@ -70,7 +70,7 @@ class AllCryptoBoys extends Component {
     const numberofPages = this.props.cryptoBoys.length/500;
         for (let j=0;j<numberofPages;j++) {
           var newLinkUrl = 'loadPage';
-          pages[j] = <li class="page-item"><form onSubmit={this.loadPage} className="pt-4 mt-1"><button  value={j} >{j}</button></form></li>;
+          pages[j] = <li class="page-item"><form onSubmit={this.loadPage} value={j} className="pt-4 mt-1"><button  value={j} >{j}</button></form></li>;
         }
     return (
       <div>
