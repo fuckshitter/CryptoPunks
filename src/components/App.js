@@ -268,6 +268,7 @@ loadMorePunks = async () => {
 };
 loadPunksForSale = async () => {
   const mintBtn = document.getElementById("mintBtn25");
+  mintBtn.disabled = true;
   this.state.cryptoBoysForSale = [];
   for (let i = 0; i < 10000; i++) {
     mintBtn.innerHTML = "Loading " + i;
