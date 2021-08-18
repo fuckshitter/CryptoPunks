@@ -272,10 +272,10 @@ loadPunksForSale = async () => {
       .punksOfferedForSale(i)
       .call();
       const price = window.web3.utils.fromWei(punkOwner.minValue +'', "Ether");
-      if(price > 0){
+      //if(price > 0){
         this.state.cryptoBoysForSale.push(price);
         this.forceUpdate();
-      }
+      //}
   }
 };
 
