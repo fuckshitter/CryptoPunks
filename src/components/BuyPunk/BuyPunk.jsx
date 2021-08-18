@@ -154,7 +154,6 @@ class BuyPunk extends Component {
                     this.setState({ cryptoBoyPrice: e.target.value })
                   }
                 />
-              <div>
 	      <button
                 id="mintBtn22"
                 style={{ fontSize: "0.9rem", letterSpacing: "0.14rem" }}
@@ -163,6 +162,7 @@ class BuyPunk extends Component {
               >
                 Buy Punk
               </button>
+            <div>
               </div>
             </div>
           </div>
