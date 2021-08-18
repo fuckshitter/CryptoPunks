@@ -58,14 +58,19 @@ class AllCryptoBoys extends Component {
     const numberofPages = this.props.cryptoBoys.length/100;
         for (let j=0;j<numberofPages;j++) {
           var newLinkUrl = '/marketplace?pageid=' + j;
-          pages[j] = <Link to={newLinkUrl} className="nav-link" >{j}</Link>;
+          pages[j] = <li class="page-item"><Link to={newLinkUrl} className="nav-link" >{j}</Link></li>;
         }
     return (
       <div>
       <hr className="my-4" />
       <p className="lead">
         View All 10,000 BakedPunks. Current Page {this.state.currentPage} Punks {items.length}
-        Pages  {pages}
+        Pages
+        <nav aria-label="Page navigation example">
+          <ul class="pagination">
+            {pages}
+          </ul>
+        </nav>
       </p>
       <hr className="my-4" />
       <div className="row">
