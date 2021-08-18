@@ -15,6 +15,7 @@ import Loading from "./Loading/Loading";
 import Navbar from "./Navbar/Navbar";
 import MyCryptoBoys from "./MyCryptoBoys/MyCryptoBoys";
 import PunksForSale from "./PunksForSale/PunksForSale";
+import BuyPunk from "./BuyPunk/BuyPunk";
 
 import {useLocation} from "react-router-dom";
 
@@ -271,7 +272,7 @@ loadPunksForSale = async () => {
   mintBtn.disabled = true;
   this.state.cryptoBoysForSale = [];
   for (let i = 0; i < 10000; i++) {
-    mintBtn.innerHTML = "Loading " + i;
+    mintBtn.innerHTML = "Loading " + i + " of 10000";
     let punkOwner = await this.state.cryptoBoysContract.methods
       .punksOfferedForSale(i)
       .call();
@@ -382,6 +383,28 @@ getPunkOwner = async (punkIndex) => {
                     loadPunksForSale={this.loadPunksForSale}
                   />
                 )}
+              />
+              <Route
+                path="/buypunk"
+                render={(props) => (
+                  <BuyPunk
+                    {...props}
+                    mintMyNFT={this.mintMyNFT}
+                    buyPunk={this.buyPunk}
+                    reservePunksForOwner={this.reservePunksForOwner}
+                    offerPunkForSale={this.offerPunkForSale}
+                    claimPunk={this.claimPunk}
+                    transferPunk={this.transferPunk}
+                    nameIsUsed={this.state.nameIsUsed}
+                    colorIsUsed={this.state.colorIsUsed}
+                    colorsUsed={this.state.colorsUsed}
+                    setMintBtnTimer={this.setMintBtnTimer}
+                    punksOfferedForSale={this.punksOfferedForSale}
+                    cryptoBoyPrice={this.state.cryptoBoyPrice}
+                    getPunkOwner={this.getPunkOwner}
+                    getMyPunks={this.getMyPunks}
+                    />
+                  )}
               />
 		</HashRouter>
 	  </>
