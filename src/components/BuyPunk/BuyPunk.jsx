@@ -129,8 +129,6 @@ class BuyPunk extends Component {
         <form onSubmit={this.callBuyPunkFromApp} className="pt-4 mt-1">
           <div className="row">
             <div className="col-md-12">
-                <div>
-                  <label htmlFor="punkId">Enter Punk ID</label>
                   <input
                     required
                     type="hidden"
@@ -143,9 +141,6 @@ class BuyPunk extends Component {
                       this.Load_New_Image(e)
                     }
                   />
-                </div>
-	      <div>
-                <label htmlFor="price">Price</label>
                 <input
                   required
                   readonly
@@ -159,7 +154,6 @@ class BuyPunk extends Component {
                     this.setState({ cryptoBoyPrice: e.target.value })
                   }
                 />
-              </div>
               <div>
 	      <button
                 id="mintBtn22"
