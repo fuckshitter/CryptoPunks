@@ -33,6 +33,7 @@ class App extends Component {
       cryptoBoysMarketContract: null,
       cryptoBoysCount: 0,
       cryptoPunksLoadCount: 0,
+      cryptoPunksBuyLoadCount: 0,
       cryptoBoys: [],
       cryptoBoysForSale: [],
       loading: true,
@@ -270,17 +271,16 @@ loadMorePunks = async () => {
 loadPunksForSale = async () => {
   const mintBtn = document.getElementById("mintBtn25");
   mintBtn.disabled = true;
-  this.state.cryptoBoysForSale = [];
-  for (let i = 0; i < 10000; i++) {
+
+  for (let i = this.state.cryptoPunksBuyLoadCount; i < 10000; i++) {
     mintBtn.innerHTML = "Loading " + i + " of 10000";
     let punkOwner = await this.state.cryptoBoysContract.methods
       .punksOfferedForSale(i)
       .call();
       const price = window.web3.utils.fromWei(punkOwner.minValue +'', "Ether");
-//      if(price + "" !== 0 + ""){
         this.state.cryptoBoysForSale.push(price);
         this.forceUpdate();
-//      }
+      this.state.cryptoPunksBuyLoadCount += 1;
   }
   mintBtn.innerHTML = "Done Loading";
 
