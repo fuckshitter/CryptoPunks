@@ -158,7 +158,7 @@ class BuyPunk extends Component {
                 id="mintBtn22"
                 style={{ fontSize: "0.9rem", letterSpacing: "0.14rem" }}
                 type="submit"
-                className="btn mt-4 btn-success"
+                className="btn mt-4 btn-block btn-success"
               >
                 Buy Punk
               </button>
