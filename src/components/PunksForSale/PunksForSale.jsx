@@ -17,7 +17,6 @@ class PunksForSale extends Component {
       cryptoBoyPrice: "",
       maxForThisRun: 0,
       cryptoBoysForSale: null,
-      punksforsalebuttonhtml: "",
     };
   }
 
