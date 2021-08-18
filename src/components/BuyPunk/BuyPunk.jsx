@@ -121,8 +121,7 @@ class BuyPunk extends Component {
                               />
                               <hr className="my-4" />
     <h5 class="card-title">Punk NO {this.state.punkid}</h5>
-    <h6 class="card-subtitle mb-2 text-muted">Price {this.state.cryptoBoyPrice} BNB</h6>
-    <p class="card-text">OWNER : {this.state.punkOwner}</p>
+    <h3 class="card-subtitle mb-2 text-muted">Price {this.state.cryptoBoyPrice} BNB</h3>
 
                     </div>
         </div>
