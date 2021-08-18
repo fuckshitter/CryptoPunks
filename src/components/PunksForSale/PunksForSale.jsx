@@ -45,6 +45,7 @@ class PunksForSale extends Component {
 
 
     for (const [index, value] of elements.entries()) {
+      if(0 != value){
 
       var s = index+"";
       while (s.length < 4) s = "0" + s;
@@ -52,6 +53,7 @@ class PunksForSale extends Component {
       var newLinkUrl = '/mint?punkid=' + index;
       items.push(<div class="card col-md-3" ><img src={newImageUrl} /><div class="card-body"> <h5 class="card-title">NO {index}</h5><p class="card-text"> PRICE {value} BNB</p><Link to={newLinkUrl} className="nav-link" >BUY</Link></div></div>)
 //      items.push(<Link to={newLinkUrl} className="nav-link" ><img src={newImageUrl} /></Link>)
+      }
     }
 
     return (
