@@ -55,12 +55,10 @@ class AllCryptoBoys extends Component {
     }
 
     const pages = []
-    pages.splice(0, pages.length);
 
         for (let j=0;j<items.length%100;j++) {
           var newLinkUrl = '/marketplace?pageid=' + j;
-
-          pages.push(<Link to={newLinkUrl} className="nav-link" >Select</Link>)
+          pages[j] = <Link to={newLinkUrl} className="nav-link" >Select</Link>;
         }
     return (
       <div>
