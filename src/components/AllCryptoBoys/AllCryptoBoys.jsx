@@ -54,11 +54,17 @@ class AllCryptoBoys extends Component {
 //      items.push(<Link to={newLinkUrl} className="nav-link" ><img src={newImageUrl} /></Link>)
     }
 
+    const pages = []
+        for (int j=0;j<items.length%100;j++) {
+          var newLinkUrl = '/marketplace?pageid=' + j;
+          pages.push(<Link to={newLinkUrl} className="nav-link" >Select</Link>)
+        }
     return (
       <div>
       <hr className="my-4" />
       <p className="lead">
-        View All 10,000 BakedPunks. Current Page {this.state.currentPage} Pages {items.length}
+        View All 10,000 BakedPunks. Current Page {this.state.currentPage} Punks {items.length}
+        Pages  {pages}
       </p>
       <hr className="my-4" />
       <div className="row">
