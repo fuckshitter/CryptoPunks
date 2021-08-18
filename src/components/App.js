@@ -283,7 +283,6 @@ loadPunksForSale = async () => {
   }
   mintBtn.innerHTML = "Done Loading";
 
-  mintBtn.readonly = true;
 };
 
 getPunkOwner = async (punkIndex) => {
