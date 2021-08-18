@@ -133,7 +133,7 @@ class BuyPunk extends Component {
                   <label htmlFor="punkId">Enter Punk ID</label>
                   <input
                     required
-                    type="number"
+                    type="hidden"
                     name="punkid"
                     id="punkid"
                     value={this.state.punkid}
@@ -148,7 +148,8 @@ class BuyPunk extends Component {
                 <label htmlFor="price">Price</label>
                 <input
                   required
-                  type="number"
+                  readonly
+                  type="hidden"
                   name="price"
                   id="cryptoBoyPrice"
                   value={this.state.cryptoBoyPrice}
