@@ -16,13 +16,13 @@ class PunksForSale extends Component {
       cryptoBunkImageURL: "/images/punks/punk-0001x8.png",
       cryptoBoyPrice: "",
       maxForThisRun: 0,
-      cryptoBoys: null,
       cryptoBoysForSale: null,
     };
   }
 
   componentDidMount = async () => {
   //  await this.props.setMintBtnTimer();
+
   };
   callLoadMorePunks = (e) => {
     e.preventDefault();

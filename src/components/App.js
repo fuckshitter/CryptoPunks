@@ -373,7 +373,6 @@ getPunkOwner = async (punkIndex) => {
                 render={() => (
                   <PunksForSale
                     accountAddress={this.state.accountAddress}
-                    cryptoBoys={this.state.cryptoBoys}
                     cryptoBoysForSale={this.state.cryptoBoysForSale}
                     totalTokensMinted={this.state.totalTokensMinted}
                     changeTokenPrice={this.changeTokenPrice}
