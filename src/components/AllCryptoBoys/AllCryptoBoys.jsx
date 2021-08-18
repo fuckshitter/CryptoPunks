@@ -58,7 +58,7 @@ class AllCryptoBoys extends Component {
     const numberofPages = this.props.cryptoBoys.length/100;
         for (let j=0;j<numberofPages;j++) {
           var newLinkUrl = '/marketplace?pageid=' + j;
-          pages[j] = <Link to={newLinkUrl} className="nav-link" >Select</Link>;
+          pages[j] = <Link to={newLinkUrl} className="nav-link" >{j}</Link>;
         }
     return (
       <div>
