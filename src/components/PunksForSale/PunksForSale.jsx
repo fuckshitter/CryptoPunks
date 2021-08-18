@@ -17,6 +17,7 @@ class PunksForSale extends Component {
       cryptoBoyPrice: "",
       maxForThisRun: 0,
       cryptoBoysForSale: null,
+      punksforsalebuttonhtml: "",
     };
   }
 
@@ -78,7 +79,7 @@ class PunksForSale extends Component {
               type="submit"
               className="btn mt-4 btn-block btn-outline-primary"
             >
-              Load Punks
+              {punksforsalebuttonhtml}
             </button>
             </div>
           </div>

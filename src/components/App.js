@@ -29,6 +29,7 @@ class App extends Component {
       accountAddress: "",
       accountBalance: "",
       selectedpunkid: "",
+      punksforsalebuttonhtml: "Load Punks",
       cryptoBoysContract: null,
       cryptoBoysMarketContract: null,
       cryptoBoysCount: 0,
@@ -155,6 +156,7 @@ class App extends Component {
           this.setState({balanceOf:this.state.balanceOf});
           this.setState({cryptoBoys:this.state.cryptoBoys});
           this.setState({cryptoBoysForSale:this.state.cryptoBoysForSale});
+          this.setState({punksforsalebuttonhtml:this.state.punksforsalebuttonhtml});
 
   	       this.setState({ loading: false });
         } else {
@@ -272,9 +274,9 @@ loadMorePunks = async () => {
 };
 loadPunksForSale = async () => {
 
+  const mintBtn = document.getElementById("mintBtn25");
+  mintBtn.disabled = true;
   for (let i = this.state.cryptoPunksBuyLoadCount; i < 10000; i++) {
-    const mintBtn = document.getElementById("mintBtn25");
-    mintBtn.disabled = true;
     mintBtn.innerHTML = "Loading " + i + " of 10000";
     let punkOwner = await this.state.cryptoBoysContract.methods
       .punksOfferedForSale(i)
@@ -404,6 +406,7 @@ getPunkOwner = async (punkIndex) => {
                     cryptoBoyPrice={this.state.cryptoBoyPrice}
                     getPunkOwner={this.getPunkOwner}
                     getMyPunks={this.getMyPunks}
+                    punksforsalebuttonhtml={this.state.punksforsalebuttonhtml}
                     />
                   )}
               />
