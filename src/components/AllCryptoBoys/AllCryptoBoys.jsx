@@ -28,12 +28,12 @@ class AllCryptoBoys extends Component {
       let pageid = new URLSearchParams(this.props.location.search).get( "pageid" );
       if(pageid === '' || pageid === null || pageid === undefined)pageid = "0";
       this.setState({ currentPage: pageid });
-      window.alert('Function ' + pageid);
+//      window.alert('Function ' + pageid);
 
   };
   loadPage = (e) => {
     e.preventDefault();
-    window.alert('Function ' + e.target.id);
+//    window.alert('Function ' + e.target.id);
     this.setState({ currentPage:  e.target.id });
 
   }
@@ -43,7 +43,7 @@ class AllCryptoBoys extends Component {
   };
   callGoToPunk = (e) => {
     e.preventDefault();
-    window.alert("Non-Ethereum browser detected. You should consider trying MetaMask! " + e.target.id);
+//    window.alert("Non-Ethereum browser detected. You should consider trying MetaMask! " + e.target.id);
 //    const history = useHistory();
 //    history.push('/mint')
 //    this.state.cryptoPunkIndex = e.target.value;
