@@ -42,7 +42,7 @@ class AllCryptoBoys extends Component {
   };
   callGoToPunk = (e) => {
     e.preventDefault();
-    window.alert("Non-Ethereum browser detected. You should consider trying MetaMask! " + e.target.value);
+    window.alert("Non-Ethereum browser detected. You should consider trying MetaMask! " + e.target.innerHTML);
 //    const history = useHistory();
 //    history.push('/mint')
 //    this.state.cryptoPunkIndex = e.target.value;
