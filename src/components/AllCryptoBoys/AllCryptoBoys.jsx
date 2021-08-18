@@ -66,13 +66,14 @@ class AllCryptoBoys extends Component {
       items.push(<div class="card col-md-2" ><img src={newImageUrl} /><div class="card-body"> <h5 class="card-title">NO {index}</h5><p class="card-text"> OWNER {value}</p><Link to={newLinkUrl} className="nav-link" >Select</Link></div></div>)
 //      items.push(<Link to={newLinkUrl} className="nav-link" ><img src={newImageUrl} /></Link>)
     }
-
+    const itemsPage = items.splice(this.state.currentPage*500, 500);
     const pages = []
     const numberofPages = this.props.cryptoBoys.length/500;
         for (let j=0;j<numberofPages;j++) {
           var newLinkUrl = 'loadPage';
           pages[j] = <li class="page-item"><form onSubmit={this.loadPage} value={j} className="pt-4 mt-1" id={j} ><button  id={j} >{j}</button></form></li>;
         }
+
     return (
       <div>
       <hr className="my-4" />
@@ -87,7 +88,7 @@ class AllCryptoBoys extends Component {
       </p>
       <hr className="my-4" />
       <div className="row">
-        {items}
+        {itemsPage}
       </div>
       <form onSubmit={this.callLoadMorePunks} className="pt-4 mt-1">
         <div className="row">
