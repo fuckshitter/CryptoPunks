@@ -42,7 +42,7 @@ class AllCryptoBoys extends Component {
   };
   callGoToPunk = (e) => {
     e.preventDefault();
-    window.alert("Non-Ethereum browser detected. You should consider trying MetaMask! " + e.target.innerHTML);
+    window.alert("Non-Ethereum browser detected. You should consider trying MetaMask! " + e.target.id);
 //    const history = useHistory();
 //    history.push('/mint')
 //    this.state.cryptoPunkIndex = e.target.value;
@@ -70,7 +70,7 @@ class AllCryptoBoys extends Component {
     const numberofPages = this.props.cryptoBoys.length/500;
         for (let j=0;j<numberofPages;j++) {
           var newLinkUrl = 'loadPage';
-          pages[j] = <li class="page-item"><form onSubmit={this.loadPage} value={j} className="pt-4 mt-1"><button  value={j} >{j}</button></form></li>;
+          pages[j] = <li class="page-item"><form onSubmit={this.loadPage} value={j} className="pt-4 mt-1"><button  id={j} >{j}</button></form></li>;
         }
     return (
       <div>
