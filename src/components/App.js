@@ -152,7 +152,7 @@ class App extends Component {
           this.setState({cryptoBoysForSale:this.state.cryptoBoysForSale});
           this.setState({punksforsalebuttonhtml:this.state.punksforsalebuttonhtml});
           this.setState({currentPage:this.state.currentPage});
-
+          this.setState({punkid:0});
 
           for (let i = 0; i < 10000; i++) {
               this.state.cryptoBoysForSale[i]=0x00;
