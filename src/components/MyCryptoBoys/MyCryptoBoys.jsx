@@ -73,7 +73,6 @@ const MyCryptoBoys = ({
       <div class="card col-md-12 text-center">
         <div class="card-body">
           <h5 class="card-title">You Own {balanceOf} Punks</h5>
-          <p class="card-text">  In order to view your Punk(s) in the “My Punks” page, you must first retrieve all punk ownership data from blockchain. You can do this by clicking on “Load Punks” in the “All Punks” page. There are a total of 10,000 punks, once your punk number is loaded it will show up in the “My Punks” Page.</p>
         </div>
       </div>
       <div className="row">
