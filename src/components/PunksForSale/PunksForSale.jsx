@@ -41,13 +41,12 @@ class PunksForSale extends Component {
 
     const elements = this.props.cryptoBoysForSale;
     //const mutatedElements = [...elements].sort((a, b) => a - b);
-    const mutatedElements = [...elements].map((el, i) => ({ index: i, price: el, }));
-    mutatedElements.sort((a, b) => a.price - b.price);
+    const mutatedElements = [...elements] .map((el, i) => ({ index: i, price: el, })) .sort((a, b) => a.price - b.price);
 
     let items = []
 
-
-    for (const [index, value] of mutatedElements.entries()) {
+    const items = mutatedElements.map((value, i) => {
+    //for (const [index, value] of mutatedElements.entries()) {
       const cprice = 0x00;
       const cvalue = value;
       if(cprice != cvalue){
