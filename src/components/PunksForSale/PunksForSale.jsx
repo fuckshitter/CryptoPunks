@@ -40,7 +40,7 @@ class PunksForSale extends Component {
   render() {
 
     const elements = this.props.cryptoBoysForSale;
-    const mutatedElements = [...elements].sort((a, b) => a.price - b.price);
+    const mutatedElements = [...elements].sort((a, b) => a - b);
 
 
     let items = []
