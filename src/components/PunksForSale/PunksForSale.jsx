@@ -67,22 +67,6 @@ class PunksForSale extends Component {
       <div className="row">
         {items}
       </div>
-      <form onSubmit={this.callLoadMorePunks} className="pt-4 mt-1">
-        <div className="row">
-          <div className="col-md-12">
-            <div>
-            <button
-              id="mintBtn25"
-              style={{ fontSize: "0.9rem", letterSpacing: "0.14rem" }}
-              type="submit"
-              className="btn mt-4 btn-block btn-outline-primary"
-            >
-              {this.props.punksforsalebuttonhtml}
-            </button>
-            </div>
-          </div>
-        </div>
-      </form>
 
         <hr className="my-4" />
         Askweedman.io
