@@ -45,7 +45,11 @@ class PunksForSale extends Component {
 
   render() {
     const elements = this.props.cryptoBoysForSale;
-    const mutatedElements = [...elements].map((el, i) => ({ index: i, price: el, })).sort((a, b) => a.price - b.price);
+    let mutatedElements = [...elements].map((el, i) => ({ index: i, price: el, })).sort((a, b) => a.price - b.price);
+    if(this.state.cryptoBoysForSale == 'Price - Highest'){
+      window.alert("Non-Ethereum browser detected. You should consider trying MetaMask! " + e.target.value);
+      mutatedElements = [...elements].map((el, i) => ({ index: i, price: el, })).sort((a, b) => b.price - a.price);
+    }
     const items = mutatedElements.map((value, i) => {
       const cprice = 0x00;
       const cvalue = value.price;
