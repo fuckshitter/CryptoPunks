@@ -38,11 +38,10 @@ class PunksForSale extends Component {
   };
 
   render() {
-    var elements = this.props.cryptoBoysForSale;
+    const elements = this.props.cryptoBoysForSale;
 
-    elements.sort();
 
-    const items = []
+    var items = []
 
 
     for (const [index, value] of elements.entries()) {
@@ -59,7 +58,7 @@ class PunksForSale extends Component {
       }
     }
 
-//    items.sort((a, b) => a - b);
+    items.sort();
 
 
 
