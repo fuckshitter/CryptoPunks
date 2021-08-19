@@ -97,6 +97,7 @@ class PunksForSale extends Component {
             </div>
           </div>
         </div>
+        <hr className="my-4" />
 
       <div className="row">
         {items}
