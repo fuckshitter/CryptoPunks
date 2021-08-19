@@ -41,7 +41,7 @@ class PunksForSale extends Component {
     const elements = this.props.cryptoBoysForSale;
 
 
-    var items = []
+    let items = []
 
 
     for (const [index, value] of elements.entries()) {
