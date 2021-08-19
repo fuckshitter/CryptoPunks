@@ -75,7 +75,7 @@ class AllCryptoBoys extends Component {
         }
 
     return (
-      <div>
+      <div class="container">
       <p className="lead">
         <nav aria-label="Page navigation example">
           <ul class="pagination pagination-sm justify-content-center">
