@@ -59,7 +59,7 @@ class PunksForSale extends Component {
 
     return (
       <div>
-      <div class="jumbotron">
+      <div className="jumbotron">
         {items}
       </div>
 
