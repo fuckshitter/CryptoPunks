@@ -29,6 +29,7 @@ class PunksForSale extends Component {
   sortByPriceAsc = (e) => {
     e.preventDefault();
     window.alert("Non-Ethereum browser detected. You should consider trying MetaMask! " + e.target.value);
+    const elements = this.props.cryptoBoysForSale;
     this.state.mutatedElements = [...elements].map((el, i) => ({ index: i, price: el, })).sort((a, b) => b.price - a.price);
 
   };
