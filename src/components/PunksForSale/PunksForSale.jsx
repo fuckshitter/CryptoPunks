@@ -40,6 +40,10 @@ class PunksForSale extends Component {
   render() {
     const elements = this.props.cryptoBoysForSale;
 
+    elements.sort(function (a, b) {
+      return a.value - b.value;
+    });
+
     const items = []
 
 
@@ -59,10 +63,8 @@ class PunksForSale extends Component {
 
 //    items.sort((a, b) => a - b);
 
-    items.sort(function (a, b) {
-      return a.value - b.value;
-    });
-    
+
+
     return (
       <div class="container">
       <div className="row">
