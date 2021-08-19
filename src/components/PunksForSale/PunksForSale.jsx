@@ -59,11 +59,6 @@ class PunksForSale extends Component {
 
     return (
       <div>
-      <hr className="my-4" />
-      <p className="lead">
-        All BakedPunks For Sale.
-      </p>
-      <hr className="my-4" />
       <div className="row">
         {items}
       </div>
