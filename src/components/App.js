@@ -161,6 +161,11 @@ class App extends Component {
           this.setState({punksforsalebuttonhtml:this.state.punksforsalebuttonhtml});
           this.setState({currentPage:this.state.currentPage});
 
+
+          (async () => {
+              await this.loadPunksForSale();
+          })();
+
   	       this.setState({ loading: false });
         } else {
           this.setState({ contractDetected: false });
