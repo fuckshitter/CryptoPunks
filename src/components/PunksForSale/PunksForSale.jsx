@@ -43,7 +43,7 @@ class PunksForSale extends Component {
     //const mutatedElements = [...elements].sort((a, b) => a - b);
     const mutatedElements = [...elements] .map((el, i) => ({ index: i, price: el, })) .sort((a, b) => a.price - b.price);
 
-    let items = []
+//    let items = []
 
     const items = mutatedElements.map((value, i) => {
     //for (const [index, value] of mutatedElements.entries()) {
