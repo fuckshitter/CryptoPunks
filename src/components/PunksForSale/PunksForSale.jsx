@@ -38,27 +38,21 @@ class PunksForSale extends Component {
   };
 
   render() {
-
     const elements = this.props.cryptoBoysForSale;
-    //const mutatedElements = [...elements].sort((a, b) => a - b);
-    const mutatedElements = [...elements] .map((el, i) => ({ index: i, price: el, })) .sort((a, b) => a.price - b.price);
-
-//    let items = []
-
+    const mutatedElements = [...elements].map((el, i) => ({ index: i, price: el, })).sort((a, b) => a.price - b.price);
     const items = mutatedElements.map((value, i) => {
-    //for (const [index, value] of mutatedElements.entries()) {
       const cprice = 0x00;
-      const cvalue = value;
-      if(cprice != cvalue){
-
-      var s = index+"";
-      while (s.length < 4) s = "0" + s;
-      var newImageUrl = '/images/punks/punk-' + s + 'x8.png';
-      var newLinkUrl = '/buypunk?punkid=' + index;
-      items.push(<div class="card col-md-3" ><img src={newImageUrl} /><div class="card-body">{" "}<h5 class="card-title">NO {index}</h5><p class="card-text"> PRICE {value} BNB</p><Link to={newLinkUrl} className="nav-link" >BUY</Link></div></div>)
-//      items.push(<Link to={newLinkUrl} className="nav-link" ><img src={newImageUrl} /></Link>)
+      const cvalue = value.price;
+      if (cprice != cvalue) {
+        var s = value.index + "";
+        while (s.length < 4) s = "0" + s;
+          var newImageUrl = "/images/punks/punk-" + s + "x8.png";
+          var newLinkUrl = "/buypunk?punkid=" + value.index;
+          return ( <div class="card col-md-3"> <img src={newImageUrl} /> <div class="card-body"> {" "} <h5 class="card-title">NO {value.index}</h5> <p class="card-text"> PRICE {value.price} BNB</p> <Link to={newLinkUrl} className="nav-link"> BUY </Link> </div> </div> );
       }
-    }
+    });
+
+
 
   //  items.sort((a, b) => (a.price - b.price));
 
