@@ -17,23 +17,12 @@ class PunksForSale extends Component {
       cryptoBoyPrice: "",
       maxForThisRun: 0,
       cryptoBoysForSale: null,
-      mutatedElements:[],
     };
   }
 
   componentDidMount = async () => {
   //  await this.props.setMintBtnTimer();
-    const elements = this.props.cryptoBoysForSale;
-    this.state.mutatedElements = [...elements].map((el, i) => ({ index: i, price: el, })).sort((a, b) => a.price - b.price);
   };
-  sortByPriceAsc = (e) => {
-    e.preventDefault();
-    window.alert("Non-Ethereum browser detected. You should consider trying MetaMask! " + e.target.value);
-    const elements = this.props.cryptoBoysForSale;
-    this.state.mutatedElements = [...elements].map((el, i) => ({ index: i, price: el, })).sort((a, b) => b.price - a.price);
-
-  };
-
   callLoadMorePunks = (e) => {
     e.preventDefault();
     this.props.loadPunksForSale();
@@ -41,8 +30,6 @@ class PunksForSale extends Component {
   callGoToPunk = (e) => {
     e.preventDefault();
     window.alert("Non-Ethereum browser detected. You should consider trying MetaMask! " + e.target.value);
-//    const elements = this.props.cryptoBoysForSale;
-//    this.state.mutatedElements = [...elements].map((el, i) => ({ index: i, price: el, })).sort((a, b) => b.price - a.price);
 //    const history = useHistory();
 //    history.push('/mint')
 //    this.state.cryptoPunkIndex = e.target.value;
@@ -51,7 +38,9 @@ class PunksForSale extends Component {
   };
 
   render() {
-    const items = this.state.mutatedElements.map((value, i) => {
+    const elements = this.props.cryptoBoysForSale;
+    const mutatedElements = [...elements].map((el, i) => ({ index: i, price: el, })).sort((a, b) => a.price - b.price);
+    const items = mutatedElements.map((value, i) => {
       const cprice = 0x00;
       const cvalue = value.price;
       if (cprice != cvalue) {
@@ -70,24 +59,7 @@ class PunksForSale extends Component {
 
 
     return (
-
       <div class="container">
-      <form onSubmit={this.sortByPriceAsc} className="pt-4 mt-1">
-        <div className="row">
-          <div className="col-md-12">
-            <div>
-            <button
-              id="mintBtn22"
-              style={{ fontSize: "0.9rem", letterSpacing: "0.14rem" }}
-              type="submit"
-              className="btn mt-4 btn-block btn-outline-primary"
-            >
-              Price - Highest
-            </button>
-            </div>
-          </div>
-        </div>
-      </form>
       <div className="row">
         {items}
       </div>
