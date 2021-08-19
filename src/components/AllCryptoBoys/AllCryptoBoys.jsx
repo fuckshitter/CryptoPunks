@@ -61,7 +61,7 @@ class AllCryptoBoys extends Component {
 
       var s = index+"";
       while (s.length < 4) s = "0" + s;
-      var newImageUrl = '/images/punks/punk-' + s + '.png';
+      var newImageUrl = '/images/punks/punk-' + s + 'x4.png';
       var newLinkUrl = '/mint?punkid=' + index;
       items.push(<div class="card col-md-2" ><img src={newImageUrl} /><div class="card-body"> <h5 class="card-title">NO {index}</h5><p class="card-text"> OWNER {value}</p><Link to={newLinkUrl} className="nav-link" >Select</Link></div></div>)
 //      items.push(<Link to={newLinkUrl} className="nav-link" ><img src={newImageUrl} /></Link>)
