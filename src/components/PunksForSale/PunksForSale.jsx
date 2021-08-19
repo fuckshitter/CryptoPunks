@@ -22,7 +22,9 @@ class PunksForSale extends Component {
 
   componentDidMount = async () => {
   //  await this.props.setMintBtnTimer();
-
+      (async () => {
+          await this.props.loadPunksForSale();
+      })();
   };
   callLoadMorePunks = (e) => {
     e.preventDefault();
