@@ -61,7 +61,7 @@ const MyCryptoBoys = ({
 
   let query = useQuery();
   return (
-    <div>
+    <div class="container">
       <div className="card mt-1">
         <div className="card-body align-items-center d-flex justify-content-center">
           <h5>
