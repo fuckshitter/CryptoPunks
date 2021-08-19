@@ -78,7 +78,6 @@ class AllCryptoBoys extends Component {
       <div>
       <hr className="my-4" />
       <p className="lead">
-        View All 10,000 BakedPunks. Current Page {this.state.currentPage} Punks Loaded {this.props.cryptoBoys.length}
         <nav aria-label="Page navigation example">
           <ul class="pagination pagination-sm justify-content-center">
             {pages}
