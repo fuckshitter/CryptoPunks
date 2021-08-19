@@ -306,16 +306,13 @@ loadPunksForSale = async (from, to) => {
 //  const mintBtn = document.getElementById("mintBtn25");
 //  mintBtn.disabled = true;
   for (let i = from; i < to; i++) {
-    this.state.punksforsalebuttonhtml = "Loading " + i + " of 9999";
     let punkOwner = await this.state.cryptoBoysContract.methods
       .punksOfferedForSale(i)
       .call();
       const price = window.web3.utils.fromWei(punkOwner.minValue +'', "Ether");
         this.state.cryptoBoysForSale[i]=price;
         this.forceUpdate();
-      this.state.cryptoPunksBuyLoadCount += 1;
   }
-  this.state.punksforsalebuttonhtml = "Done Loading";
 
 };
 getPunkOwner = async (punkIndex) => {
