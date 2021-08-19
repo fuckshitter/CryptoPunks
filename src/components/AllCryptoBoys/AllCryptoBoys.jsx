@@ -80,7 +80,7 @@ class AllCryptoBoys extends Component {
       <p className="lead">
         View All 10,000 BakedPunks. Current Page {this.state.currentPage} Punks Loaded {this.props.cryptoBoys.length}
         <nav aria-label="Page navigation example">
-          <ul class="pagination">
+          <ul class="pagination pagination-sm">
             {pages}
           </ul>
         </nav>
