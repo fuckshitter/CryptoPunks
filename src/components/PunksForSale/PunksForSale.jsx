@@ -71,7 +71,7 @@ class PunksForSale extends Component {
       <div class="container">
 
         <div className="row">
-          <div className="col-md-12">
+          <div className="col-md-6">
             <div>
             {this.state.cryptoBoysForSale}
             <button
@@ -83,6 +83,10 @@ class PunksForSale extends Component {
             >
               Price - Lowest
             </button>
+            </div>
+          </div>
+          <div className="col-md-6">
+            <div>
             <button
               id="mintBtn22"
               style={{ fontSize: "0.9rem", letterSpacing: "0.14rem" }}
