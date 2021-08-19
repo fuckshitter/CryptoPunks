@@ -72,7 +72,6 @@ class PunksForSale extends Component {
         <div className="row">
           <div className="col-md-6">
             <div>
-            {this.state.cryptoBoysForSale}
             <button
               id="mintBtn22"
               style={{ fontSize: "0.9rem", letterSpacing: "0.14rem" }}
