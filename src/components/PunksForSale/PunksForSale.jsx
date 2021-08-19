@@ -61,7 +61,7 @@ class PunksForSale extends Component {
       <div>
       <hr className="my-4" />
       <p className="lead">
-        View All 10,000 BakedPunks For Sale.
+        All BakedPunks For Sale.
       </p>
       <hr className="my-4" />
       <div className="row">
