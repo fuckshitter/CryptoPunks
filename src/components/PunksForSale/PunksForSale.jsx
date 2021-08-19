@@ -23,10 +23,14 @@ class PunksForSale extends Component {
 
   componentDidMount = async () => {
   //  await this.props.setMintBtnTimer();
+    const elements = this.props.cryptoBoysForSale;
+    this.state.mutatedElements = [...elements].map((el, i) => ({ index: i, price: el, })).sort((a, b) => a.price - b.price);
   };
   sortByPriceAsc = (e) => {
     e.preventDefault();
     window.alert("Non-Ethereum browser detected. You should consider trying MetaMask! " + e.target.value);
+    this.state.mutatedElements = [...elements].map((el, i) => ({ index: i, price: el, })).sort((a, b) => b.price - a.price);
+
   };
 
   callLoadMorePunks = (e) => {
@@ -36,6 +40,8 @@ class PunksForSale extends Component {
   callGoToPunk = (e) => {
     e.preventDefault();
     window.alert("Non-Ethereum browser detected. You should consider trying MetaMask! " + e.target.value);
+//    const elements = this.props.cryptoBoysForSale;
+//    this.state.mutatedElements = [...elements].map((el, i) => ({ index: i, price: el, })).sort((a, b) => b.price - a.price);
 //    const history = useHistory();
 //    history.push('/mint')
 //    this.state.cryptoPunkIndex = e.target.value;
@@ -44,8 +50,6 @@ class PunksForSale extends Component {
   };
 
   render() {
-    const elements = this.props.cryptoBoysForSale;
-    this.state.mutatedElements = [...elements].map((el, i) => ({ index: i, price: el, })).sort((a, b) => a.price - b.price);
     const items = this.state.mutatedElements.map((value, i) => {
       const cprice = 0x00;
       const cvalue = value.price;
