@@ -61,7 +61,7 @@ const MyCryptoBoys = ({
 
   let query = useQuery();
   return (
-    <div class="container">
+    <div >
       <div className="card mt-1">
         <div className="card-body align-items-center d-flex justify-content-center">
           <h5>
@@ -75,9 +75,11 @@ const MyCryptoBoys = ({
           <h5 class="card-title">You Own {balanceOf} Punks</h5>
         </div>
       </div>
+        <div class="container">
       <div className="row">
         {items}
       </div>
+        </div>
 
       <hr className="my-4" />
       Askweedman.io
