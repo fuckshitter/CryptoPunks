@@ -162,6 +162,9 @@ class App extends Component {
           this.setState({currentPage:this.state.currentPage});
 
 
+          for (let i = 0; i < 10000; i++) {
+              this.state.cryptoBoysForSale[i]=0x00;
+          }
           (async () => {
               await this.loadPunksForSale(0,5000);
           })();
