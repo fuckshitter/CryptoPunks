@@ -55,7 +55,7 @@ class PunksForSale extends Component {
       while (s.length < 4) s = "0" + s;
       var newImageUrl = '/images/punks/punk-' + s + 'x8.png';
       var newLinkUrl = '/buypunk?punkid=' + index;
-      items.push(<div class="card col-md-3" ><img src={newImageUrl} /><div class="card-body"> <h5 class="card-title">NO {index}</h5><p class="card-text"> PRICE {value} BNB</p><Link to={newLinkUrl} className="nav-link" >BUY</Link></div></div>)
+      items.push(<div class="card col-md-3" ><img src={newImageUrl} /><div class="card-body">{" "}<h5 class="card-title">NO {index}</h5><p class="card-text"> PRICE {value} BNB</p><Link to={newLinkUrl} className="nav-link" >BUY</Link></div></div>)
 //      items.push(<Link to={newLinkUrl} className="nav-link" ><img src={newImageUrl} /></Link>)
       }
     }
