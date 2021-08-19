@@ -58,7 +58,7 @@ class PunksForSale extends Component {
       }
     }
 
-    items.sort((a, b) => (a[0] - b[0]));
+    items.sort((a, b) => (a.price - b.price));
 
 
 
