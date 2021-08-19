@@ -165,12 +165,11 @@ class App extends Component {
           for (let i = 0; i < 10000; i++) {
               this.state.cryptoBoysForSale[i]=0x00;
           }
-          (async () => {
-              await this.loadPunksForSale(0,5000);
-          })();
-          (async () => {
-              await this.loadPunksForSale(5000,10000);
-          })();
+          for (let i = 0; i < 100; i++) {
+            (async () => {
+                await this.loadPunksForSale(i*100,(i*100)+500);
+            })();
+          }
 
   	       this.setState({ loading: false });
         } else {
