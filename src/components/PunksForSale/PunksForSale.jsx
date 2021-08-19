@@ -23,6 +23,11 @@ class PunksForSale extends Component {
   componentDidMount = async () => {
   //  await this.props.setMintBtnTimer();
   };
+  sortByPriceAsc = (e) => {
+    e.preventDefault();
+    window.alert("Non-Ethereum browser detected. You should consider trying MetaMask! " + e.target.value);
+  };
+
   callLoadMorePunks = (e) => {
     e.preventDefault();
     this.props.loadPunksForSale();
@@ -59,7 +64,24 @@ class PunksForSale extends Component {
 
 
     return (
+
       <div class="container">
+      <form onSubmit={this.sortByPriceAsc} className="pt-4 mt-1">
+        <div className="row">
+          <div className="col-md-12">
+            <div>
+            <button
+              id="mintBtn22"
+              style={{ fontSize: "0.9rem", letterSpacing: "0.14rem" }}
+              type="submit"
+              className="btn mt-4 btn-block btn-outline-primary"
+            >
+              Price - Highest
+            </button>
+            </div>
+          </div>
+        </div>
+      </form>
       <div className="row">
         {items}
       </div>
