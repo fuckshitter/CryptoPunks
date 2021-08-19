@@ -27,6 +27,10 @@ class PunksForSale extends Component {
     e.preventDefault();
     this.props.loadPunksForSale();
   };
+  sortPunksByHighest = (e) => {
+    e.preventDefault();
+    window.alert("Non-Ethereum browser detected. You should consider trying MetaMask! " + e.target.innerHTML);
+  };
   callGoToPunk = (e) => {
     e.preventDefault();
     window.alert("Non-Ethereum browser detected. You should consider trying MetaMask! " + e.target.value);
@@ -60,6 +64,24 @@ class PunksForSale extends Component {
 
     return (
       <div class="container">
+
+      <form onSubmit={this.sortPunksByHighest} className="pt-4 mt-1">
+        <div className="row">
+          <div className="col-md-12">
+            <div>
+            <button
+              id="mintBtn22"
+              style={{ fontSize: "0.9rem", letterSpacing: "0.14rem" }}
+              type="submit"
+              className="btn mt-4 btn-block btn-outline-primary"
+            >
+              Punk - Highest
+            </button>
+            </div>
+          </div>
+        </div>
+      </form>
+
       <div className="row">
         {items}
       </div>
