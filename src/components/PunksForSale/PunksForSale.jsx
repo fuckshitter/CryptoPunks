@@ -38,13 +38,15 @@ class PunksForSale extends Component {
   };
 
   render() {
+
     const elements = this.props.cryptoBoysForSale;
+    const mutatedElements = [...elements].sort((a, b) => a.price - b.price);
 
 
     let items = []
 
 
-    for (const [index, value] of elements.entries()) {
+    for (const [index, value] of mutatedElements.entries()) {
       const cprice = 0x00;
       const cvalue = value;
       if(cprice != cvalue){
