@@ -17,6 +17,7 @@ class PunksForSale extends Component {
       cryptoBoyPrice: "",
       maxForThisRun: 0,
       cryptoBoysForSale: null,
+      sortByType: "",
     };
   }
 
@@ -30,6 +31,7 @@ class PunksForSale extends Component {
   sortPunksByHighest = (e) => {
     e.preventDefault();
     window.alert("Non-Ethereum browser detected. You should consider trying MetaMask! " + e.target.innerHTML);
+    this.state.cryptoBoysForSale = e.target.innerHTML;
   };
   callGoToPunk = (e) => {
     e.preventDefault();
@@ -68,6 +70,7 @@ class PunksForSale extends Component {
         <div className="row">
           <div className="col-md-12">
             <div>
+            {this.state.cryptoBoysForSale}
             <button
               id="mintBtn22"
               style={{ fontSize: "0.9rem", letterSpacing: "0.14rem" }}
