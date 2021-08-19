@@ -47,7 +47,7 @@ class FormAndPreview extends Component {
     window.scrollTo(0, 0);
     console.log(this.props);
     let punkid = new URLSearchParams(this.props.location.search).get( "punkid" );
-    if(punkid === '' || punkid === null || punkid === undefined)punkid = "0";
+    if(punkid === '' || punkid === null || punkid === undefined)punkid =this.state.punkid;
     this.setState({ punkid });
     //this.props.punksOfferedForSale(punkid);
 
