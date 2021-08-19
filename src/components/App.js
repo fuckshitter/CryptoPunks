@@ -290,7 +290,7 @@ loadPunksForSale = async () => {
       .punksOfferedForSale(i)
       .call();
       const price = window.web3.utils.fromWei(punkOwner.minValue +'', "Ether");
-        this.state.cryptoBoysForSale.push(price);
+        this.state.cryptoBoysForSale[i]=price;
         this.forceUpdate();
       this.state.cryptoPunksBuyLoadCount += 1;
   }
