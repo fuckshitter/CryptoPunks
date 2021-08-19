@@ -170,6 +170,14 @@ class App extends Component {
                 await this.loadPunksForSale(i*50,(i*50)+50);
             })();
           }
+          for (let i = 0; i < 10000; i++) {
+              this.state.cryptoBoys[i]=0x00;
+          }
+          for (let i = 0; i < 200; i++) {
+            (async () => {
+                await this.loadMorePunks(i*50,(i*50)+50);
+            })();
+          }
 
   	       this.setState({ loading: false });
         } else {
@@ -285,6 +293,17 @@ loadMorePunks = async () => {
   }
   this.state.cryptoPunksLoadCount += incAmt;
 };
+
+loadMorePunks = async (from, to) => {
+  for (let i = from; i < to; i++) {
+    let punkOwner = await this.state.cryptoBoysContract.methods
+      .punkIndexToAddress(i)
+      .call();
+    this.state.cryptoBoys[i]=punkOwner;
+  }
+  this.forceUpdate();
+};
+
 loadPunksForSale = async () => {
 
 //  const mintBtn = document.getElementById("mintBtn25");
