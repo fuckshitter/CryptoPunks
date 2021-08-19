@@ -17,6 +17,7 @@ class PunksForSale extends Component {
       cryptoBoyPrice: "",
       maxForThisRun: 0,
       cryptoBoysForSale: null,
+      mutatedElements:[],
     };
   }
 
@@ -44,8 +45,8 @@ class PunksForSale extends Component {
 
   render() {
     const elements = this.props.cryptoBoysForSale;
-    const mutatedElements = [...elements].map((el, i) => ({ index: i, price: el, })).sort((a, b) => a.price - b.price);
-    const items = mutatedElements.map((value, i) => {
+    this.state.mutatedElements = [...elements].map((el, i) => ({ index: i, price: el, })).sort((a, b) => a.price - b.price);
+    const items = this.state.mutatedElements.map((value, i) => {
       const cprice = 0x00;
       const cvalue = value.price;
       if (cprice != cvalue) {
