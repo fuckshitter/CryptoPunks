@@ -75,7 +75,7 @@ class PunksForSale extends Component {
               type="submit"
               className="btn mt-4 btn-block btn-outline-primary"
             >
-              Punk - Highest
+              Price - Highest
             </button>
             </div>
           </div>
