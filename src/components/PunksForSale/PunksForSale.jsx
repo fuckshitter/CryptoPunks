@@ -38,11 +38,9 @@ class PunksForSale extends Component {
   };
 
   render() {
-    const elements = this.props.cryptoBoysForSale;
+    var elements = this.props.cryptoBoysForSale;
 
-    elements.sort(function (a, b) {
-      return a.value - b.value;
-    });
+    elements.sort();
 
     const items = []
 
