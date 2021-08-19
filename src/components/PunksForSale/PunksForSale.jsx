@@ -30,8 +30,7 @@ class PunksForSale extends Component {
   };
   sortPunksByHighest = (e) => {
     e.preventDefault();
-    window.alert("Non-Ethereum browser detected. You should consider trying MetaMask! " + e.target.innerHTML);
-    this.state.cryptoBoysForSale = e.target.innerHTML;
+    this.setState({cryptoBoysForSale:e.target.innerHTML});
   };
   callGoToPunk = (e) => {
     e.preventDefault();
