@@ -141,14 +141,6 @@ class App extends Component {
             .call();
 
           let punkOwners = [];
-          for (let i = 0; i < this.state.cryptoPunksLoadCount; i++) {
-            let punkOwner = await cryptoBoysContract.methods
-              .punkIndexToAddress(i)
-              .call();
-            punkOwners.push(punkOwner);
-          }
-
-
           this.state.cryptoBoys = punkOwners;
           this.state.cryptoBoysForSale = [];
           this.state.balanceOf  = balanceOf + "";
@@ -173,9 +165,9 @@ class App extends Component {
           for (let i = 0; i < 10000; i++) {
               this.state.cryptoBoys[i]=0x00;
           }
-          for (let i = 0; i < 200; i++) {
+          for (let i = 0; i < 100; i++) {
             (async () => {
-                await this.loadMorePunks(i*50,(i*50)+50);
+                await this.loadMorePunks(i*100,(i*100)+100);
             })();
           }
 
