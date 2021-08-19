@@ -76,7 +76,6 @@ class AllCryptoBoys extends Component {
 
     return (
       <div>
-      <hr className="my-4" />
       <p className="lead">
         <nav aria-label="Page navigation example">
           <ul class="pagination pagination-sm justify-content-center">
