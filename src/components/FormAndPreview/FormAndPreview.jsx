@@ -135,7 +135,7 @@ class FormAndPreview extends Component {
                     <div class="card-body">
                           <img
                               src={this.state.cryptoBunkImageURL}
-                              class="img-thumbnail"
+                              class="img-thumbnail col-md-6"
                               onClick={this.callViewPunkDetail}
                               />
                               <hr className="my-4" />
