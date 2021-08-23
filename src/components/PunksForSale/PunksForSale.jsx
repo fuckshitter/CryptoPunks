@@ -50,7 +50,7 @@ class PunksForSale extends Component {
     var newImageUrl = '/images/punks.v2/punk-' + s + '.png';
 
     window.alert("Test ");
-
+    e.target.src = newImageUrl;
   };
 
   render() {
