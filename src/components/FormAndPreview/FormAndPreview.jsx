@@ -109,6 +109,10 @@ class FormAndPreview extends Component {
 
 
     var newImageUrl = '/images/punks.v2/punk-' + s + '.png';
+
+    if(newImageUrl === this.state.cryptoBunkImageURL){
+      newImageUrl = '/images/punks/punk-' + s + 'x8.png';
+    }
     this.setState({
       cryptoBunkImageURL : newImageUrl
 
