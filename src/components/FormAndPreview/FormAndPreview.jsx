@@ -131,7 +131,7 @@ class FormAndPreview extends Component {
       <div>
 
         <div class="container">
-        <div class="card col-md-6 text-center" >
+        <div class="card col-md-12 text-center" >
                     <div class="card-body">
                           <img
                               src={this.state.cryptoBunkImageURL}
