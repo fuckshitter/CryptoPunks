@@ -63,7 +63,7 @@ class PunksForSale extends Component {
         while (s.length < 4) s = "0" + s;
           var newImageUrl = "/images/punks/punk-" + s + "x8.png";
           var newLinkUrl = "/buypunk?punkid=" + value.index;
-          return ( <div class="card col-md-3"><Link to={newLinkUrl} className="nav-link"><img class="img-thumbnail col-md-3" src={newImageUrl} id={value.index} onMouseEnter={this.callViewPunkDetail} /></Link>  <div class="card-body"> {" "} <h5 class="card-title">NO {value.index}</h5> <p class="card-text"> PRICE {value.price} BNB</p> <Link to={newLinkUrl} className="nav-link"> BUY </Link> </div> </div> );
+          return ( <div class="card col-md-3"><Link to={newLinkUrl} className="nav-link"><img class="img-thumbnail" src={newImageUrl} id={value.index} onMouseEnter={this.callViewPunkDetail} /></Link>  <div class="card-body"> {" "} <h5 class="card-title">NO {value.index}</h5> <p class="card-text"> PRICE {value.price} BNB</p> <Link to={newLinkUrl} className="nav-link"> BUY </Link> </div> </div> );
       }
     });
 
