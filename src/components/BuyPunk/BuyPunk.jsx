@@ -103,6 +103,22 @@ class BuyPunk extends Component {
       this.state.punkid
     );
   };
+  callViewPunkDetail = (e) => {
+    var s = this.state.punkid +"";
+    while (s.length < 4) s = "0" + s;
+
+
+    var newImageUrl = '/images/punks.v2/punk-' + s + '.png';
+
+    if(newImageUrl === this.state.cryptoBunkImageURL){
+      newImageUrl = '/images/punks/punk-' + s + 'x8.png';
+    }
+    this.setState({
+      cryptoBunkImageURL : newImageUrl
+
+    })
+
+  };
 
 
 
@@ -117,7 +133,8 @@ class BuyPunk extends Component {
                     <div class="card-body">
                           <img
                               src={this.state.cryptoBunkImageURL}
-                              class="img-thumbnail"
+                              class="img-thumbnail  col-md-6"
+                              onClick={this.callViewPunkDetail}
                               />
                               <hr className="my-4" />
     <h5 class="card-title">Punk NO {this.state.punkid}</h5>
