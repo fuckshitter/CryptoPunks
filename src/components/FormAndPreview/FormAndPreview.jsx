@@ -104,6 +104,16 @@ class FormAndPreview extends Component {
     );
   };
   callViewPunkDetail = (e) => {
+    var s = this.state.punkid +"";
+    while (s.length < 4) s = "0" + s;
+
+
+    var newImageUrl = '/images/punks.v2/punk-' + s + '.png';
+    this.setState({
+      cryptoBunkImageURL : newImageUrl
+
+    })
+
       window.alert('Function ' );
   };
 
