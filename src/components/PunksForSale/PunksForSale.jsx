@@ -83,9 +83,6 @@ class PunksForSale extends Component {
         <div className="row">
           <div className="col-md-6">
             <div>
-            onMouseEnter={() => setIsShown(true)}
-            onMouseLeave={() => setIsShown(false)}
-
             <button
               id="mintBtn22"
               style={{ fontSize: "0.9rem", letterSpacing: "0.14rem" }}
