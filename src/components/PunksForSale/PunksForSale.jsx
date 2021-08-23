@@ -43,7 +43,7 @@ class PunksForSale extends Component {
   };
 
   callViewPunkDetail = (e) => {
-    var s = this.state.punkid +"";
+    var s = e.target.id +"";
     while (s.length < 4) s = "0" + s;
 
 
