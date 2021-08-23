@@ -46,8 +46,8 @@ class PunksForSale extends Component {
     var s = e.target.id +"";
     while (s.length < 4) s = "0" + s;
     var newImageUrl = '/images/punks.v2/punk-' + s + '.png';
-    window.alert(e.target.src);
-    window.alert(newImageUrl);
+//    window.alert(e.target.src);
+//    window.alert(newImageUrl);
     if(e.target.src.indexOf(newImageUrl) !== -1){
       newImageUrl = "/images/punks/punk-" + s + "x8.png";
     }
