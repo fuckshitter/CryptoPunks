@@ -42,6 +42,17 @@ class PunksForSale extends Component {
     //this.props.loadMorePunks();
   };
 
+  callViewPunkDetail = (e) => {
+    var s = this.state.punkid +"";
+    while (s.length < 4) s = "0" + s;
+
+
+    var newImageUrl = '/images/punks.v2/punk-' + s + '.png';
+
+    window.alert("Test ");
+
+  };
+
   render() {
     const elements = this.props.cryptoBoysForSale;
     let mutatedElements = [...elements].map((el, i) => ({ index: i, price: el, })).sort((a, b) => a.price - b.price);
@@ -56,7 +67,7 @@ class PunksForSale extends Component {
         while (s.length < 4) s = "0" + s;
           var newImageUrl = "/images/punks/punk-" + s + "x8.png";
           var newLinkUrl = "/buypunk?punkid=" + value.index;
-          return ( <div class="card col-md-3"><Link to={newLinkUrl} className="nav-link"><img src={newImageUrl} /></Link>  <div class="card-body"> {" "} <h5 class="card-title">NO {value.index}</h5> <p class="card-text"> PRICE {value.price} BNB</p> <Link to={newLinkUrl} className="nav-link"> BUY </Link> </div> </div> );
+          return ( <div class="card col-md-3"><Link to={newLinkUrl} className="nav-link"><img src={newImageUrl} id={value.index} onMouseEnter={this.callViewPunkDetail} /></Link>  <div class="card-body"> {" "} <h5 class="card-title">NO {value.index}</h5> <p class="card-text"> PRICE {value.price} BNB</p> <Link to={newLinkUrl} className="nav-link"> BUY </Link> </div> </div> );
       }
     });
 
@@ -72,6 +83,9 @@ class PunksForSale extends Component {
         <div className="row">
           <div className="col-md-6">
             <div>
+            onMouseEnter={() => setIsShown(true)}
+            onMouseLeave={() => setIsShown(false)}
+
             <button
               id="mintBtn22"
               style={{ fontSize: "0.9rem", letterSpacing: "0.14rem" }}
