@@ -125,12 +125,14 @@ class FormAndPreview extends Component {
 
     return (
       <div>
+
+        <div class="container">
         <div class="card col-md-6 text-center" >
                     <div class="card-body">
                           <img
                               src={this.state.cryptoBunkImageURL}
                               class="img-thumbnail"
-                              onMouseEnter={this.callViewPunkDetail}
+                              onClick={this.callViewPunkDetail}
                               />
                               <hr className="my-4" />
     <h5 class="card-title">Punk NO {this.state.punkid}</h5>
@@ -138,6 +140,7 @@ class FormAndPreview extends Component {
     <p class="card-text">OWNER : {this.state.punkOwner}</p>
 
                     </div>
+        </div>
         </div>
         <form onSubmit={this.callClaimPunkFromApp} className="pt-4 mt-1">
           <div className="row">
