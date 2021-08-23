@@ -114,7 +114,6 @@ class FormAndPreview extends Component {
 
     })
 
-      window.alert('Function ' );
   };
 
 
@@ -126,7 +125,7 @@ class FormAndPreview extends Component {
 
     return (
       <div>
-        <div class="card col-md-12 text-center" >
+        <div class="card col-md-6 text-center" >
                     <div class="card-body">
                           <img
                               src={this.state.cryptoBunkImageURL}
