@@ -130,7 +130,7 @@ class BuyPunk extends Component {
     return (
       <div>
         <div class="card col-md-12 text-center" >
-                    <div class="card-body">
+                    <div class="card-body bg-info">
                           <img
                               src={this.state.cryptoBunkImageURL}
                               class="img-thumbnail  col-md-6"
