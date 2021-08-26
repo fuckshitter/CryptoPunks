@@ -37,6 +37,8 @@ const ConnectToMetamask = ({ connectToMetamask }) => {
       Your very first BakedPunk NFT may be worth your first house or car!
       </p>
       <p className="lead">
+
+        <div class="container">
       <div>
         {items}
       </div>
@@ -44,6 +46,7 @@ const ConnectToMetamask = ({ connectToMetamask }) => {
       <div>
         {itemsv2}
       </div>
+        </div>
       </p>
       <hr className="my-4" />
       <p className="lead">
