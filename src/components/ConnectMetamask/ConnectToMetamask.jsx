@@ -13,8 +13,8 @@ for (let i = 0; i < 10; i++) {
         var newImageUrl = '/images/punks/punk-' + s + 'x4.png';
 
         var newImageUrlv2 = '/images/punks.v2/punk-' + s + '.png';
-        items.push(<img src={newImageUrl} alt={rand} />)
-        itemsv2.push(<img src={newImageUrlv2} alt={rand} />)
+        items.push(<div class="card col-md-2" ><img src={newImageUrl} alt={rand} /></div>)
+        itemsv2.push(<div class="card col-md-2" ><img src={newImageUrlv2} alt={rand} /></div>)
 }
 
 const ConnectToMetamask = ({ connectToMetamask }) => {
