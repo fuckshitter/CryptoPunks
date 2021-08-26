@@ -3,7 +3,6 @@ import metamaskIcon from "./metamask.svg";
 
 
 const items = []
-const itemsv2 = []
 
 for (let i = 0; i < 10; i++) {
         const rand = Math.floor(Math.random() * 9999);;
@@ -11,15 +10,12 @@ for (let i = 0; i < 10; i++) {
         var s = index+"";
         while (s.length < 4) s = "0" + s;
         var newImageUrl = '/images/punks/punk-' + s + 'x4.png';
-
-        var newImageUrlv2 = '/images/punks.v2/punk-' + s + '.png';
-        items.push(<div class="card col-md-2" ><img src={newImageUrl} alt={rand} /></div>)
-        itemsv2.push(<div class="card col-md-2" ><img src={newImageUrlv2} alt={rand} /></div>)
+        items.push(<img src={newImageUrl} alt={rand} />)
 }
 
 const ConnectToMetamask = ({ connectToMetamask }) => {
   return (
-    <div className="container">
+    <div className="jumbotron">
       <h1 className="display-5">
         BakedPunks NFT Marketplace
       </h1>
@@ -36,15 +32,11 @@ const ConnectToMetamask = ({ connectToMetamask }) => {
       BakedPunk with proof of ownership stored on the Binance Smart Chain network. Who knows?
       Your very first BakedPunk NFT may be worth your first house or car!
       </p>
-
+      <p className="lead">
       <div>
         {items}
       </div>
-
-      <div>
-        {itemsv2}
-      </div>
-      
+      </p>
       <hr className="my-4" />
       <p className="lead">
           Contract Address : <a href="https://bscscan.com/token/0xead759ec13b02c21ae87044f009ce97c1c72371f" >0xea...371f</a>
