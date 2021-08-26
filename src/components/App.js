@@ -165,9 +165,9 @@ class App extends Component {
           for (let i = 0; i < 10000; i++) {
               this.state.cryptoBoys[i]=0x00;
           }
-          for (let i = 0; i < 100; i++) {
+          for (let i = 0; i < 200; i++) {
             (async () => {
-                await this.loadMorePunks(i*100,(i*100)+100);
+                await this.loadMorePunks(i*50,(i*50)+50);
             })();
           }
 
