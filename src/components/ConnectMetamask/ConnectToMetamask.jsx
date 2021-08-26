@@ -19,7 +19,7 @@ for (let i = 0; i < 10; i++) {
 
 const ConnectToMetamask = ({ connectToMetamask }) => {
   return (
-    <div className="jumbotron">
+    <div className="container">
       <h1 className="display-5">
         BakedPunks NFT Marketplace
       </h1>
@@ -36,9 +36,7 @@ const ConnectToMetamask = ({ connectToMetamask }) => {
       BakedPunk with proof of ownership stored on the Binance Smart Chain network. Who knows?
       Your very first BakedPunk NFT may be worth your first house or car!
       </p>
-      <p className="lead">
 
-        <div class="container">
       <div>
         {items}
       </div>
@@ -46,8 +44,7 @@ const ConnectToMetamask = ({ connectToMetamask }) => {
       <div>
         {itemsv2}
       </div>
-        </div>
-      </p>
+      
       <hr className="my-4" />
       <p className="lead">
           Contract Address : <a href="https://bscscan.com/token/0xead759ec13b02c21ae87044f009ce97c1c72371f" >0xea...371f</a>
