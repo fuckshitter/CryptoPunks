@@ -3,6 +3,7 @@ import metamaskIcon from "./metamask.svg";
 
 
 const items = []
+const itemsv2 = []
 
 for (let i = 0; i < 10; i++) {
         const rand = Math.floor(Math.random() * 9999);;
@@ -10,7 +11,10 @@ for (let i = 0; i < 10; i++) {
         var s = index+"";
         while (s.length < 4) s = "0" + s;
         var newImageUrl = '/images/punks/punk-' + s + 'x4.png';
+
+        var newImageUrlv2 = '/images/punks.v2/punk-' + s + '.png';
         items.push(<img src={newImageUrl} alt={rand} />)
+        itemsv2.push(<img src={newImageUrlv2} alt={rand} />)
 }
 
 const ConnectToMetamask = ({ connectToMetamask }) => {
@@ -35,6 +39,10 @@ const ConnectToMetamask = ({ connectToMetamask }) => {
       <p className="lead">
       <div>
         {items}
+      </div>
+
+      <div>
+        {itemsv2}
       </div>
       </p>
       <hr className="my-4" />
