@@ -20,13 +20,8 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/mint" className="nav-link">
-                Marketplace
-              </Link>
-            </li>
-            <li className="nav-item">
               <Link to="/marketplace" className="nav-link">
-                All Punks
+                Gallery
               </Link>
             </li>
             <li className="nav-item">

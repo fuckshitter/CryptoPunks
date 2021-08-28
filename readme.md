@@ -7,6 +7,7 @@ punks.askweedman.io
 
 ![All the CryptoPunks](/punks.png)
 
+npm install @truffle/hdwallet-provider
 
 exec ssh-agent bash
 
